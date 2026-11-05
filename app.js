@@ -678,6 +678,7 @@ function renderGuide(t) {
       : (ipad ? t.ipadSteps : t.androidSteps);
     return /* HTML */ `<section class="anchor-section" id="guide-${scene}" tabindex="-1" aria-labelledby="guide-title-${scene}">
       <h2 id="guide-title-${scene}">${t.scenes[sceneIndex]}</h2>
+      <div class="note note-check"><strong>${t.preparation}</strong>${ipad ? t.ipadPrep : t.androidPrep}</div>
       ${scene === "legacy" ? `<div class="note note-warning"><strong>${t.legacy}</strong>${ipad ? t.legacyIpad : t.legacyAndroid}</div>` : ""}
       <ol class="steps">
         ${steps.map((step, index) => `<li><h3>${step[0]}</h3><p>${step[1]}</p>${step[2] ? `<a class="action" href="${step[3]}" target="_blank" rel="noopener noreferrer">${step[2]} <span aria-hidden="true">↗</span></a>` : ""}${stepImage(t, ipad, index, scene)}</li>`).join("")}
@@ -694,7 +695,6 @@ function renderGuide(t) {
     <nav class="section-anchors" aria-label="${t.nav[0]}">
       ${sceneKeys.map((scene, index) => `<a href="${href("guide", state.device, scene)}/guide-${scene}" data-section-anchor="guide-${scene}">${t.scenes[index]}</a>`).join("")}
     </nav>
-    <div class="note note-check"><strong>${t.preparation}</strong>${ipad ? t.ipadPrep : t.androidPrep}</div>
     ${sections}
     ${link("faq", `${t.faqLink} ›`)}`;
 }
