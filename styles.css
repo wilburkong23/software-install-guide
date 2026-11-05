@@ -403,6 +403,30 @@ header {
   display: block;
   margin-bottom: 5px;
 }
+.note-check {
+  background: #edf5ff;
+  border: 1px solid #c8dff8;
+  border-left: 4px solid #0071e3;
+  color: #243b53;
+  line-height: 1.75;
+}
+.note-check strong {
+  color: #0056ad;
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+.note-warning {
+  background: #fff7e8;
+  border: 1px solid #f0d7a5;
+  border-left: 4px solid #b77910;
+  color: #654719;
+  line-height: 1.75;
+}
+.note-warning strong {
+  color: #805300;
+  font-size: 16px;
+  margin-bottom: 7px;
+}
 .steps {
   list-style: none;
   padding: 0;

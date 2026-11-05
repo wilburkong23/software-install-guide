@@ -675,15 +675,15 @@ function renderGuide(t) {
     <div class="tabs" aria-label="${t.nav[0]}">
       ${sceneKeys.map((scene, i) => `<button data-scene="${scene}" aria-pressed="${state.scene === scene}">${t.scenes[i]}</button>`).join("")}
     </div>
-    <div class="note">
+    <div class="note note-check">
       <strong>${t.preparation}</strong>${ipad ? t.ipadPrep : t.androidPrep}
     </div>
-    ${state.scene === "legacy" ? `<div class="note"><strong>${t.legacy}</strong>${ipad ? t.legacyIpad : t.legacyAndroid}</div>` : ""}
+    ${state.scene === "legacy" ? `<div class="note note-warning"><strong>${t.legacy}</strong>${ipad ? t.legacyIpad : t.legacyAndroid}</div>` : ""}
     <h2>${t.scenes[sceneKeys.indexOf(state.scene)]}</h2>
     <ol class="steps">
       ${steps.map((step, index) => `<li><h3>${step[0]}</h3><p>${step[1]}</p>${step[2] ? `<a class="action" href="${step[3]}" target="_blank" rel="noopener noreferrer">${step[2]} <span aria-hidden="true">↗</span></a>` : ""}${stepImage(t, ipad, index)}</li>`).join("")}
     </ol>
-    <div class="note"><strong>${t.installed}</strong>${t.installedText}</div>
+    <div class="note note-check"><strong>${t.installed}</strong>${t.installedText}</div>
     <div class="video">
       <span class="play" aria-hidden="true">▷</span>
       <div>
