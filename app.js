@@ -588,13 +588,55 @@ function href(page, device = state.device, scene = state.scene) {
   return `#/${state.locale}/v1.1-v1.2/${page}/${device}/${scene}`;
 }
 function link(page, label, device, scene, className = "") {
-  return `<a class="${className}" href="${href(page, device, scene)}">${label}</a>`;
+  return /* HTML */ `<a class="${className}" href="${href(page, device, scene)}"
+    >${label}</a
+  >`;
 }
 function deviceArt(type) {
-  return `<div class="device-art ${type}" aria-hidden="true"><div class="device"><div class="screen"><div class="shirt"></div></div></div></div>`;
+  return /* HTML */ `<div class="device-art ${type}" aria-hidden="true">
+    <div class="device">
+      <div class="screen"><div class="shirt"></div></div>
+    </div>
+  </div>`;
 }
 function renderHome(t) {
-  return `<main id="main"><div class="wrap"><section class="hero"><h1>${t.heading}</h1><p class="eyebrow">${t.manual}</p><p class="intro">${t.intro}</p><label class="version">${t.version}<select aria-label="${t.version}"><option>V1.1–V1.2</option></select></label></section><section><h2 class="section-heading">${t.choose}</h2><div class="device-grid">${deviceKeys.map((key, i) => link("guide", `${deviceArt(key)}<h3>${t.devices[i]}</h3><p>${t.channels[i]}</p><span class="link">${t.start} <span aria-hidden="true">›</span></span>`, key, "install", "device-card")).join("")}</div><div class="quicklinks">${link("faq", `${t.versionHelp} ›`)}</div></section></div><section class="feature-band"><div class="wrap feature-grid"><div class="feature">${icons.specs}<h2>${t.specsTitle}</h2><p>${t.specsDesc}</p>${link("specs", `${t.specsLink} ›`)}</div><div class="feature">${icons.faq}<h2>${t.faqTitle}</h2><p>${t.faqDesc}</p>${link("faq", `${t.faqLink} ›`)}</div></div></section></main>`;
+  return /* HTML */ `<main id="main">
+    <div class="wrap">
+      <section class="hero">
+        <h1>${t.heading}</h1>
+        <p class="eyebrow">${t.manual}</p>
+        <p class="intro">${t.intro}</p>
+        <label class="version"
+          >${t.version}<select aria-label="${t.version}">
+            <option>V1.1–V1.2</option>
+          </select></label
+        >
+      </section>
+      <section>
+        <h2 class="section-heading">${t.choose}</h2>
+        <div class="device-grid">
+          ${deviceKeys.map((key, i) => link("guide", `${deviceArt(key)}<h3>${t.devices[i]}</h3><p>${t.channels[i]}</p><span class="link">${t.start} <span aria-hidden="true">›</span></span>`, key, "install", "device-card")).join("")}
+        </div>
+        <div class="quicklinks">${link("faq", `${t.versionHelp} ›`)}</div>
+      </section>
+    </div>
+    <section class="feature-band">
+      <div class="wrap feature-grid">
+        <div class="feature">
+          ${icons.specs}
+          <h2>${t.specsTitle}</h2>
+          <p>${t.specsDesc}</p>
+          ${link("specs", `${t.specsLink} ›`)}
+        </div>
+        <div class="feature">
+          ${icons.faq}
+          <h2>${t.faqTitle}</h2>
+          <p>${t.faqDesc}</p>
+          ${link("faq", `${t.faqLink} ›`)}
+        </div>
+      </div>
+    </section>
+  </main>`;
 }
 function stepImage(t, ipad, index) {
   let filename;
@@ -609,17 +651,72 @@ function stepImage(t, ipad, index) {
     en: "Existing Chinese interface reference. Follow this guide and the release notice for current versions, system requirements and sign-in instructions. Open the original image.",
     ja: "既存の中国語画面の参考画像です。バージョン、動作要件、ログイン方法は本文とリリース案内をご確認ください。原寸画像を開けます。",
   };
-  return `<figure class="tutorial-image"><a href="./assets/${filename}" target="_blank" rel="noopener noreferrer"><img src="./assets/${filename}" alt="${ipad ? t.ipadSteps[1][0] : index === 0 ? t.androidSteps[0][0] : t.androidSteps[2][0]}" loading="lazy"></a><figcaption>${captions[state.locale]}</figcaption></figure>`;
+  return /* HTML */ `<figure class="tutorial-image">
+    <a href="./assets/${filename}" target="_blank" rel="noopener noreferrer"
+      ><img
+        src="./assets/${filename}"
+        alt="${ipad ? t.ipadSteps[1][0] : index === 0 ? t.androidSteps[0][0] : t.androidSteps[2][0]}"
+        loading="lazy"
+    /></a>
+    <figcaption>${captions[state.locale]}</figcaption>
+  </figure>`;
 }
 function renderGuide(t) {
   const ipad = state.device === "ipad";
   let steps = ipad ? t.ipadSteps : t.androidSteps;
   if (state.scene === "update") steps = ipad ? t.ipadUpdate : t.androidUpdate;
-  return `<h1>${t.devices[deviceKeys.indexOf(state.device)]} · ${t.nav[0]}</h1><p class="lede">${t.channels[deviceKeys.indexOf(state.device)]}</p><div class="tabs" aria-label="${t.nav[0]}">${sceneKeys.map((scene, i) => `<button data-scene="${scene}" aria-pressed="${state.scene === scene}">${t.scenes[i]}</button>`).join("")}</div><div class="note"><strong>${t.preparation}</strong>${ipad ? t.ipadPrep : t.androidPrep}</div>${state.scene === "legacy" ? `<div class="note"><strong>${t.legacy}</strong>${ipad ? t.legacyIpad : t.legacyAndroid}</div>` : ""}<h2>${t.scenes[sceneKeys.indexOf(state.scene)]}</h2><ol class="steps">${steps.map((step, index) => `<li><h3>${step[0]}</h3><p>${step[1]}</p>${step[2] ? `<a class="action" href="${step[3]}" target="_blank" rel="noopener noreferrer">${step[2]} <span aria-hidden="true">↗</span></a>` : ""}${stepImage(t, ipad, index)}</li>`).join("")}</ol><div class="note"><strong>${t.installed}</strong>${t.installedText}</div><div class="video"><span class="play" aria-hidden="true">▷</span><div><h3>${t.video}</h3><p>${t.videoText}</p></div></div>${link("faq", `${t.faqLink} ›`)}`;
+  return /* HTML */ `<h1>
+      ${t.devices[deviceKeys.indexOf(state.device)]} · ${t.nav[0]}
+    </h1>
+    <p class="lede">${t.channels[deviceKeys.indexOf(state.device)]}</p>
+    <div class="tabs" aria-label="${t.nav[0]}">
+      ${sceneKeys.map((scene, i) => `<button data-scene="${scene}" aria-pressed="${state.scene === scene}">${t.scenes[i]}</button>`).join("")}
+    </div>
+    <div class="note">
+      <strong>${t.preparation}</strong>${ipad ? t.ipadPrep : t.androidPrep}
+    </div>
+    ${state.scene === "legacy" ? `<div class="note"><strong>${t.legacy}</strong>${ipad ? t.legacyIpad : t.legacyAndroid}</div>` : ""}
+    <h2>${t.scenes[sceneKeys.indexOf(state.scene)]}</h2>
+    <ol class="steps">
+      ${steps.map((step, index) => `<li><h3>${step[0]}</h3><p>${step[1]}</p>${step[2] ? `<a class="action" href="${step[3]}" target="_blank" rel="noopener noreferrer">${step[2]} <span aria-hidden="true">↗</span></a>` : ""}${stepImage(t, ipad, index)}</li>`).join("")}
+    </ol>
+    <div class="note"><strong>${t.installed}</strong>${t.installedText}</div>
+    <div class="video">
+      <span class="play" aria-hidden="true">▷</span>
+      <div>
+        <h3>${t.video}</h3>
+        <p>${t.videoText}</p>
+      </div>
+    </div>
+    ${link("faq", `${t.faqLink} ›`)}`;
 }
 function renderSpecs(t) {
   const ipad = state.device === "ipad";
-  return `<h1>${t.nav[1]}</h1><p class="lede">${t.specIntro}</p><div class="tabs" aria-label="${t.choose}">${deviceKeys.map((key, i) => `<button data-device="${key}" aria-pressed="${state.device === key}">${t.devices[i]}</button>`).join("")}</div><h2>${t.devices[deviceKeys.indexOf(state.device)]}</h2><div class="table-wrap"><table><thead><tr>${t.headers.map((h) => `<th scope="col">${h}</th>`).join("")}</tr></thead><tbody>${(ipad ? t.ipadRows : t.androidRows).map((row) => `<tr>${row.map((cell) => `<td>${cell}</td>`).join("")}</tr>`).join("")}</tbody></table></div>${ipad ? `<p class="note">${t.ipadCaution}</p>` : ""}<h2>${t.network}</h2><p>${t.networkText}</p><details><summary>${t.networkDetail}</summary><p>${t.networkDetailText}</p></details>`;
+  return /* HTML */ `<h1>${t.nav[1]}</h1>
+    <p class="lede">${t.specIntro}</p>
+    <div class="tabs" aria-label="${t.choose}">
+      ${deviceKeys.map((key, i) => `<button data-device="${key}" aria-pressed="${state.device === key}">${t.devices[i]}</button>`).join("")}
+    </div>
+    <h2>${t.devices[deviceKeys.indexOf(state.device)]}</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            ${t.headers.map((h) => `<th scope="col">${h}</th>`).join("")}
+          </tr>
+        </thead>
+        <tbody>
+          ${(ipad ? t.ipadRows : t.androidRows).map((row) => `<tr>${row.map((cell) => `<td>${cell}</td>`).join("")}</tr>`).join("")}
+        </tbody>
+      </table>
+    </div>
+    ${ipad ? `<p class="note">${t.ipadCaution}</p>` : ""}
+    <h2>${t.network}</h2>
+    <p>${t.networkText}</p>
+    <details>
+      <summary>${t.networkDetail}</summary>
+      <p>${t.networkDetailText}</p>
+    </details>`;
 }
 function renderArticle(t) {
   const labels = { guide: t.nav[0], specs: t.nav[1], faq: t.nav[2] };
@@ -629,7 +726,27 @@ function renderArticle(t) {
       : state.page === "specs"
         ? renderSpecs(t)
         : `<h1>${t.nav[2]}</h1><p class="lede">${t.faqIntro}</p>${t.faqs.map(([q, a], i) => `<details ${i === 0 ? "open" : ""}><summary>${q}</summary><p>${a}</p></details>`).join("")}`;
-  return `<main id="main" class="wrap"><div class="breadcrumb">${link("home", t.home)} <span aria-hidden="true">›</span> V1.1–V1.2 <span aria-hidden="true">›</span> ${labels[state.page]}</div><div class="article-layout"><aside class="sidebar"><p>V1.1–V1.2</p>${deviceKeys.map((key, i) => `<a href="${href("guide", key)}" ${state.page === "guide" && state.device === key ? 'aria-current="page"' : ""}>${t.devices[i]}</a>`).join("")}<a href="${href("specs")}" ${state.page === "specs" ? 'aria-current="page"' : ""}>${t.nav[1]}</a><a href="${href("faq")}" ${state.page === "faq" ? 'aria-current="page"' : ""}>${t.nav[2]}</a></aside><article class="article">${body}</article></div></main>`;
+  return /* HTML */ `<main id="main" class="wrap">
+    <div class="breadcrumb">
+      ${link("home", t.home)} <span aria-hidden="true">›</span> V1.1–V1.2
+      <span aria-hidden="true">›</span> ${labels[state.page]}
+    </div>
+    <div class="article-layout">
+      <aside class="sidebar">
+        <p>V1.1–V1.2</p>
+        ${deviceKeys.map((key, i) => `<a href="${href("guide", key)}" ${state.page === "guide" && state.device === key ? 'aria-current="page"' : ""}>${t.devices[i]}</a>`).join("")}<a
+          href="${href("specs")}"
+          ${state.page === "specs" ? 'aria-current="page"' : ""}
+          >${t.nav[1]}</a
+        ><a
+          href="${href("faq")}"
+          ${state.page === "faq" ? 'aria-current="page"' : ""}
+          >${t.nav[2]}</a
+        >
+      </aside>
+      <article class="article">${body}</article>
+    </div>
+  </main>`;
 }
 function render() {
   const parts = location.hash.replace(/^#\//, "").split("/");
@@ -643,18 +760,40 @@ function render() {
   document.documentElement.lang = t.lang;
   document.title = `${state.page === "home" ? t.manual : t.nav[["guide", "specs", "faq"].indexOf(state.page)]} · LightChain`;
   document.getElementById("app").innerHTML =
-    `<a class="skip" href="#main">${t.skip}</a><header><div class="topbar">${link("home", `${mark}${t.brand}`, undefined, undefined, "brand")}<div class="utility"><span>${t.support}</span><select id="language" aria-label="Language / 语言 / 言語">${[
-      ["zh", "简体中文"],
-      ["ja", "日本語"],
-      ["en", "English"],
-    ]
-      .map(
-        ([key, label]) =>
-          `<option value="${key}" ${key === state.locale ? "selected" : ""}>${label}</option>`,
-      )
-      .join(
-        "",
-      )}</select></div></div></header><nav class="localnav" aria-label="${t.manual}"><div class="localbar">${link("home", t.manual, undefined, undefined, "localtitle")}<div class="navlinks">${["guide", "specs", "faq"].map((page, i) => `<a href="${href(page)}" ${state.page === page ? 'aria-current="page"' : ""}>${t.nav[i]}</a>`).join("")}</div></div></nav>${state.page === "home" ? renderHome(t) : renderArticle(t)}<footer class="wrap footer"><span>${t.footer}</span><span>${t.updated}</span></footer>`;
+    /* HTML */
+    `<a class="skip" href="#main">${t.skip}</a>
+      <header>
+        <div class="topbar">
+          ${link("home", `${mark}${t.brand}`, undefined, undefined, "brand")}
+          <div class="utility">
+            <span>${t.support}</span
+            ><select id="language" aria-label="Language / 语言 / 言語">
+              ${[
+                ["zh", "简体中文"],
+                ["ja", "日本語"],
+                ["en", "English"],
+              ]
+                .map(
+                  ([key, label]) =>
+                    `<option value="${key}" ${key === state.locale ? "selected" : ""}>${label}</option>`,
+                )
+                .join("")}
+            </select>
+          </div>
+        </div>
+      </header>
+      <nav class="localnav" aria-label="${t.manual}">
+        <div class="localbar">
+          ${link("home", t.manual, undefined, undefined, "localtitle")}
+          <div class="navlinks">
+            ${["guide", "specs", "faq"].map((page, i) => `<a href="${href(page)}" ${state.page === page ? 'aria-current="page"' : ""}>${t.nav[i]}</a>`).join("")}
+          </div>
+        </div>
+      </nav>
+      ${state.page === "home" ? renderHome(t) : renderArticle(t)}
+      <footer class="wrap footer">
+        <span>${t.footer}</span><span>${t.updated}</span>
+      </footer>`;
   document.getElementById("language").addEventListener("change", (event) => {
     state.locale = event.target.value;
     location.hash = href(state.page);
