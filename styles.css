@@ -338,6 +338,11 @@ header {
   padding-bottom: 64px;
 }
 .sidebar {
+  position: sticky;
+  top: 90px;
+  align-self: start;
+  max-height: calc(100dvh - 114px);
+  overflow-y: auto;
   border-right: 1px solid #e5e5e7;
   padding-right: 24px;
 }
@@ -354,16 +359,12 @@ header {
   border-top: 1px solid #e5e5e7;
   margin: 12px 0;
 }
-.sidebar p {
-  font-size: 12px;
-  color: #6e6e73;
-  margin: 0 0 12px;
-}
 .sidebar a {
   display: block;
   padding: 10px 12px;
   font-size: 14px;
-  color: #424245;
+  color: #1d1d1f;
+  font-weight: 600;
   margin-bottom: 3px;
   border-radius: 7px;
 }
@@ -687,6 +688,8 @@ details p {
     gap: 24px;
   }
   .sidebar {
+    position: static;
+    max-height: none;
     border: 0;
     border-bottom: 1px solid #e5e5e7;
     padding: 0 0 10px;
@@ -713,9 +716,6 @@ details p {
     border: 0;
     background: #e5e5e7;
     margin: 8px 6px;
-  }
-  .sidebar p {
-    display: none;
   }
   .sidebar a {
     white-space: nowrap;

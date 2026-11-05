@@ -739,7 +739,6 @@ function renderArticle(t) {
     </div>
     <div class="article-layout">
       <aside class="sidebar">
-        <p>V1.1–V1.2</p>
         <section class="sidebar-group">
           <h2>${t.sidebarGroups[0]}</h2>
           <div class="sidebar-items">
