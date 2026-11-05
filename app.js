@@ -51,8 +51,8 @@ const translations = {
         "https://apps.apple.com/app/testflight/id899247664",
       ],
       [
-        "返回此页，打开应用邀请",
-        "完成 TestFlight 设置后，回到本手册，点击下方入口，在邀请页选择“在 TestFlight 中查看”。",
+        "打开轻链AI试衣终端安装邀请",
+        "完成 TestFlight 初次设置后，点击下方“安装轻链AI试衣终端”按钮，在邀请页选择“在 TestFlight 中查看”。",
         "安装轻链AI试衣终端",
         "https://testflight.apple.com/join/NdJvT2Gt",
       ],
@@ -237,8 +237,8 @@ const translations = {
         "https://apps.apple.com/app/testflight/id899247664",
       ],
       [
-        "Return here and open the invitation",
-        "After setup, return to this guide and use the link below. Select “View in TestFlight” on the invitation page.",
+        "Open the LightChain AI Fitting Terminal invitation",
+        "After completing TestFlight setup, select “Install LightChain AI Fitting Terminal” below, then select “View in TestFlight” on the invitation page.",
         "Install LightChain AI Fitting Terminal",
         "https://testflight.apple.com/join/NdJvT2Gt",
       ],
@@ -441,8 +441,8 @@ const translations = {
         "https://apps.apple.com/app/testflight/id899247664",
       ],
       [
-        "このページに戻り、招待を開く",
-        "初期設定後、このガイドに戻って下のリンクを開き、招待ページで「TestFlightで表示」を選択します。",
+        "LightChain AI試着端末のインストール招待を開く",
+        "TestFlightの初期設定後、下の「AI試着端末をインストール」ボタンをタップし、招待ページで「TestFlightで表示」を選択します。",
         "AI試着端末をインストール",
         "https://testflight.apple.com/join/NdJvT2Gt",
       ],
