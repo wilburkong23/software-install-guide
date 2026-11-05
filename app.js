@@ -1,5 +1,6 @@
 const translations = {
   zh: {
+    sidebarGroups: ["下载与安装", "软硬件规格要求", "FAQ"],
     lang: "zh-CN",
     brand: "轻链 LightChain",
     manual: "AI试衣终端用户手册",
@@ -180,6 +181,7 @@ const translations = {
     ],
   },
   en: {
+    sidebarGroups: ["Download & installation", "Hardware & software requirements", "FAQ"],
     lang: "en",
     brand: "LightChain",
     manual: "AI Fitting Terminal User Guide",
@@ -389,6 +391,7 @@ const translations = {
     ],
   },
   ja: {
+    sidebarGroups: ["ダウンロードとインストール", "ハードウェア・ソフトウェア要件", "FAQ"],
     lang: "ja",
     brand: "LightChain",
     manual: "AI試着端末ユーザーガイド",
@@ -737,15 +740,26 @@ function renderArticle(t) {
     <div class="article-layout">
       <aside class="sidebar">
         <p>V1.1–V1.2</p>
-        ${deviceKeys.map((key, i) => `<a href="${href("guide", key)}" ${state.page === "guide" && state.device === key ? 'aria-current="page"' : ""}>${t.devices[i]}</a>`).join("")}<hr class="sidebar-divider"><a
-          href="${href("specs")}"
-          ${state.page === "specs" ? 'aria-current="page"' : ""}
-          >${t.nav[1]}</a
-        ><hr class="sidebar-divider"><a
-          href="${href("faq")}"
-          ${state.page === "faq" ? 'aria-current="page"' : ""}
-          >${t.nav[2]}</a
-        >
+        <section class="sidebar-group">
+          <h2>${t.sidebarGroups[0]}</h2>
+          <div class="sidebar-items">
+            ${deviceKeys.map((key, i) => `<a href="${href("guide", key)}" ${state.page === "guide" && state.device === key ? 'aria-current="page"' : ""}>${t.devices[i]}</a>`).join("")}
+          </div>
+        </section>
+        <hr class="sidebar-divider">
+        <section class="sidebar-group">
+          <h2>${t.sidebarGroups[1]}</h2>
+          <div class="sidebar-items">
+            <a href="${href("specs")}" ${state.page === "specs" ? 'aria-current="page"' : ""}>${t.nav[1]}</a>
+          </div>
+        </section>
+        <hr class="sidebar-divider">
+        <section class="sidebar-group">
+          <h2>${t.sidebarGroups[2]}</h2>
+          <div class="sidebar-items">
+            <a href="${href("faq")}" ${state.page === "faq" ? 'aria-current="page"' : ""}>${t.nav[2]}</a>
+          </div>
+        </section>
       </aside>
       <article class="article">${body}</article>
     </div>

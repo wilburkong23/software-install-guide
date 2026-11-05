@@ -341,6 +341,14 @@ header {
   border-right: 1px solid #e5e5e7;
   padding-right: 24px;
 }
+.sidebar-group h2 {
+  margin: 0 0 8px;
+  padding: 0 12px;
+  color: #6e6e73;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 500;
+}
 .sidebar-divider {
   border: 0;
   border-top: 1px solid #e5e5e7;
@@ -686,10 +694,22 @@ details p {
     overflow: auto;
     gap: 4px;
   }
+  .sidebar-group {
+    flex: 0 0 auto;
+  }
+  .sidebar-group h2 {
+    padding: 0 8px;
+    margin-bottom: 6px;
+    font-size: 11px;
+  }
+  .sidebar-items {
+    display: flex;
+    gap: 4px;
+  }
   .sidebar-divider {
     flex: 0 0 1px;
     width: 1px;
-    height: 20px;
+    height: 42px;
     border: 0;
     background: #e5e5e7;
     margin: 8px 6px;
