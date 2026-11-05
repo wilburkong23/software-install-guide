@@ -808,3 +808,30 @@ details p {
     max-height: 280px;
   }
 }
+
+.spec-anchors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 28px;
+  padding: 0 0 22px;
+  margin: 24px 0 30px;
+  border-bottom: 1px solid #e5e5e7;
+  font-size: 14px;
+}
+.spec-anchors a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.spec-section {
+  scroll-margin-top: 90px;
+  margin-bottom: 44px;
+}
+.spec-section:focus {
+  outline: none;
+}
+@media (max-width: 760px) {
+  .spec-section {
+    scroll-margin-top: 130px;
+  }
+}

@@ -697,26 +697,25 @@ function renderGuide(t) {
     ${link("faq", `${t.faqLink} ›`)}`;
 }
 function renderSpecs(t) {
-  const ipad = state.device === "ipad";
+  const sections = deviceKeys.map((key, index) => {
+    const rows = key === "ipad" ? t.ipadRows : t.androidRows;
+    return /* HTML */ `<section class="spec-section" id="spec-${key}" tabindex="-1" aria-labelledby="spec-title-${key}">
+      <h2 id="spec-title-${key}">${t.devices[index]}</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr>${t.headers.map(title => `<th scope="col">${title}</th>`).join("")}</tr></thead>
+          <tbody>${rows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join("")}</tr>`).join("")}</tbody>
+        </table>
+      </div>
+      ${key === "ipad" ? `<p class="note">${t.ipadCaution}</p>` : ""}
+    </section>`;
+  }).join("");
   return /* HTML */ `<h1>${t.nav[1]}</h1>
     <p class="lede">${t.specIntro}</p>
-    <div class="tabs" aria-label="${t.choose}">
-      ${deviceKeys.map((key, i) => `<button data-device="${key}" aria-pressed="${state.device === key}">${t.devices[i]}</button>`).join("")}
-    </div>
-    <h2>${t.devices[deviceKeys.indexOf(state.device)]}</h2>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            ${t.headers.map((h) => `<th scope="col">${h}</th>`).join("")}
-          </tr>
-        </thead>
-        <tbody>
-          ${(ipad ? t.ipadRows : t.androidRows).map((row) => `<tr>${row.map((cell) => `<td>${cell}</td>`).join("")}</tr>`).join("")}
-        </tbody>
-      </table>
-    </div>
-    ${ipad ? `<p class="note">${t.ipadCaution}</p>` : ""}
+    <nav class="spec-anchors" aria-label="${t.choose}">
+      ${deviceKeys.map((key, index) => `<a href="${href("specs", key)}/spec-${key}" data-spec-anchor="spec-${key}">${t.devices[index]} <span aria-hidden="true">↓</span></a>`).join("")}
+    </nav>
+    ${sections}
     <h2>${t.network}</h2>
     <p>${t.networkText}</p>
     <details>
@@ -771,6 +770,7 @@ function render() {
     page: ["guide", "specs", "faq"].includes(parts[2]) ? parts[2] : "home",
     device: deviceKeys.includes(parts[3]) ? parts[3] : "ipad",
     scene: sceneKeys.includes(parts[4]) ? parts[4] : "install",
+    anchor: deviceKeys.map(key => `spec-${key}`).includes(parts[5]) ? parts[5] : "",
   };
   const t = translations[state.locale];
   document.documentElement.lang = t.lang;
@@ -812,18 +812,18 @@ function render() {
       </footer>`;
   document.getElementById("language").addEventListener("change", (event) => {
     state.locale = event.target.value;
-    location.hash = href(state.page);
+    location.hash = href(state.page) + (state.page === "specs" && state.anchor ? `/${state.anchor}` : "");
   });
   document.querySelectorAll("[data-scene]").forEach((button) =>
     button.addEventListener("click", () => {
       location.hash = href("guide", state.device, button.dataset.scene);
     }),
   );
-  document.querySelectorAll("[data-device]").forEach((button) =>
-    button.addEventListener("click", () => {
-      location.hash = href("specs", button.dataset.device);
-    }),
-  );
+  document.querySelectorAll("[data-spec-anchor]").forEach(anchor => {
+    anchor.addEventListener("click", () => {
+      if (anchor.hash === location.hash) scrollToRoute();
+    });
+  });
   document.querySelector(".skip").addEventListener("click", (event) => {
     event.preventDefault();
     const main = document.getElementById("main");
@@ -831,8 +831,18 @@ function render() {
     main.focus();
   });
 }
+function scrollToRoute() {
+  const section = state.page === "specs" && document.getElementById(state.anchor);
+  if (section) {
+    section.focus({ preventScroll: true });
+    section.scrollIntoView({ block: "start" });
+  } else {
+    window.scrollTo(0, 0);
+  }
+}
 window.addEventListener("hashchange", () => {
   render();
-  window.scrollTo(0, 0);
+  scrollToRoute();
 });
 render();
+scrollToRoute();
