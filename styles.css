@@ -399,7 +399,7 @@ header {
   border-radius: 10px;
   padding: 19px 22px;
   font-size: 14px;
-  margin: 24px 0;
+  margin: 32px 0;
 }
 .note strong {
   display: block;
@@ -445,7 +445,7 @@ header {
   counter-increment: steps;
   position: relative;
   padding: 7px 0 24px 45px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 .steps li:before {
   content: counter(steps);
@@ -485,7 +485,7 @@ header {
 }
 .article h2 {
   font-size: 24px;
-  margin: 32px 0 16px;
+  margin: 48px 0 24px;
 }
 .video {
   border-top: 1px solid #e5e5e7;
@@ -816,12 +816,19 @@ details p {
 }
 .anchor-section {
   scroll-margin-top: var(--anchor-scroll-offset, 150px);
-  margin-bottom: 44px;
+  display: flow-root;
+  margin-bottom: 80px;
+}
+.anchor-section > h2 {
+  margin-top: 0;
 }
 .anchor-section:focus {
   outline: none;
 }
 @media (max-width: 760px) {
+  .anchor-section {
+    margin-bottom: 56px;
+  }
   .section-anchors {
     font-size: 12px;
   }
