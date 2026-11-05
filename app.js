@@ -4,7 +4,7 @@ const translations = {
     lang: "zh-CN",
     brand: "轻链 LightChain",
     manual: "AI试衣终端用户手册",
-    support: "产品支持",
+    languageLabel: "切换语言",
     nav: ["下载、安装与更新", "设备规格", "常见问题"],
     home: "手册首页",
     heading: "轻链AI试衣终端",
@@ -185,7 +185,7 @@ const translations = {
     lang: "en",
     brand: "LightChain",
     manual: "AI Fitting Terminal User Guide",
-    support: "Product support",
+    languageLabel: "Switch language",
     nav: ["Install & update", "Specifications", "FAQ"],
     home: "Guide home",
     heading: "LightChain AI Fitting Terminal",
@@ -395,7 +395,7 @@ const translations = {
     lang: "ja",
     brand: "LightChain",
     manual: "AI試着端末ユーザーガイド",
-    support: "製品サポート",
+    languageLabel: "言語を切り替える",
     nav: ["インストールと更新", "動作環境", "よくある質問"],
     home: "ガイドのホーム",
     heading: "LightChain AI試着端末",
@@ -783,12 +783,12 @@ function render() {
         <div class="topbar">
           ${link("home", `<img src="./assets/lightchain-logo.svg" alt="${t.brand}" width="117" height="24">`, undefined, undefined, "brand")}
           <div class="utility">
-            <span>${t.support}</span
-            ><select id="language" aria-label="Language / 语言 / 言語">
+            <label for="language">${t.languageLabel}</label
+            ><select id="language" aria-label="${t.languageLabel}">
               ${[
-                ["zh", "简体中文"],
-                ["ja", "日本語"],
-                ["en", "English"],
+                ["zh", "🇨🇳 简体中文"],
+                ["ja", "🇯🇵 日本語"],
+                ["en", "🇺🇸 English"],
               ]
                 .map(
                   ([key, label]) =>

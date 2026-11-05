@@ -588,7 +588,7 @@ details p {
   .topbar {
     height: 52px;
   }
-  .utility > span {
+  .utility > label {
     display: none;
   }
   .brand {
