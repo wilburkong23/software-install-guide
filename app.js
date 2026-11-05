@@ -737,11 +737,11 @@ function renderArticle(t) {
     <div class="article-layout">
       <aside class="sidebar">
         <p>V1.1–V1.2</p>
-        ${deviceKeys.map((key, i) => `<a href="${href("guide", key)}" ${state.page === "guide" && state.device === key ? 'aria-current="page"' : ""}>${t.devices[i]}</a>`).join("")}<a
+        ${deviceKeys.map((key, i) => `<a href="${href("guide", key)}" ${state.page === "guide" && state.device === key ? 'aria-current="page"' : ""}>${t.devices[i]}</a>`).join("")}<hr class="sidebar-divider"><a
           href="${href("specs")}"
           ${state.page === "specs" ? 'aria-current="page"' : ""}
           >${t.nav[1]}</a
-        ><a
+        ><hr class="sidebar-divider"><a
           href="${href("faq")}"
           ${state.page === "faq" ? 'aria-current="page"' : ""}
           >${t.nav[2]}</a

@@ -341,6 +341,11 @@ header {
   border-right: 1px solid #e5e5e7;
   padding-right: 24px;
 }
+.sidebar-divider {
+  border: 0;
+  border-top: 1px solid #e5e5e7;
+  margin: 12px 0;
+}
 .sidebar p {
   font-size: 12px;
   color: #6e6e73;
@@ -680,6 +685,14 @@ details p {
     display: flex;
     overflow: auto;
     gap: 4px;
+  }
+  .sidebar-divider {
+    flex: 0 0 1px;
+    width: 1px;
+    height: 20px;
+    border: 0;
+    background: #e5e5e7;
+    margin: 8px 6px;
   }
   .sidebar p {
     display: none;
