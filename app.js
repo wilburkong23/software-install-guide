@@ -577,8 +577,6 @@ const translations = {
 const deviceKeys = ["ipad", "terminal", "pad"];
 const sceneKeys = ["install", "legacy", "update"];
 let state;
-const mark =
-  '<svg viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M11 8H8a6 6 0 0 0 0 12h6M17 20h3a6 6 0 0 0 0-12h-6M9 14h10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>';
 const icons = {
   specs:
     '<svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="5" y="5" width="22" height="17" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M11 27h10M16 22v5M10 11h12M10 16h7" stroke="currentColor" stroke-width="1.5"/></svg>',
@@ -593,6 +591,11 @@ function link(page, label, device, scene, className = "") {
   >`;
 }
 function deviceArt(type) {
+  if (type === "terminal") {
+    return /* HTML */ `<div class="device-art terminal" aria-hidden="true">
+      <img src="./assets/android-terminal.png" alt="" width="270" height="658">
+    </div>`;
+  }
   return /* HTML */ `<div class="device-art ${type}" aria-hidden="true">
     <div class="device">
       <div class="screen"><div class="shirt"></div></div>
@@ -764,7 +767,7 @@ function render() {
     `<a class="skip" href="#main">${t.skip}</a>
       <header>
         <div class="topbar">
-          ${link("home", `${mark}${t.brand}`, undefined, undefined, "brand")}
+          ${link("home", `<img src="./assets/lightchain-logo.svg" alt="${t.brand}" width="117" height="24">`, undefined, undefined, "brand")}
           <div class="utility">
             <span>${t.support}</span
             ><select id="language" aria-label="Language / 语言 / 言語">

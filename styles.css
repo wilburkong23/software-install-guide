@@ -66,9 +66,11 @@ header {
   align-items: center;
   gap: 9px;
 }
-.brand svg {
-  width: 26px;
-  height: 26px;
+.brand img {
+  display: block;
+  width: 117px;
+  height: 24px;
+  object-fit: contain;
 }
 .utility {
   display: flex;
@@ -264,25 +266,12 @@ header {
   );
   filter: drop-shadow(2px 4px 3px #0002);
 }
-.terminal .device {
-  height: 125px;
-  width: 68px;
-  border-radius: 7px;
-  border-color: #b2b3b5;
-  padding: 6px;
-}
-.terminal .screen {
-  background: #ddd9d3;
-}
-.terminal:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 75px;
-  height: 7px;
-  border-radius: 50%;
-  background: #a7a8aa;
-  box-shadow: 0 -8px 0 -2px #96999d;
+.terminal img {
+  display: block;
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
 }
 .pad .device {
   width: 145px;
@@ -611,9 +600,6 @@ details p {
   .device {
     height: 108px;
     width: 80px;
-  }
-  .terminal .device {
-    height: 107px;
   }
   .pad .device {
     width: 111px;
