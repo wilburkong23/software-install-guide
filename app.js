@@ -644,11 +644,11 @@ function renderHome(t) {
     </section>
   </main>`;
 }
-function stepImage(t, ipad, index) {
+function stepImage(t, ipad, index, scene) {
   let filename;
-  if (ipad && state.scene !== "update" && index === 1)
+  if (ipad && scene !== "update" && index === 1)
     filename = "ipad-invitation.png";
-  if (!ipad && state.scene !== "update" && index === 0)
+  if (!ipad && scene !== "update" && index === 0)
     filename = "android-download.png";
   if (!ipad && index === 2) filename = "android-updater.png";
   if (!filename) return "";
@@ -657,10 +657,13 @@ function stepImage(t, ipad, index) {
     en: "Existing Chinese interface reference. Follow this guide and the release notice for current versions, system requirements and sign-in instructions. Open the original image.",
     ja: "既存の中国語画面の参考画像です。バージョン、動作要件、ログイン方法は本文とリリース案内をご確認ください。原寸画像を開けます。",
   };
+  const dimensions = {"ipad-invitation.png": [900, 1100], "android-download.png": [1798, 875], "android-updater.png": [1086, 1448]};
   return /* HTML */ `<figure class="tutorial-image">
     <a href="./assets/${filename}" target="_blank" rel="noopener noreferrer"
       ><img
         src="./assets/${filename}"
+        width="${dimensions[filename][0]}"
+        height="${dimensions[filename][1]}"
         alt="${ipad ? t.ipadSteps[1][0] : index === 0 ? t.androidSteps[0][0] : t.androidSteps[2][0]}"
         loading="lazy"
     /></a>
@@ -669,37 +672,36 @@ function stepImage(t, ipad, index) {
 }
 function renderGuide(t) {
   const ipad = state.device === "ipad";
-  let steps = ipad ? t.ipadSteps : t.androidSteps;
-  if (state.scene === "update") steps = ipad ? t.ipadUpdate : t.androidUpdate;
-  return /* HTML */ `<h1>
-      ${t.devices[deviceKeys.indexOf(state.device)]} · ${t.nav[0]}
-    </h1>
-    <p class="lede">${t.channels[deviceKeys.indexOf(state.device)]}</p>
-    <div class="tabs" aria-label="${t.nav[0]}">
-      ${sceneKeys.map((scene, i) => `<button data-scene="${scene}" aria-pressed="${state.scene === scene}">${t.scenes[i]}</button>`).join("")}
-    </div>
-    <div class="note note-check">
-      <strong>${t.preparation}</strong>${ipad ? t.ipadPrep : t.androidPrep}
-    </div>
-    ${state.scene === "legacy" ? `<div class="note note-warning"><strong>${t.legacy}</strong>${ipad ? t.legacyIpad : t.legacyAndroid}</div>` : ""}
-    <h2>${t.scenes[sceneKeys.indexOf(state.scene)]}</h2>
-    <ol class="steps">
-      ${steps.map((step, index) => `<li><h3>${step[0]}</h3><p>${step[1]}</p>${step[2] ? `<a class="action" href="${step[3]}" target="_blank" rel="noopener noreferrer">${step[2]} <span aria-hidden="true">↗</span></a>` : ""}${stepImage(t, ipad, index)}</li>`).join("")}
-    </ol>
-    <div class="note note-check"><strong>${t.installed}</strong>${t.installedText}</div>
-    <div class="video">
-      <span class="play" aria-hidden="true">▷</span>
-      <div>
-        <h3>${t.video}</h3>
-        <p>${t.videoText}</p>
+  const sections = sceneKeys.map((scene, sceneIndex) => {
+    const steps = scene === "update"
+      ? (ipad ? t.ipadUpdate : t.androidUpdate)
+      : (ipad ? t.ipadSteps : t.androidSteps);
+    return /* HTML */ `<section class="anchor-section" id="guide-${scene}" tabindex="-1" aria-labelledby="guide-title-${scene}">
+      <h2 id="guide-title-${scene}">${t.scenes[sceneIndex]}</h2>
+      ${scene === "legacy" ? `<div class="note note-warning"><strong>${t.legacy}</strong>${ipad ? t.legacyIpad : t.legacyAndroid}</div>` : ""}
+      <ol class="steps">
+        ${steps.map((step, index) => `<li><h3>${step[0]}</h3><p>${step[1]}</p>${step[2] ? `<a class="action" href="${step[3]}" target="_blank" rel="noopener noreferrer">${step[2]} <span aria-hidden="true">↗</span></a>` : ""}${stepImage(t, ipad, index, scene)}</li>`).join("")}
+      </ol>
+      <div class="note note-check"><strong>${t.installed}</strong>${t.installedText}</div>
+      <div class="video">
+        <span class="play" aria-hidden="true">▷</span>
+        <div><h3>${t.video}</h3><p>${t.videoText}</p></div>
       </div>
-    </div>
+    </section>`;
+  }).join("");
+  return /* HTML */ `<h1>${t.devices[deviceKeys.indexOf(state.device)]} · ${t.nav[0]}</h1>
+    <p class="lede">${t.channels[deviceKeys.indexOf(state.device)]}</p>
+    <nav class="section-anchors" aria-label="${t.nav[0]}">
+      ${sceneKeys.map((scene, index) => `<a href="${href("guide", state.device, scene)}/guide-${scene}" data-section-anchor="guide-${scene}">${t.scenes[index]}</a>`).join("")}
+    </nav>
+    <div class="note note-check"><strong>${t.preparation}</strong>${ipad ? t.ipadPrep : t.androidPrep}</div>
+    ${sections}
     ${link("faq", `${t.faqLink} ›`)}`;
 }
 function renderSpecs(t) {
   const sections = deviceKeys.map((key, index) => {
     const rows = key === "ipad" ? t.ipadRows : t.androidRows;
-    return /* HTML */ `<section class="spec-section" id="spec-${key}" tabindex="-1" aria-labelledby="spec-title-${key}">
+    return /* HTML */ `<section class="anchor-section" id="spec-${key}" tabindex="-1" aria-labelledby="spec-title-${key}">
       <h2 id="spec-title-${key}">${t.devices[index]}</h2>
       <div class="table-wrap">
         <table>
@@ -712,8 +714,8 @@ function renderSpecs(t) {
   }).join("");
   return /* HTML */ `<h1>${t.nav[1]}</h1>
     <p class="lede">${t.specIntro}</p>
-    <nav class="spec-anchors" aria-label="${t.choose}">
-      ${deviceKeys.map((key, index) => `<a href="${href("specs", key)}/spec-${key}" data-spec-anchor="spec-${key}">${t.devices[index]}</a>`).join("")}
+    <nav class="section-anchors" aria-label="${t.choose}">
+      ${deviceKeys.map((key, index) => `<a href="${href("specs", key)}/spec-${key}" data-section-anchor="spec-${key}">${t.devices[index]}</a>`).join("")}
     </nav>
     ${sections}
     <h2>${t.network}</h2>
@@ -770,7 +772,7 @@ function render() {
     page: ["guide", "specs", "faq"].includes(parts[2]) ? parts[2] : "home",
     device: deviceKeys.includes(parts[3]) ? parts[3] : "ipad",
     scene: sceneKeys.includes(parts[4]) ? parts[4] : "install",
-    anchor: deviceKeys.map(key => `spec-${key}`).includes(parts[5]) ? parts[5] : "",
+    anchor: [...deviceKeys.map(key => `spec-${key}`), ...sceneKeys.map(scene => `guide-${scene}`)].includes(parts[5]) ? parts[5] : "",
   };
   const t = translations[state.locale];
   document.documentElement.lang = t.lang;
@@ -812,14 +814,9 @@ function render() {
       </footer>`;
   document.getElementById("language").addEventListener("change", (event) => {
     state.locale = event.target.value;
-    location.hash = href(state.page) + (state.page === "specs" && state.anchor ? `/${state.anchor}` : "");
+    location.hash = href(state.page) + (state.anchor ? `/${state.anchor}` : "");
   });
-  document.querySelectorAll("[data-scene]").forEach((button) =>
-    button.addEventListener("click", () => {
-      location.hash = href("guide", state.device, button.dataset.scene);
-    }),
-  );
-  document.querySelectorAll("[data-spec-anchor]").forEach(anchor => {
+  document.querySelectorAll("[data-section-anchor]").forEach(anchor => {
     anchor.addEventListener("click", () => {
       if (anchor.hash === location.hash) scrollToRoute();
     });
@@ -830,40 +827,41 @@ function render() {
     main.tabIndex = -1;
     main.focus();
   });
-  updateSpecLayout();
+  updateAnchorLayout();
 }
-function updateSpecLayout() {
-  const navigation = document.querySelector(".spec-anchors");
+function updateAnchorLayout() {
+  const navigation = document.querySelector(".section-anchors");
   if (!navigation) return;
   const top = document.querySelector(".localnav").getBoundingClientRect().height + 12;
-  document.documentElement.style.setProperty("--spec-nav-top", `${top}px`);
-  document.documentElement.style.setProperty("--spec-scroll-offset", `${top + navigation.getBoundingClientRect().height + 24}px`);
-  updateActiveSpec();
+  document.documentElement.style.setProperty("--anchor-nav-top", `${top}px`);
+  document.documentElement.style.setProperty("--anchor-scroll-offset", `${top + navigation.getBoundingClientRect().height + 24}px`);
+  updateActiveSection();
 }
-function updateActiveSpec() {
-  const navigation = document.querySelector(".spec-anchors");
+function updateActiveSection() {
+  const navigation = document.querySelector(".section-anchors");
   if (!navigation) return;
-  const offset = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--spec-scroll-offset"));
-  let activeId = "spec-ipad";
-  document.querySelectorAll(".spec-section").forEach(section => {
+  const offset = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--anchor-scroll-offset"));
+  let activeId = document.querySelector(".anchor-section")?.id;
+  document.querySelectorAll(".anchor-section").forEach(section => {
     if (section.getBoundingClientRect().top <= offset + 2) activeId = section.id;
   });
   navigation.querySelectorAll("a").forEach(anchor => {
-    if (anchor.dataset.specAnchor === activeId) {
+    if (anchor.dataset.sectionAnchor === activeId) {
       anchor.setAttribute("aria-current", "location");
     } else {
       anchor.removeAttribute("aria-current");
     }
   });
 }
-window.addEventListener("resize", updateSpecLayout);
-window.addEventListener("scroll", updateActiveSpec, { passive: true });
+window.addEventListener("resize", updateAnchorLayout);
+window.addEventListener("scroll", updateActiveSection, { passive: true });
 function scrollToRoute() {
-  const section = state.page === "specs" && document.getElementById(state.anchor);
+  const targetId = state.anchor || (state.page === "guide" && state.scene !== "install" ? `guide-${state.scene}` : "");
+  const section = document.getElementById(targetId);
   if (section) {
     section.focus({ preventScroll: true });
     section.scrollIntoView({ block: "start" });
-    updateActiveSpec();
+    updateActiveSection();
   } else {
     window.scrollTo(0, 0);
   }
