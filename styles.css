@@ -421,7 +421,7 @@ header {
   left: 23px;
   width: 18px;
   height: 18px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'%3E%3Ccircle cx='10' cy='10' r='8' stroke='%231d1d1f' stroke-width='1.5'/%3E%3Cpath d='M10 9v5' stroke='%231d1d1f' stroke-width='1.5' stroke-linecap='round'/%3E%3Ccircle cx='10' cy='6' r='1' fill='%231d1d1f'/%3E%3C/svg%3E") center / contain no-repeat;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'%3E%3Ccircle cx='10' cy='10' r='8' stroke='%230071e3' stroke-width='1.5'/%3E%3Cpath d='M10 9v5' stroke='%230071e3' stroke-width='1.5' stroke-linecap='round'/%3E%3Ccircle cx='10' cy='6' r='1' fill='%230071e3'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 .note-check strong,
 .note-warning strong {
