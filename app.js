@@ -143,7 +143,7 @@ const translations = {
       "已反馈 iPad Pro 12.9 英寸第 4 代（A12Z）出现视频或整机卡住，当前不推荐该机型。",
     network: "网络条件",
     networkText:
-      "两端均需稳定访问业务、实时视频与媒体上传服务。固定终端优先有线，平板优先稳定的 5GHz Wi-Fi。使用 Decart 实时视频时，项目推荐每台设备上行、下行各至少 10 Mbps 可用带宽，多台并发按设备数累加。",
+      "两端均需稳定访问业务、实时视频与媒体上传服务。固定终端优先有线，平板优先稳定的 5GHz Wi-Fi。使用 Pro 模型实时视频时，项目推荐每台设备上行、下行各至少 10 Mbps 可用带宽，多台并发按设备数累加。",
     networkDetail: "现场实施与网络配置",
     networkDetailText:
       "场地网络还需验证实时媒体所需 UDP、WebSocket 及相关域名的可达性。请向实施人员获取交付环境的放行清单，并在实际并发量下测试真实试衣会话。",
@@ -352,7 +352,7 @@ const translations = {
       "The 12.9-inch iPad Pro (4th generation, A12Z) has reported video or device freezes and is currently not recommended.",
     network: "Network requirements",
     networkText:
-      "Both platforms need reliable access to business, live video and media-upload services. Prefer Ethernet for fixed terminals or stable 5GHz Wi-Fi for tablets. For Decart live video, the project recommends at least 10 Mbps available upload and download per device. Multiply by concurrent devices.",
+      "Both platforms need reliable access to business, live video and media-upload services. Prefer Ethernet for fixed terminals or stable 5GHz Wi-Fi for tablets. For live video with the Pro model, the project recommends at least 10 Mbps available upload and download per device. Multiply by concurrent devices.",
     networkDetail: "Deployment and network configuration",
     networkDetailText:
       "Validate the UDP, WebSocket and domain access required for real-time media. Obtain the environment-specific allowlist from your deployment team and test live sessions at the planned concurrency.",
@@ -537,7 +537,7 @@ const translations = {
       "12.9インチiPad Pro（第4世代、A12Z）では映像や本体の停止が報告されており、現在は推奨していません。",
     network: "ネットワーク条件",
     networkText:
-      "両プラットフォームとも業務サービス、リアルタイム映像、メディアアップロードへの安定した接続が必要です。固定端末は有線、タブレットは安定した5GHz Wi-Fiを推奨します。Decart利用時は1台あたり上り・下り各10Mbps以上の実効帯域を推奨し、同時利用台数分を確保してください。",
+      "両プラットフォームとも業務サービス、リアルタイム映像、メディアアップロードへの安定した接続が必要です。固定端末は有線、タブレットは安定した5GHz Wi-Fiを推奨します。Proモデル利用時は1台あたり上り・下り各10Mbps以上の実効帯域を推奨し、同時利用台数分を確保してください。",
     networkDetail: "現場導入とネットワーク設定",
     networkDetailText:
       "リアルタイム映像に必要なUDP、WebSocket、関連ドメインへの接続を確認してください。導入担当者から環境に応じた許可リストを入手し、予定する同時利用台数で実際の試着を検証します。",
