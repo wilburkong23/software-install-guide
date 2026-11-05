@@ -332,10 +332,21 @@ header {
   margin-bottom: 30px;
 }
 .article-layout {
+  position: relative;
   display: grid;
   grid-template-columns: 210px minmax(0, 1fr);
   gap: 54px;
   padding-bottom: 64px;
+}
+.article-layout::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 64px;
+  left: 209px;
+  width: 1px;
+  background: #e5e5e7;
+  pointer-events: none;
 }
 .sidebar {
   position: sticky;
@@ -343,7 +354,6 @@ header {
   align-self: start;
   max-height: calc(100dvh - 114px);
   overflow-y: auto;
-  border-right: 1px solid #e5e5e7;
   padding-right: 24px;
 }
 .sidebar-group h2 {
@@ -682,6 +692,9 @@ details p {
   .footer {
     flex-direction: column;
     gap: 8px;
+  }
+  .article-layout::before {
+    display: none;
   }
   .article-layout {
     grid-template-columns: 1fr;
