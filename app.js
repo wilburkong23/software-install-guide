@@ -713,7 +713,7 @@ function renderSpecs(t) {
   return /* HTML */ `<h1>${t.nav[1]}</h1>
     <p class="lede">${t.specIntro}</p>
     <nav class="spec-anchors" aria-label="${t.choose}">
-      ${deviceKeys.map((key, index) => `<a href="${href("specs", key)}/spec-${key}" data-spec-anchor="spec-${key}">${t.devices[index]} <span aria-hidden="true">↓</span></a>`).join("")}
+      ${deviceKeys.map((key, index) => `<a href="${href("specs", key)}/spec-${key}" data-spec-anchor="spec-${key}">${t.devices[index]}</a>`).join("")}
     </nav>
     ${sections}
     <h2>${t.network}</h2>
@@ -830,12 +830,40 @@ function render() {
     main.tabIndex = -1;
     main.focus();
   });
+  updateSpecLayout();
 }
+function updateSpecLayout() {
+  const navigation = document.querySelector(".spec-anchors");
+  if (!navigation) return;
+  const top = document.querySelector(".localnav").getBoundingClientRect().height + 12;
+  document.documentElement.style.setProperty("--spec-nav-top", `${top}px`);
+  document.documentElement.style.setProperty("--spec-scroll-offset", `${top + navigation.getBoundingClientRect().height + 24}px`);
+  updateActiveSpec();
+}
+function updateActiveSpec() {
+  const navigation = document.querySelector(".spec-anchors");
+  if (!navigation) return;
+  const offset = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--spec-scroll-offset"));
+  let activeId = "spec-ipad";
+  document.querySelectorAll(".spec-section").forEach(section => {
+    if (section.getBoundingClientRect().top <= offset + 2) activeId = section.id;
+  });
+  navigation.querySelectorAll("a").forEach(anchor => {
+    if (anchor.dataset.specAnchor === activeId) {
+      anchor.setAttribute("aria-current", "location");
+    } else {
+      anchor.removeAttribute("aria-current");
+    }
+  });
+}
+window.addEventListener("resize", updateSpecLayout);
+window.addEventListener("scroll", updateActiveSpec, { passive: true });
 function scrollToRoute() {
   const section = state.page === "specs" && document.getElementById(state.anchor);
   if (section) {
     section.focus({ preventScroll: true });
     section.scrollIntoView({ block: "start" });
+    updateActiveSpec();
   } else {
     window.scrollTo(0, 0);
   }
