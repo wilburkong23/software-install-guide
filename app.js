@@ -30,9 +30,9 @@ const translations = {
     scenes: ["首次安装", "老版本换装", "现有版本更新"],
     preparation: "开始前，请先检查",
     ipadPrep:
-      "准备 iPadOS 16.4 或以上系统的 iPad、Apple 账户及稳定网络。保持供电，并确认有足够存储空间。",
+      "准备 <b>iPadOS 16.4 或以上</b>系统的 iPad、Apple 账户及稳定网络。保持供电，并确认有足够存储空间。",
     androidPrep:
-      "确认设备为 Android 12 或以上系统，连接稳定网络并保持供电。安装前请查看设备规格，准备好运营提供的登录账号。",
+      "确认设备为 <b>Android 12 或以上</b>系统，连接稳定网络并保持供电。安装前请查看设备规格，准备好运营提供的登录账号。",
     legacy: "适用范围待确认",
     legacyAndroid:
       "旧版设备换装需要卸载旧的试衣终端 App 和轻链更新助手。请先联系运营确认当前版本属于需要换装的范围，并确认照片保存及账号信息，再继续以下安装步骤。",
@@ -216,9 +216,9 @@ const translations = {
     ],
     preparation: "Before you begin",
     ipadPrep:
-      "Prepare an iPad running iPadOS 16.4 or later, an Apple Account and a stable connection. Keep the device powered and check available storage.",
+      "Prepare an iPad running <b>iPadOS 16.4 or later</b>, an Apple Account and a stable connection. Keep the device powered and check available storage.",
     androidPrep:
-      "Check that your device runs Android 12 or later. Keep it powered and connected. Review device specifications and have your operator-provided account ready.",
+      "Check that your device runs <b>Android 12 or later</b>. Keep it powered and connected. Review device specifications and have your operator-provided account ready.",
     legacy: "Confirm applicability first",
     legacyAndroid:
       "Replacing a legacy installation requires removing the old terminal app and LightChain Updater. Ask your operator to confirm that this applies to your version, save your photos and confirm your account details before following the steps below.",
@@ -420,9 +420,9 @@ const translations = {
     scenes: ["初めてのインストール", "旧版からの入れ替え", "アプリの更新"],
     preparation: "開始前に確認",
     ipadPrep:
-      "iPadOS 16.4以降のiPad、Apple Account、安定したネットワークを用意してください。電源と空き容量も確認します。",
+      "<b>iPadOS 16.4以降</b>のiPad、Apple Account、安定したネットワークを用意してください。電源と空き容量も確認します。",
     androidPrep:
-      "Android 12以降であることを確認し、電源とネットワークを確保してください。動作環境を確認し、運営担当者から案内されたアカウントを用意します。",
+      "<b>Android 12以降</b>であることを確認し、電源とネットワークを確保してください。動作環境を確認し、運営担当者から案内されたアカウントを用意します。",
     legacy: "対象バージョンの確認が必要です",
     legacyAndroid:
       "旧版からの入れ替えでは、旧試着端末アプリと更新アシスタントの削除が必要です。担当者に対象バージョンか確認し、写真の保存とアカウント情報を確認してから、以下の手順を進めてください。",
