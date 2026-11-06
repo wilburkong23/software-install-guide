@@ -40,6 +40,9 @@ summary:focus-visible {
   outline-offset: 5px;
 }
 header {
+  position: sticky;
+  top: 0;
+  z-index: 6;
   background: #fafafc;
   border-bottom: 1px solid #e6e6e8;
 }
@@ -105,7 +108,7 @@ header {
   background: rgba(255, 255, 255, 0.94);
   border-bottom: 1px solid #e6e6e8;
   position: sticky;
-  top: 0;
+  top: var(--utility-bar-height, 57px);
   z-index: 5;
   backdrop-filter: blur(18px);
 }
@@ -365,9 +368,9 @@ header {
 }
 .sidebar {
   position: sticky;
-  top: 90px;
+  top: calc(var(--header-stack-height, 124px) + 24px);
   align-self: start;
-  max-height: calc(100dvh - 114px);
+  max-height: calc(100dvh - var(--header-stack-height, 124px) - 48px);
   overflow-y: auto;
   padding-right: 24px;
 }

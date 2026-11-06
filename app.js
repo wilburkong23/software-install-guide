@@ -992,9 +992,13 @@ function render() {
   updateAnchorLayout();
 }
 function updateAnchorLayout() {
+  const utilityHeight = document.querySelector("#app > header").getBoundingClientRect().height;
+  const stackHeight = utilityHeight + document.querySelector(".localnav").getBoundingClientRect().height;
+  document.documentElement.style.setProperty("--utility-bar-height", `${utilityHeight}px`);
+  document.documentElement.style.setProperty("--header-stack-height", `${stackHeight}px`);
   const navigation = document.querySelector(".section-anchors");
   if (!navigation) return;
-  const top = document.querySelector(".localnav").getBoundingClientRect().height + 12;
+  const top = stackHeight + 12;
   document.documentElement.style.setProperty("--anchor-nav-top", `${top}px`);
   document.documentElement.style.setProperty("--anchor-scroll-offset", `${top + navigation.getBoundingClientRect().height + 24}px`);
   updateActiveSection();
