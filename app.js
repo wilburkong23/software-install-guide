@@ -662,20 +662,62 @@ function stepImage(t, ipad, index, scene) {
     ja: ipad ? "日本語のTestFlight実画面です。公開元のアプリ名と説明は中国語のままです。本ガイドではアプリ名を「试衣终端」に統一しています。" : "中国語の実画面に日本語の操作説明を添えています。日本語の実画面は未確認です。名称、バージョン、OS欄が異なる場合は、本ガイドのAndroid 12以降の要件と公式案内に従ってください。",
   };
   const labels = {
-    zh: {title: "操作对照", download: [["轻链更新助手", "找到更新助手区域。"], ["下载 Updater App", "点击此按钮下载更新助手，然后在这台安卓设备上安装。"]], updater: [["业务版本", "仅用于辅助排查，不是试衣终端 App 的当前版本。"], ["检查并更新", "点击此按钮，按系统提示完成下载和安装。"], ["已经是最新版本", "仍需回到试衣终端 App 核对实际版本。"]], open: "点击查看原图"},
-    en: {title: "English button guide", download: [["轻链更新助手", "LightChain Updater: find this section."], ["下载 Updater App", "Download Updater App: tap this button, then install it on this Android device."]], updater: [["业务版本", "Business version: a troubleshooting value, not the terminal app version."], ["检查并更新", "Check and update: tap here, then complete the system download and installation prompts."], ["已经是最新版本", "Up to date: still verify the actual version inside the terminal app."]], open: "Open original image"},
-    ja: {title: "日本語の操作ガイド", download: [["轻链更新助手", "更新アシスタント：この欄を探してください。"], ["下载 Updater App", "更新アシスタントをダウンロード：このボタンを押し、同じAndroid端末にインストールします。"]], updater: [["业务版本", "業務バージョン：調査用の値です。試着アプリのバージョンではありません。"], ["检查并更新", "更新を確認：このボタンを押し、OSの案内に従ってダウンロードとインストールを完了します。"], ["已经是最新版本", "最新バージョン：試着アプリ内で実際のバージョンも確認してください。"]], open: "原寸画像を開く"},
+    zh: {title: "操作对照", download: [["轻链更新助手", "找到更新助手区域。"], ["下载 Updater App", "点击此按钮下载更新助手，然后在这台安卓设备上安装。"]], updater: [["业务版本", "仅用于辅助排查，不是试衣终端 App 的当前版本。"], ["检查并更新", "点击此按钮，按系统提示完成下载和安装。"], ["已经是最新版本", "仍需回到试衣终端 App 核对实际版本。"]], open: "点击放大查看"},
+    en: {title: "English button guide", download: [["轻链更新助手", "LightChain Updater: find this section."], ["下载 Updater App", "Download Updater App: tap this button, then install it on this Android device."]], updater: [["业务版本", "Business version: a troubleshooting value, not the terminal app version."], ["检查并更新", "Check and update: tap here, then complete the system download and installation prompts."], ["已经是最新版本", "Up to date: still verify the actual version inside the terminal app."]], open: "Enlarge image"},
+    ja: {title: "日本語の操作ガイド", download: [["轻链更新助手", "更新アシスタント：この欄を探してください。"], ["下载 Updater App", "更新アシスタントをダウンロード：このボタンを押し、同じAndroid端末にインストールします。"]], updater: [["业务版本", "業務バージョン：調査用の値です。試着アプリのバージョンではありません。"], ["检查并更新", "更新を確認：このボタンを押し、OSの案内に従ってダウンロードとインストールを完了します。"], ["已经是最新版本", "最新バージョン：試着アプリ内で実際のバージョンも確認してください。"]], open: "画像を拡大する"},
   };
   const copy = labels[state.locale];
   const dimensions = ipad ? [889, 530] : index === 0 ? [640, 986] : [1086, 1448];
   return `<figure class="tutorial-image ${ipad ? "" : "tutorial-annotated"}">
-    <a href="./assets/${imagePath}" target="_blank" rel="noopener noreferrer" aria-label="${copy.open}">
+    <button type="button" class="image-preview-trigger" aria-haspopup="dialog" aria-label="${copy.open}">
       <img src="./assets/${imagePath}" width="${dimensions[0]}" height="${dimensions[1]}" alt="${ipad ? t.ipadSteps[1][0] : index === 0 ? t.androidSteps[0][0] : t.androidSteps[2][0]}" loading="lazy" />
-    </a>
+    </button>
     ${ipad ? "" : `<div class="tutorial-key"><h4>${copy.title}</h4><dl>${(index === 0 ? copy.download : copy.updater).map(([label, explanation]) => `<dt lang="zh-CN">${label}</dt><dd>${explanation}</dd>`).join("")}</dl></div>`}
-    <figcaption>${captions[state.locale]} ${copy.open} ↗</figcaption>
+    <figcaption>${captions[state.locale]} ${copy.open}</figcaption>
   </figure>`;
 }
+function openImageViewer(trigger) {
+  const source = trigger.querySelector("img");
+  const copy = {
+    zh: { title: "图片预览", close: "关闭大图" },
+    en: { title: "Image preview", close: "Close image" },
+    ja: { title: "画像プレビュー", close: "画像を閉じる" },
+  }[state.locale];
+  const dialog = document.createElement("dialog");
+  dialog.className = "image-viewer";
+  dialog.setAttribute("aria-label", copy.title);
+  dialog.innerHTML = `<div class="image-viewer-panel"><button type="button" class="image-viewer-close" autofocus><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button><img class="image-viewer-image" /></div>`;
+  const closeButton = dialog.querySelector("button");
+  closeButton.setAttribute("aria-label", copy.close);
+  closeButton.title = copy.close;
+  const image = dialog.querySelector("img");
+  image.src = source.currentSrc || source.src;
+  image.alt = source.alt;
+  closeButton.addEventListener("click", () => dialog.close());
+  dialog.addEventListener("keydown", event => {
+    if (event.key === "Tab") {
+      event.preventDefault();
+      closeButton.focus();
+    }
+  });
+  let startedOnBackdrop = false;
+  dialog.addEventListener("pointerdown", event => { startedOnBackdrop = event.target === dialog; });
+  dialog.addEventListener("click", event => {
+    if (startedOnBackdrop && event.target === dialog) dialog.close();
+  });
+  const closeOnNavigation = () => dialog.close();
+  window.addEventListener("hashchange", closeOnNavigation);
+  dialog.addEventListener("close", () => {
+    document.documentElement.classList.remove("image-viewer-open");
+    window.removeEventListener("hashchange", closeOnNavigation);
+    dialog.remove();
+    if (trigger.isConnected) trigger.focus({ preventScroll: true });
+  }, { once: true });
+  document.body.append(dialog);
+  document.documentElement.classList.add("image-viewer-open");
+  dialog.showModal();
+}
+
 function renderGuide(t) {
   const ipad = state.device === "ipad";
   const sections = sceneKeys.map((scene, sceneIndex) => {
@@ -841,6 +883,9 @@ function render() {
     const main = document.getElementById("main");
     main.tabIndex = -1;
     main.focus();
+  });
+  document.querySelectorAll(".image-preview-trigger").forEach(trigger => {
+    trigger.addEventListener("click", () => openImageViewer(trigger));
   });
   updateAnchorLayout();
 }
