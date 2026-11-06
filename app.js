@@ -33,7 +33,7 @@ const translations = {
     ipadPrep:
       "请在您需要安装应用的 iPad 上确认系统为 <b>iPadOS 16.4 或以上</b>，并对照设备规格检查<b>芯片、内存、存储及摄像头等硬件满足最低要求</b>。存储容量至少为 <b>64GB</b>，并留有足够可用空间；若芯片版本低于 A14，请与技术人员确认是否满足安装条件。准备好 Apple 账户及稳定网络，并保持供电。",
     androidPrep:
-      "确认设备为 <b>Android 12 或以上</b>系统，连接稳定网络并保持供电。安装前请查看设备规格，准备好官方提供的登录账号。",
+      "请在您需要安装应用的安卓设备上确认系统为 <b>Android 12 或以上</b>，并对照对应设备规格核对<b>处理器、内存、存储、屏幕及摄像头</b>。当前最低选型建议为 <b>8GB 内存、64GB 存储</b>，并保留安装、更新所需空间。连接稳定网络并保持供电，准备好官方提供的登录账号。",
     legacy: "适用范围待确认",
     legacyIpadTitle: "安装前，请删除旧应用",
     legacyAndroid:
@@ -243,7 +243,7 @@ const translations = {
     ipadPrep:
       "On the iPad where you want to install the app, confirm that the system runs <b>iPadOS 16.4 or later</b> and check the device specifications to ensure that the <b>chip, memory, storage and camera meet the minimum requirements</b>. Storage capacity must be at least <b>64GB</b>, with enough free space. If your chip is older than A14, please consult technical support to confirm whether the device meets the installation requirements. Have an Apple Account and a stable connection ready, and keep the device powered.",
     androidPrep:
-      "Check that your device runs <b>Android 12 or later</b>. Keep it powered and connected. Review device specifications and have the account provided by official support ready.",
+      "On the Android device where you want to install the app, confirm <b>Android 12 or later</b> and check the relevant specifications for its <b>processor, memory, storage, screen and camera</b>. Current minimum selection guidelines are <b>8GB RAM and 64GB storage</b>, with free space for installation and updates. Keep the device powered and connected, and have the account provided by official support ready.",
     legacy: "Confirm applicability first",
     legacyIpadTitle: "Delete the old app before installing",
     legacyAndroid:
@@ -471,7 +471,7 @@ const translations = {
     ipadPrep:
       "アプリをインストールするiPadで、OSが<b>iPadOS 16.4以降</b>であることを確認してください。動作環境と照合し、<b>チップ、メモリ、ストレージ、カメラなどが最低要件を満たしていること</b>も確認します。ストレージ容量は<b>64GB以上</b>で、十分な空き容量が必要です。A14より前のチップを搭載している場合は、インストール条件を満たすか技術担当者に確認してください。Apple Account、安定したネットワーク、電源を用意してください。",
     androidPrep:
-      "<b>Android 12以降</b>であることを確認し、電源とネットワークを確保してください。動作環境を確認し、公式サポートから案内されたアカウントを用意します。",
+      "アプリをインストールするAndroid端末で、OSが<b>Android 12以降</b>であることを確認し、該当する端末の動作環境と照合して<b>プロセッサ、メモリ、ストレージ、画面、カメラ</b>を確認してください。現在の最低選定目安は<b>メモリ8GB、ストレージ64GB</b>で、インストール・更新用の空き容量も必要です。電源と安定したネットワークを確保し、公式サポートから案内されたアカウントを用意してください。",
     legacy: "対象バージョンの確認が必要です",
     legacyIpadTitle: "インストール前に旧版アプリを削除",
     legacyAndroid:
@@ -793,7 +793,7 @@ function renderGuide(t) {
       : (ipad ? t.ipadSteps : t.androidSteps);
     return /* HTML */ `<section class="anchor-section" id="guide-${scene}" tabindex="-1" aria-labelledby="guide-title-${scene}">
       <h2 id="guide-title-${scene}">${t.scenes[sceneIndex]}</h2>
-      <div class="note note-check"><strong>${t.preparation}</strong>${ipad ? `${t.ipadPrep} <a href="${href("specs", "ipad")}/spec-ipad">${t.specsLink} ›</a>` : t.androidPrep}</div>
+      <div class="note note-check"><strong>${t.preparation}</strong>${ipad ? t.ipadPrep : t.androidPrep} <a href="${href("specs", state.device)}/spec-${state.device}">${t.specsLink} ›</a></div>
       ${scene === "legacy" ? `<div class="note note-warning"><strong>${ipad ? t.legacyIpadTitle : t.legacy}</strong>${ipad ? t.legacyIpad : t.legacyAndroid}</div>` : ""}
       <ol class="steps">
         ${steps.map((step, index) => `<li><h3>${step[0]}</h3><p>${step[1]}</p>${step[2] ? `<a class="action" href="${step[3]}" target="_blank" rel="noopener noreferrer">${step[2]} <span aria-hidden="true">↗</span></a>` : ""}${stepImage(t, ipad, index, scene)}</li>`).join("")}
