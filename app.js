@@ -47,19 +47,19 @@ const translations = {
     ipadSteps: [
       [
         "安装 TestFlight",
-        "在 App Store 中获取 Apple 提供的 TestFlight，安装后打开并完成首次设置。",
+        "请在您需要安装应用的 iPad 上打开 App Store，获取 Apple 提供的 TestFlight，安装后打开并完成首次设置。",
         "获取 TestFlight",
         "https://apps.apple.com/app/testflight/id899247664",
       ],
       [
         "返回此页，打开应用邀请",
-        "完成 TestFlight 设置后，回到本手册，点击下方入口，在邀请页选择“在 TestFlight 中查看”。",
+        "完成 TestFlight 设置后，请在您需要安装应用的 iPad 上回到本手册，点击下方入口，在邀请页选择“在 TestFlight 中查看”。",
         "安装轻链AI试衣终端",
         "https://testflight.apple.com/join/NdJvT2Gt",
       ],
       [
         "接受邀请并安装",
-        "核对应用名称为轻链AI试衣终端，首次加入时点击“接受”，再点击“安装”。",
+        "请在该 iPad 的 TestFlight 中核对应用名称为轻链AI试衣终端，首次加入时点击“接受”，再点击“安装”。",
       ],
       [
         "打开试衣终端",
@@ -69,17 +69,17 @@ const translations = {
     androidSteps: [
       [
         "下载轻链更新助手",
-        "在需要安装的安卓设备浏览器中打开下载页，选择“下载 Updater App”。",
+        "请在您需要安装应用的安卓设备上，使用浏览器打开下载页，选择“下载 Updater App”。",
         "打开下载页",
         "https://tryon-mirror.lightchainai.com/d",
       ],
       [
         "安装更新助手",
-        "从浏览器下载记录或文件管理中打开 APK。按系统提示允许当前浏览器或文件管理安装应用，再继续安装。受管设备请联系管理员。",
+        "请在您需要安装应用的安卓设备上，从浏览器下载记录或文件管理中打开 APK。按系统提示允许当前浏览器或文件管理安装应用，再继续安装。受管设备请联系管理员。",
       ],
       [
         "安装试衣终端 App",
-        "打开轻链更新助手，点击“检查并更新”。若系统要求允许助手安装应用，按提示授权后继续下载和安装。",
+        "请在您需要安装应用的安卓设备上打开轻链更新助手，点击“检查并更新”。若系统要求允许助手安装应用，按提示授权后继续下载和安装。",
       ],
       [
         "打开并核对版本",
@@ -90,7 +90,7 @@ const translations = {
       ["结束当前体验", "保存本次照片，保持网络与电量。"],
       [
         "在 TestFlight 中更新",
-        "打开 TestFlight，找到轻链AI试衣终端，点击“更新”。若仅显示“打开”，请核对版本是否符合运营通知。",
+        "请在您需要更新应用的 iPad 上打开 TestFlight，找到轻链AI试衣终端，点击“更新”。若仅显示“打开”，请核对版本是否符合运营通知。",
       ],
       [
         "重新打开并检查",
@@ -104,11 +104,11 @@ const translations = {
       ],
       [
         "在 App 中检查更新",
-        "首页左上 Logo 连续点击 7 次进入个人中心，记录当前版本并点击“检查更新”。",
+        "请在您需要更新应用的安卓设备上打开轻链AI试衣终端，连续点击首页左上 Logo 7 次进入个人中心，记录当前版本并点击“检查更新”。",
       ],
       [
         "通过更新助手完成安装",
-        "跳转轻链更新助手后点击“检查并更新”，按提示下载和安装。无法跳转时可从桌面打开助手。",
+        "请在同一台安卓设备上跳转至轻链更新助手后点击“检查并更新”，按提示下载和安装。无法跳转时可从桌面打开助手。",
       ],
       [
         "返回 App 核对",
@@ -160,7 +160,7 @@ const translations = {
       ],
       [
         "已经安装 TestFlight，为什么找不到试衣终端？",
-        "返回 iPad 安装教程，点击“安装轻链AI试衣终端”，从邀请页进入 TestFlight，接受邀请并安装应用。",
+        "请在您需要安装应用的 iPad 上打开本手册，返回 iPad 安装教程，点击“安装轻链AI试衣终端”，从邀请页进入 TestFlight，接受邀请并安装应用。",
       ],
       [
         "更新助手显示最新，为什么 App 版本没变？",
@@ -234,19 +234,19 @@ const translations = {
     ipadSteps: [
       [
         "Install TestFlight",
-        "Get TestFlight by Apple from the App Store. Open it and complete the initial setup.",
+        "On the iPad where you want to install the app, open the App Store and get TestFlight by Apple. Open it and complete the initial setup.",
         "Get TestFlight",
         "https://apps.apple.com/app/testflight/id899247664",
       ],
       [
         "Return here and open the invitation",
-        "After setup, return to this guide and use the link below. Select “View in TestFlight” on the invitation page.",
+        "After setup, return to this guide on the iPad where you want to install the app and use the link below. Select “View in TestFlight” on the invitation page.",
         "Install LightChain AI Fitting Terminal",
         "https://testflight.apple.com/join/NdJvT2Gt",
       ],
       [
         "Accept and install",
-        "Check the app name. When joining for the first time, select Accept, then Install.",
+        "In TestFlight on that iPad, check the app name. When joining for the first time, select Accept, then Install.",
       ],
       [
         "Open the terminal app",
@@ -256,17 +256,17 @@ const translations = {
     androidSteps: [
       [
         "Download LightChain Updater",
-        "Open the download page on your Android device and select “下载 Updater App”.",
+        "On the Android device where you want to install the app, open the download page in a browser and select “下载 Updater App”.",
         "Open download page",
         "https://tryon-mirror.lightchainai.com/d",
       ],
       [
         "Install the updater",
-        "Open the APK from browser downloads or your file manager. If prompted, allow this source to install apps. Contact your administrator for managed devices.",
+        "On the Android device where you want to install the app, open the APK from browser downloads or your file manager. If prompted, allow this source to install apps. Contact your administrator for managed devices.",
       ],
       [
         "Install the terminal app",
-        "Open LightChain Updater and select “检查并更新” (Check and update). Grant installation permission if requested and finish downloading and installing.",
+        "On the Android device where you want to install the app, open LightChain Updater and select “检查并更新” (Check and update). Grant installation permission if requested and finish downloading and installing.",
       ],
       [
         "Open and check the version",
@@ -280,7 +280,7 @@ const translations = {
       ],
       [
         "Update in TestFlight",
-        "Find the terminal app in TestFlight and select Update. If it shows Open, compare the version with your operator’s release notice.",
+        "On the iPad where you want to update the app, open TestFlight, find the terminal app and select Update. If it shows Open, compare the version with your operator’s release notice.",
       ],
       [
         "Open and verify",
@@ -294,11 +294,11 @@ const translations = {
       ],
       [
         "Check for updates in the app",
-        "Tap the top-left logo on the home screen seven times to open the profile. Record the current version and select Check for updates.",
+        "On the Android device where you want to update the app, open the terminal app and tap the top-left logo on the home screen seven times to open the profile. Record the current version and select Check for updates.",
       ],
       [
         "Complete installation with the updater",
-        "In LightChain Updater, select “检查并更新” (Check and update). Follow the download and installation prompts. Open the updater from the desktop if needed.",
+        "On the same Android device, open LightChain Updater and select “检查并更新” (Check and update). Follow the download and installation prompts. Open the updater from the desktop if needed.",
       ],
       [
         "Return to the app",
@@ -362,7 +362,7 @@ const translations = {
     faqs: [
       [
         "Where can I find the app version?",
-        "Tap the top-left logo on the home screen seven times. Find Current version in the profile and compare it with the release notice.",
+        "On the Android device where you want to update the app, open the terminal app and tap the top-left logo on the home screen seven times. Find Current version in the profile and compare it with the release notice.",
       ],
       [
         "Why does installation fail on Android?",
@@ -370,7 +370,7 @@ const translations = {
       ],
       [
         "TestFlight is installed. Where is the terminal app?",
-        "Return to the iPad guide and select Install LightChain AI Fitting Terminal. Open the invitation in TestFlight, accept and install.",
+        "On the iPad where you want to install the app, open this manual, return to the iPad guide and select Install LightChain AI Fitting Terminal. Open the invitation in TestFlight, accept and install.",
       ],
       [
         "The updater says up to date, but the app version is unchanged.",
@@ -439,19 +439,19 @@ const translations = {
     ipadSteps: [
       [
         "TestFlightをインストール",
-        "App StoreでApple提供のTestFlightを入手し、起動して初期設定を完了します。",
+        "アプリをインストールするiPadでApp Storeを開き、Apple提供のTestFlightを入手し、起動して初期設定を完了します。",
         "TestFlightを入手",
         "https://apps.apple.com/app/testflight/id899247664",
       ],
       [
         "このページに戻り、招待を開く",
-        "初期設定後、このガイドに戻って下のリンクを開き、招待ページで「TestFlightで表示」を選択します。",
+        "初期設定後、アプリをインストールするiPadでこのガイドに戻って下のリンクを開き、招待ページで「TestFlightで表示」を選択します。",
         "AI試着端末をインストール",
         "https://testflight.apple.com/join/NdJvT2Gt",
       ],
       [
         "招待を承認してインストール",
-        "アプリ名を確認します。初回は「承認」を選択し、「インストール」をタップします。",
+        "同じiPadのTestFlightでアプリ名を確認します。初回は「承認」を選択し、「インストール」をタップします。",
       ],
       [
         "試着端末アプリを開く",
@@ -461,17 +461,17 @@ const translations = {
     androidSteps: [
       [
         "更新アシスタントをダウンロード",
-        "対象のAndroidデバイスでダウンロードページを開き、「下载 Updater App」を選択します。",
+        "アプリをインストールするAndroidデバイスのブラウザでダウンロードページを開き、「下载 Updater App」を選択します。",
         "ダウンロードページへ",
         "https://tryon-mirror.lightchainai.com/d",
       ],
       [
         "更新アシスタントをインストール",
-        "ブラウザのダウンロード履歴またはファイル管理からAPKを開きます。必要に応じて提供元からのインストールを許可します。管理対象デバイスは管理者にご相談ください。",
+        "アプリをインストールするAndroidデバイスで、ブラウザのダウンロード履歴またはファイル管理からAPKを開きます。必要に応じて提供元からのインストールを許可します。管理対象デバイスは管理者にご相談ください。",
       ],
       [
         "試着端末アプリをインストール",
-        "更新アシスタントを開き、「检查并更新」（更新を確認）を選択します。必要な権限を許可し、ダウンロードとインストールを完了します。",
+        "アプリをインストールするAndroidデバイスで更新アシスタントを開き、「检查并更新」（更新を確認）を選択します。必要な権限を許可し、ダウンロードとインストールを完了します。",
       ],
       [
         "アプリとバージョンを確認",
@@ -482,7 +482,7 @@ const translations = {
       ["利用中の操作を終了", "写真を保存し、ネットワークと電源を確保します。"],
       [
         "TestFlightで更新",
-        "TestFlightで試着端末アプリを見つけ、「アップデート」を選択します。「開く」と表示される場合は、案内されたバージョンか確認してください。",
+        "アプリを更新するiPadでTestFlightを開き、試着端末アプリを見つけ、「アップデート」を選択します。「開く」と表示される場合は、案内されたバージョンか確認してください。",
       ],
       [
         "再起動して確認",
@@ -496,11 +496,11 @@ const translations = {
       ],
       [
         "アプリで更新を確認",
-        "ホーム画面左上のロゴを7回タップして個人ページを開きます。現在のバージョンを記録し、更新確認を選択します。",
+        "アプリを更新するAndroidデバイスで試着端末アプリを開き、ホーム画面左上のロゴを7回タップして個人ページを開きます。現在のバージョンを記録し、更新確認を選択します。",
       ],
       [
         "更新アシスタントでインストール",
-        "「检查并更新」（更新を確認）を選択し、案内に従ってダウンロードとインストールを完了します。自動で開かない場合はデスクトップから起動してください。",
+        "同じAndroidデバイスで更新アシスタントを開き、「检查并更新」（更新を確認）を選択し、案内に従ってダウンロードとインストールを完了します。自動で開かない場合はデスクトップから起動してください。",
       ],
       [
         "アプリに戻って確認",
@@ -556,7 +556,7 @@ const translations = {
       ],
       [
         "TestFlightを入れましたが、試着端末アプリがありません。",
-        "iPadガイドに戻り、「AI試着端末をインストール」を選択します。招待からTestFlightに移動し、承認とインストールを完了してください。",
+        "アプリをインストールするiPadで本マニュアルのiPadガイドに戻り、「AI試着端末をインストール」を選択します。招待からTestFlightに移動し、承認とインストールを完了してください。",
       ],
       [
         "更新アシスタントでは最新ですが、アプリのバージョンが変わりません。",
