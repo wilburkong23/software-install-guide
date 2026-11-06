@@ -52,7 +52,7 @@ header {
   padding-right: 32px;
 }
 .topbar {
-  height: 56px;
+  height: 64px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -75,11 +75,32 @@ header {
 .utility {
   display: flex;
   align-items: center;
-  gap: 20px;
-  font-size: 12px;
-  color: #6e6e73;
+  gap: 12px;
+  font-size: 13px;
+  color: #0066cc;
 }
-.utility select,
+.utility label {
+  font-weight: 600;
+  cursor: pointer;
+}
+.utility select {
+  appearance: none;
+  -webkit-appearance: none;
+  min-width: 150px;
+  height: 44px;
+  padding: 0 36px 0 14px;
+  border: 1px solid #c3d7ee;
+  border-radius: 10px;
+  background: #f5f9ff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='m2.5 4.5 3.5 3.5 3.5-3.5' stroke='%230066cc' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right 12px center / 12px 12px no-repeat;
+  color: #1d1d1f;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.utility select:hover {
+  border-color: #0071e3;
+  background-color: #edf5ff;
+}
 .version select {
   border: 0;
   background: transparent;
@@ -583,10 +604,21 @@ details p {
     padding-right: 22px;
   }
   .topbar {
-    height: 52px;
+    height: 84px;
+    gap: 12px;
   }
-  .utility > label {
-    display: none;
+  .utility {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+  }
+  .utility label {
+    font-size: 11px;
+  }
+  .utility select {
+    min-width: 136px;
+    font-size: 13px;
+    padding-left: 12px;
   }
   .brand {
     font-size: 15px;
