@@ -866,7 +866,6 @@ details p {
 .spec-subheading { margin-top: 36px; }
 .spec-list { padding-left: 22px; line-height: 1.8; }
 .spec-list li + li { margin-top: 12px; }
-.spec-source { margin-top: 36px; font-size: 13px; color: #6e6e73; }
 .tutorial-image { max-width: 100%; }
 .tutorial-image img { max-height: 560px; }
 .tutorial-annotated { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 20px; align-items: start; }

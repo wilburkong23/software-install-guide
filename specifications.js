@@ -64,7 +64,7 @@ const specificationUpdates = {
       ]
     ],
     "recording": "运行限制：摄像头须能被系统及 App 正常枚举、打开和采集。本地双路录制需要可用的 H.264 Surface 编码器及 EGL14。",
-    "networkTitle": "Pro 模型实时视频：带宽与网络质量",
+    "networkTitle": "pro 模型实时视频：带宽与网络质量",
     "networkHeaders": [
       "项目",
       "基本要求／质量参考",
@@ -100,7 +100,6 @@ const specificationUpdates = {
       "不要将媒体流强制送入无法转发 UDP 的 HTTP／HTTPS 代理；不要解密检查 DTLS／SRTP。相关中继服务须排除 TLS 解密检查。不得因实时音视频、P2P 或 AI 服务分类而拦截或限速。",
       "同时验证交付环境业务 API、OSS／CDN 的 HTTPS 图片与录像上传下载。实际设备、现场网络和计划并发量下连续观察真实会话 2–3 分钟：质量保持 good、最差 fair，无停滞或带宽受限；记录抖动、重连并验证录像上传。网页、测速和 API 连通不能替代媒体验收。"
     ],
-    "source": "规格依据：展会与外销问题跟进文档；同步于 2026 年 11 月 6 日。候选配置需实机验证，网络基础设施变化后应复核。",
     "terminalRows": [
       [
         "系统",
@@ -268,7 +267,7 @@ const specificationUpdates = {
       ]
     ],
     "recording": "Runtime requirements: the system and app must enumerate, open and capture from the camera. Local dual-stream recording requires a working H.264 Surface encoder and EGL14.",
-    "networkTitle": "Pro model live video: bandwidth and quality",
+    "networkTitle": "pro model live video: bandwidth and quality",
     "networkHeaders": [
       "Metric",
       "Baseline / quality bands",
@@ -304,7 +303,6 @@ const specificationUpdates = {
       "Do not force media through HTTP / HTTPS proxies that cannot forward UDP. Do not decrypt DTLS / SRTP; exclude the relevant relay service from TLS inspection. Avoid blocking or throttling based on real-time video, P2P or AI service categories.",
       "Also validate HTTPS image and video transfers to the delivered business API and OSS / CDN endpoints. Test actual devices at the site and planned concurrency for 2–3 minutes: good quality, fair at worst, no stalls or bandwidth limitation. Record jitter and reconnects and verify video uploads. Web browsing, speed tests and API connectivity do not replace media acceptance tests."
     ],
-    "source": "Source: exhibition and overseas deployment issue tracker. Synced November 6, 2026. Validate candidate devices and recheck network rules when infrastructure changes.",
     "terminalRows": [
       [
         "System",
@@ -472,7 +470,7 @@ const specificationUpdates = {
       ]
     ],
     "recording": "動作条件：OSとアプリからカメラを列挙・起動し、映像を取得できること。ローカルの2系統録画には、利用可能なH.264 SurfaceエンコーダとEGL14が必要です。",
-    "networkTitle": "Proモデルのリアルタイム映像：帯域と品質",
+    "networkTitle": "proモデルのリアルタイム映像：帯域と品質",
     "networkHeaders": [
       "項目",
       "基本要件・品質目安",
@@ -508,7 +506,6 @@ const specificationUpdates = {
       "UDP転送に対応しないHTTP／HTTPSプロキシへメディア通信を強制しないでください。DTLS／SRTPを復号検査せず、該当する中継サービスをTLS検査の対象外とします。リアルタイム映像、P2P、AIの分類で遮断・制限しないでください。",
       "納品環境の業務API、OSS／CDNへのHTTPS画像・動画送受信も検証します。実機、現場ネットワーク、予定同時台数で2–3分間の実セッションを確認し、good、最低でもfairを維持し、停止・帯域制限がないことを確認します。ジッター、再接続、動画アップロードも記録します。Web閲覧、速度測定、API疎通だけでは代替できません。"
     ],
-    "source": "出典：展示会・海外導入の課題追跡文書。2026年11月6日同期。候補端末は実機で検証し、通信基盤変更時は設定を再確認してください。",
     "terminalRows": [
       [
         "OS",
