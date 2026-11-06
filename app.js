@@ -819,9 +819,10 @@ function renderSpecTable(headers, rows) {
 function renderSpecs(t) {
   const spec = specificationUpdates[state.locale];
   const sections = deviceKeys.map((key, index) => {
-    const rows = key === "ipad" ? spec.ipadRows : spec.androidRows;
+    const rows = key === "ipad" ? spec.ipadRows : key === "terminal" ? spec.terminalRows : spec.padRows;
     return /* HTML */ `<section class="anchor-section" id="spec-${key}" tabindex="-1" aria-labelledby="spec-title-${key}">
       <h2 id="spec-title-${key}">${t.devices[index]}</h2>
+      ${key === "ipad" ? "" : `<p>${key === "terminal" ? spec.terminalIntro : spec.padIntro}</p>`}
       <div class="table-wrap">
         <table>
           <thead><tr>${t.headers.map(title => `<th scope="col">${title}</th>`).join("")}</tr></thead>

@@ -29,58 +29,6 @@ const specificationUpdates = {
         "持续采集 1080p／30fps；优先 10.9 英寸及以上，mini 用于紧凑场景；竖屏固定、全身取景、均匀照明"
       ]
     ],
-    "androidRows": [
-      [
-        "系统",
-        "Android 12 及以上",
-        "Android 15 及以上，使用与交付 App 验证匹配的稳定固件"
-      ],
-      [
-        "处理器",
-        "需结合整机实测，无统一最低型号",
-        "RK3588 级别或同档平板处理器"
-      ],
-      [
-        "内存",
-        "8GB（最低选型建议）",
-        "8GB 及以上；高频与多任务可选 12GB 及以上"
-      ],
-      [
-        "存储",
-        "64GB，并为更新、缓存及待上传录像保留空间",
-        "64GB 及以上；平板新采购优先 128GB，日常保留 20GB 可用空间"
-      ],
-      [
-        "尺寸",
-        "无固定英寸安装限制；满足取景、文字可读性和触控操作",
-        "一体机 10.5–55 英寸；平板展示优先 10.5 英寸及以上"
-      ],
-      [
-        "屏幕／触控",
-        "系统正常识别，点击、滑动与多点触控可用",
-        "红外／电容，多点触控"
-      ],
-      [
-        "分辨率",
-        "无统一最低像素要求，需实测",
-        "1K–4K，核对面板实际像素；高分屏不代表模型输出分辨率更高"
-      ],
-      [
-        "网络",
-        "可稳定访问业务、模型实时视频和媒体上传服务",
-        "有线／无线；固定场地优先有线，平板优先稳定的 5GHz Wi-Fi"
-      ],
-      [
-        "接口",
-        "相机与网络接口可用；外接 USB 相机验证驱动及 App 调用",
-        "一体机具备网口／USB；平板使用内置相机，外接时验证 USB 接入能力"
-      ],
-      [
-        "摄像头",
-        "App 可识别并持续采集，按 1080p／30fps 验证；授予摄像头、麦克风权限",
-        "一体机：影石 Insta360 Link 2C；平板：实测内置相机，核对取景、旋转与镜像"
-      ]
-    ],
     "processorTitle": "安卓平板处理器选型范围",
     "processorNote": "以下是候选范围，不代表所有搭载这些芯片的设备都已通过验证。按实际内存、固件、相机与完整试衣流程验收；型号中的“+”“s”须完整核对。",
     "processorHeaders": [
@@ -152,7 +100,108 @@ const specificationUpdates = {
       "不要将媒体流强制送入无法转发 UDP 的 HTTP／HTTPS 代理；不要解密检查 DTLS／SRTP。相关中继服务须排除 TLS 解密检查。不得因实时音视频、P2P 或 AI 服务分类而拦截或限速。",
       "同时验证交付环境业务 API、OSS／CDN 的 HTTPS 图片与录像上传下载。实际设备、现场网络和计划并发量下连续观察真实会话 2–3 分钟：质量保持 good、最差 fair，无停滞或带宽受限；记录抖动、重连并验证录像上传。网页、测速和 API 连通不能替代媒体验收。"
     ],
-    "source": "规格依据：展会与外销问题跟进文档；同步于 2026 年 11 月 6 日。候选配置需实机验证，网络基础设施变化后应复核。"
+    "source": "规格依据：展会与外销问题跟进文档；同步于 2026 年 11 月 6 日。候选配置需实机验证，网络基础设施变化后应复核。",
+    "terminalRows": [
+      [
+        "系统",
+        "Android 12 及以上",
+        "Android 15 及以上，使用与交付 App 验证匹配的稳定固件"
+      ],
+      [
+        "主板／处理器",
+        "需结合整机、固件及相机实测",
+        "RK3588 级别；参考配置：4×Cortex-A76＋4×Cortex-A55，Mali-G610 MP4"
+      ],
+      [
+        "内存",
+        "8GB（最低选型建议）",
+        "8GB 及以上；高频与多任务可选 12GB 及以上"
+      ],
+      [
+        "存储",
+        "64GB，并为更新、缓存及待上传录像保留空间",
+        "64GB 及以上，日常保留 20GB 可用空间"
+      ],
+      [
+        "一体机尺寸",
+        "无固定英寸安装限制；满足现场取景、文字可读性和触控操作",
+        "10.5–55 英寸，按场地选型"
+      ],
+      [
+        "触控屏",
+        "系统正常识别，点击、滑动与多点触控可用",
+        "红外／电容，多点触控"
+      ],
+      [
+        "分辨率",
+        "无统一最低像素要求，需实测",
+        "1K–4K，核对面板实际像素；高分屏不代表模型输出分辨率更高"
+      ],
+      [
+        "固定场地网络",
+        "可稳定访问业务、模型实时视频和媒体上传服务",
+        "优先有线网络；使用无线时验证现场稳定性"
+      ],
+      [
+        "网口／USB",
+        "实际使用的网络和相机接口可用；USB 相机驱动及 App 调用须验证",
+        "一体机具备网口及 USB 接口"
+      ],
+      [
+        "外接摄像头",
+        "App 可识别并持续采集，按 1080p／30fps 验证；授予摄像头、麦克风权限",
+        "影石 Insta360 Link 2C，结合实际安装位置验证全身取景"
+      ]
+    ],
+    "padRows": [
+      [
+        "系统",
+        "Android 12 及以上",
+        "Android 15 及以上，使用与交付 App 验证匹配的稳定固件"
+      ],
+      [
+        "平板处理器",
+        "需结合具体机型实测，不仅按芯片型号判断",
+        "RK3588 同档或更高候选；具体骁龙、天玑范围见下方选型表"
+      ],
+      [
+        "内存",
+        "8GB（最低选型建议）",
+        "8GB 及以上；高频与多任务可选 12GB 及以上"
+      ],
+      [
+        "存储",
+        "64GB，并为更新、缓存及待上传录像保留空间",
+        "新采购优先 128GB 及以上，日常保留 20GB 可用空间"
+      ],
+      [
+        "屏幕与触控",
+        "满足文字可读性、取景与操作；点击、滑动、多点触控正常",
+        "展示优先 10.5 英寸及以上，按现场使用场景选型"
+      ],
+      [
+        "分辨率",
+        "无统一最低像素要求，需实测",
+        "1K–4K，核对面板实际像素；高分屏不代表模型输出分辨率更高"
+      ],
+      [
+        "无线网络",
+        "可稳定访问业务、模型实时视频和媒体上传服务",
+        "优先信号稳定的 5GHz Wi-Fi，按现场并发量验证"
+      ],
+      [
+        "外设扩展（如使用）",
+        "外接相机时，单独验证 USB 接入能力、驱动及 App 调用",
+        "采用内置相机时无需按一体机要求配置网口／外接相机"
+      ],
+      [
+        "内置摄像头",
+        "App 可识别并持续采集，按 1080p／30fps 验证；授予摄像头、麦克风权限",
+        "使用实测通过的内置相机，核对全身取景、旋转与镜像"
+      ]
+    ],
+    "terminalIntro": "面向固定安装的安卓一体机，重点核对主板、触控屏、外接相机及有线接口。",
+    "padIntro": "面向安卓平板，重点核对整机处理器、内置相机、屏幕操作和无线网络。"
   },
   "en": {
     "modelTitle": "Recommended iPad models",
@@ -182,58 +231,6 @@ const specificationUpdates = {
         "Camera & screen",
         "Camera accessible to the app, with permission granted",
         "Continuous 1080p / 30fps. Prefer 10.9 inches or larger; mini for compact spaces. Mount in portrait with full-body framing and even lighting."
-      ]
-    ],
-    "androidRows": [
-      [
-        "System",
-        "Android 12 or later",
-        "Android 15 or later with firmware validated against the delivered app"
-      ],
-      [
-        "Processor",
-        "Validate the complete device; no universal minimum model",
-        "RK3588-class or comparable tablet processor"
-      ],
-      [
-        "Memory",
-        "8GB minimum selection guideline",
-        "8GB or more; 12GB or more for intensive use and multitasking"
-      ],
-      [
-        "Storage",
-        "64GB; reserve space for updates, cache and pending video uploads",
-        "64GB or more; prefer 128GB for new tablets and keep 20GB free"
-      ],
-      [
-        "Size",
-        "No fixed installation size; ensure readable text, usable touch targets and suitable framing",
-        "All-in-one: 10.5–55 inches; tablet displays: preferably 10.5 inches or larger"
-      ],
-      [
-        "Screen / touch",
-        "System recognition, taps, swipes and multitouch must work",
-        "Infrared / capacitive multitouch"
-      ],
-      [
-        "Resolution",
-        "No universal minimum pixel count; validate on device",
-        "1K–4K; verify actual panel pixels. Higher display resolution does not increase model output resolution."
-      ],
-      [
-        "Network",
-        "Reliable access to business, live model video and media-upload services",
-        "Wired / wireless; prefer Ethernet for fixed installations and stable 5GHz Wi-Fi for tablets"
-      ],
-      [
-        "Interfaces",
-        "Working camera and network interfaces; validate USB camera drivers and app access",
-        "All-in-one: Ethernet / USB. Tablets: built-in camera; validate USB access for external cameras."
-      ],
-      [
-        "Camera",
-        "Recognized by the app; continuous 1080p / 30fps capture validation; camera and microphone permissions",
-        "All-in-one: Insta360 Link 2C. Tablets: tested built-in cameras; verify framing, rotation and mirroring."
       ]
     ],
     "processorTitle": "Android tablet processor candidates",
@@ -307,7 +304,108 @@ const specificationUpdates = {
       "Do not force media through HTTP / HTTPS proxies that cannot forward UDP. Do not decrypt DTLS / SRTP; exclude the relevant relay service from TLS inspection. Avoid blocking or throttling based on real-time video, P2P or AI service categories.",
       "Also validate HTTPS image and video transfers to the delivered business API and OSS / CDN endpoints. Test actual devices at the site and planned concurrency for 2–3 minutes: good quality, fair at worst, no stalls or bandwidth limitation. Record jitter and reconnects and verify video uploads. Web browsing, speed tests and API connectivity do not replace media acceptance tests."
     ],
-    "source": "Source: exhibition and overseas deployment issue tracker. Synced November 6, 2026. Validate candidate devices and recheck network rules when infrastructure changes."
+    "source": "Source: exhibition and overseas deployment issue tracker. Synced November 6, 2026. Validate candidate devices and recheck network rules when infrastructure changes.",
+    "terminalRows": [
+      [
+        "System",
+        "Android 12 or later",
+        "Android 15 or later with firmware validated against the delivered app"
+      ],
+      [
+        "Board / processor",
+        "Validate the complete terminal, firmware and camera",
+        "RK3588-class; reference: 4×Cortex-A76 + 4×Cortex-A55, Mali-G610 MP4"
+      ],
+      [
+        "Memory",
+        "8GB minimum selection guideline",
+        "8GB or more; 12GB or more for intensive use and multitasking"
+      ],
+      [
+        "Storage",
+        "64GB; reserve space for updates, cache and pending video uploads",
+        "64GB or more; keep 20GB free"
+      ],
+      [
+        "All-in-one size",
+        "No fixed installation size; ensure suitable framing, readable text and usable touch controls",
+        "10.5–55 inches, selected for the site"
+      ],
+      [
+        "Touchscreen",
+        "System recognition, taps, swipes and multitouch must work",
+        "Infrared / capacitive multitouch"
+      ],
+      [
+        "Resolution",
+        "No universal minimum pixel count; validate on device",
+        "1K–4K; verify actual panel pixels. Higher display resolution does not increase model output resolution."
+      ],
+      [
+        "Fixed-site network",
+        "Reliable access to business, live model video and media-upload services",
+        "Prefer Ethernet; validate on-site stability when using wireless"
+      ],
+      [
+        "Ethernet / USB",
+        "Validate network ports, USB camera drivers and app access",
+        "All-in-one with Ethernet and USB ports"
+      ],
+      [
+        "External camera",
+        "App recognition and continuous 1080p / 30fps capture; camera and microphone permissions",
+        "Insta360 Link 2C; verify full-body framing at the installation position"
+      ]
+    ],
+    "padRows": [
+      [
+        "System",
+        "Android 12 or later",
+        "Android 15 or later with firmware validated against the delivered app"
+      ],
+      [
+        "Tablet processor",
+        "Validate the actual tablet, not just its chip model",
+        "RK3588-class or higher candidates; see the Snapdragon and Dimensity selection table below"
+      ],
+      [
+        "Memory",
+        "8GB minimum selection guideline",
+        "8GB or more; 12GB or more for intensive use and multitasking"
+      ],
+      [
+        "Storage",
+        "64GB; reserve space for updates, cache and pending video uploads",
+        "Prefer 128GB or more for new purchases; keep 20GB free"
+      ],
+      [
+        "Screen & touch",
+        "Readable text, suitable framing, working taps, swipes and multitouch",
+        "Prefer 10.5 inches or larger for display use, selected for the setting"
+      ],
+      [
+        "Resolution",
+        "No universal minimum pixel count; validate on device",
+        "1K–4K; verify actual panel pixels. Higher display resolution does not increase model output resolution."
+      ],
+      [
+        "Wireless network",
+        "Reliable access to business, live model video and media-upload services",
+        "Prefer stable 5GHz Wi-Fi; validate at the planned site concurrency"
+      ],
+      [
+        "Optional peripherals",
+        "For external cameras, separately validate USB access, drivers and app compatibility",
+        "A built-in camera setup does not require the all-in-one’s Ethernet / external-camera configuration"
+      ],
+      [
+        "Built-in camera",
+        "App recognition and continuous 1080p / 30fps capture; camera and microphone permissions",
+        "Use a tested built-in camera; verify full-body framing, rotation and mirroring"
+      ]
+    ],
+    "terminalIntro": "For fixed Android all-in-one terminals. Check the board, touchscreen, external camera and wired interfaces.",
+    "padIntro": "For Android tablets. Check the complete device’s processor, built-in camera, screen controls and wireless connection."
   },
   "ja": {
     "modelTitle": "推奨iPadモデル",
@@ -337,58 +435,6 @@ const specificationUpdates = {
         "カメラ・画面",
         "アプリからカメラを利用でき、権限が許可されていること",
         "1080p／30fpsの連続撮影。10.9インチ以上を優先し、省スペース用途ではminiも候補。縦向き固定、全身の画角、均一な照明。"
-      ]
-    ],
-    "androidRows": [
-      [
-        "OS",
-        "Android 12以降",
-        "Android 15以降。納品アプリとの動作確認済みの安定したファームウェア"
-      ],
-      [
-        "プロセッサ",
-        "端末全体で実測。共通の最低型番指定はなし",
-        "RK3588相当、または同等クラスのタブレット向けプロセッサ"
-      ],
-      [
-        "メモリ",
-        "8GB（最低選定目安）",
-        "8GB以上。高頻度利用やマルチタスクでは12GB以上も候補"
-      ],
-      [
-        "ストレージ",
-        "64GB。更新、キャッシュ、未送信動画用の空きを確保",
-        "64GB以上。新規タブレットは128GBを優先し、日常的に20GBの空きを確保"
-      ],
-      [
-        "サイズ",
-        "固定のインチ制限なし。画角、文字の読みやすさ、タッチ操作を確認",
-        "一体型：10.5–55インチ。タブレット展示：10.5インチ以上を優先"
-      ],
-      [
-        "画面・タッチ",
-        "OSが認識し、タップ、スワイプ、マルチタッチが動作すること",
-        "赤外線／静電容量式、マルチタッチ対応"
-      ],
-      [
-        "解像度",
-        "共通の最低画素数指定なし。実機検証が必要",
-        "1K–4K。パネルの実画素数を確認。高解像度画面でもモデル出力の解像度は上がりません。"
-      ],
-      [
-        "ネットワーク",
-        "業務、モデルのリアルタイム映像、メディア送信サービスに安定接続",
-        "有線／無線。固定設置は有線、タブレットは安定した5GHz Wi-Fiを優先"
-      ],
-      [
-        "インターフェース",
-        "カメラと通信が動作。外付けUSBカメラはドライバとアプリからの利用を検証",
-        "一体型：LAN／USB。タブレット：内蔵カメラ。外付け時はUSB接続能力を確認"
-      ],
-      [
-        "カメラ",
-        "アプリによる認識と1080p／30fpsの連続撮影を検証。カメラ・マイク権限を許可",
-        "一体型：Insta360 Link 2C。タブレット：実測済み内蔵カメラ。画角、回転、ミラー表示を確認"
       ]
     ],
     "processorTitle": "Androidタブレットのプロセッサ候補",
@@ -462,6 +508,107 @@ const specificationUpdates = {
       "UDP転送に対応しないHTTP／HTTPSプロキシへメディア通信を強制しないでください。DTLS／SRTPを復号検査せず、該当する中継サービスをTLS検査の対象外とします。リアルタイム映像、P2P、AIの分類で遮断・制限しないでください。",
       "納品環境の業務API、OSS／CDNへのHTTPS画像・動画送受信も検証します。実機、現場ネットワーク、予定同時台数で2–3分間の実セッションを確認し、good、最低でもfairを維持し、停止・帯域制限がないことを確認します。ジッター、再接続、動画アップロードも記録します。Web閲覧、速度測定、API疎通だけでは代替できません。"
     ],
-    "source": "出典：展示会・海外導入の課題追跡文書。2026年11月6日同期。候補端末は実機で検証し、通信基盤変更時は設定を再確認してください。"
+    "source": "出典：展示会・海外導入の課題追跡文書。2026年11月6日同期。候補端末は実機で検証し、通信基盤変更時は設定を再確認してください。",
+    "terminalRows": [
+      [
+        "OS",
+        "Android 12以降",
+        "Android 15以降。納品アプリとの動作確認済みの安定したファームウェア"
+      ],
+      [
+        "基板・プロセッサ",
+        "端末全体、ファームウェア、カメラを組み合わせて実測",
+        "RK3588相当。参考：4×Cortex-A76＋4×Cortex-A55、Mali-G610 MP4"
+      ],
+      [
+        "メモリ",
+        "8GB（最低選定目安）",
+        "8GB以上。高頻度利用やマルチタスクでは12GB以上も候補"
+      ],
+      [
+        "ストレージ",
+        "64GB。更新、キャッシュ、未送信動画用の空きを確保",
+        "64GB以上、日常的に20GBの空きを確保"
+      ],
+      [
+        "一体型のサイズ",
+        "固定のインチ制限なし。現場の画角、文字の読みやすさ、タッチ操作を確認",
+        "10.5–55インチ。設置場所に合わせて選定"
+      ],
+      [
+        "タッチスクリーン",
+        "OSが認識し、タップ、スワイプ、マルチタッチが動作",
+        "赤外線／静電容量式、マルチタッチ対応"
+      ],
+      [
+        "解像度",
+        "共通の最低画素数指定なし。実機検証が必要",
+        "1K–4K。パネルの実画素数を確認。高解像度画面でもモデル出力の解像度は上がりません。"
+      ],
+      [
+        "固定設置の通信",
+        "業務、リアルタイム映像、メディア送信に安定接続",
+        "有線LANを優先。無線の場合は現場の安定性を検証"
+      ],
+      [
+        "LAN・USB端子",
+        "通信端子、USBカメラのドライバ、アプリからの利用を検証",
+        "LANとUSB端子を備えた一体型"
+      ],
+      [
+        "外付けカメラ",
+        "アプリ認識と1080p／30fpsの連続撮影。カメラ・マイク権限を許可",
+        "Insta360 Link 2C。実際の設置位置で全身の画角を確認"
+      ]
+    ],
+    "padRows": [
+      [
+        "OS",
+        "Android 12以降",
+        "Android 15以降。納品アプリとの動作確認済みの安定したファームウェア"
+      ],
+      [
+        "タブレットのプロセッサ",
+        "チップ名だけでなく、実際の端末で検証",
+        "RK3588相当以上の候補。Snapdragon・Dimensityの具体的な候補は下表を参照"
+      ],
+      [
+        "メモリ",
+        "8GB（最低選定目安）",
+        "8GB以上。高頻度利用やマルチタスクでは12GB以上も候補"
+      ],
+      [
+        "ストレージ",
+        "64GB。更新、キャッシュ、未送信動画用の空きを確保",
+        "新規購入は128GB以上を優先し、日常的に20GBの空きを確保"
+      ],
+      [
+        "画面・タッチ操作",
+        "文字の読みやすさ、画角、タップ、スワイプ、マルチタッチを確認",
+        "展示用途は10.5インチ以上を優先。現場に合わせて選定"
+      ],
+      [
+        "解像度",
+        "共通の最低画素数指定なし。実機検証が必要",
+        "1K–4K。パネルの実画素数を確認。高解像度画面でもモデル出力の解像度は上がりません。"
+      ],
+      [
+        "無線ネットワーク",
+        "業務、リアルタイム映像、メディア送信に安定接続",
+        "安定した5GHz Wi-Fiを優先。予定同時利用台数で検証"
+      ],
+      [
+        "周辺機器（使用時）",
+        "外付けカメラはUSB接続能力、ドライバ、アプリ対応を個別検証",
+        "内蔵カメラ使用時は、一体型と同じLAN端子・外付けカメラ構成は不要"
+      ],
+      [
+        "内蔵カメラ",
+        "アプリ認識と1080p／30fpsの連続撮影。カメラ・マイク権限を許可",
+        "実測済み内蔵カメラを使用。全身の画角、回転、ミラー表示を確認"
+      ]
+    ],
+    "terminalIntro": "固定設置のAndroid一体型向けです。基板、タッチスクリーン、外付けカメラ、有線接続を確認します。",
+    "padIntro": "Androidタブレット向けです。端末のプロセッサ、内蔵カメラ、画面操作、無線接続を確認します。"
   }
 };
