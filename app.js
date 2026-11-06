@@ -54,7 +54,7 @@ const translations = {
       ],
       [
         "返回此页，打开应用邀请",
-        "完成 TestFlight 设置后，请在您需要安装应用的 iPad 上回到本手册，点击下方入口，在邀请页选择“在 TestFlight 中查看”。",
+        "完成 TestFlight 设置后，请在您需要安装应用的 iPad 上回到本手册，点击下方入口，在邀请页选择“在 TestFlight 中查看”。 如果 TestFlight 提示需要输入邀请码，请在该 iPad 上返回本手册，点击下方“安装试衣终端”，再从邀请页进入 TestFlight。",
         "安装试衣终端",
         "https://testflight.apple.com/join/NdJvT2Gt",
       ],
@@ -168,6 +168,10 @@ const translations = {
         "请打开试衣终端 App 核对当前版本。检查是否完成系统安装确认。持续异常时记录 App 版本、助手业务版本和提示截图，联系官方。",
       ],
       [
+        "TestFlight 提示需要输入邀请码，怎么办？",
+        "请在您需要安装应用的 iPad 上返回本手册，进入<a href=\"#/zh/v1.1-v1.2/guide/ipad/install/guide-install\">iPad 安装指引</a>，点击“安装试衣终端”。在邀请页选择“在 TestFlight 中查看”，然后按提示接受邀请并安装。",
+      ],
+      [
         "TestFlight 没有安装按钮或目标版本？",
         "记录页面提示，确认机型和系统版本，并将截图发给官方核对测试资格、名额及构建有效期。",
       ],
@@ -246,7 +250,7 @@ const translations = {
       ],
       [
         "Return here and open the invitation",
-        "After setup, return to this guide on the iPad where you want to install the app and use the link below. Select “View in TestFlight” on the invitation page.",
+        "After setup, return to this guide on the iPad where you want to install the app and use the link below. Select “View in TestFlight” on the invitation page. If TestFlight asks for an invitation code, return to this guide on the same iPad and tap “Install Live Fitting” below, then open TestFlight from the invitation page.",
         "Install Live Fitting",
         "https://testflight.apple.com/join/NdJvT2Gt",
       ],
@@ -383,6 +387,10 @@ const translations = {
         "Check the version inside the “Live Fitting” app and ensure the system installation confirmation was completed. Send the app version, updater business version and screenshots to official support if needed.",
       ],
       [
+        "TestFlight asks for an invitation code. What should I do?",
+        "On the iPad where you want to install the app, return to this guide and open the <a href=\"#/en/v1.1-v1.2/guide/ipad/install/guide-install\">iPad installation instructions</a>. Tap “Install Live Fitting”, select “View in TestFlight” on the invitation page, then follow the prompts to accept the invitation and install the app.",
+      ],
+      [
         "TestFlight has no installation button or required build.",
         "Record the message, device model and OS version. Ask official support to check eligibility, capacity and build validity.",
       ],
@@ -456,7 +464,7 @@ const translations = {
       ],
       [
         "このページに戻り、招待を開く",
-        "初期設定後、アプリをインストールするiPadでこのガイドに戻って下のリンクを開き、招待ページで「TestFlightで表示」を選択します。",
+        "初期設定後、アプリをインストールするiPadでこのガイドに戻って下のリンクを開き、招待ページで「TestFlightで表示」を選択します。 TestFlightで招待コードの入力を求められた場合は、同じiPadで本ガイドに戻り、下の「Live Fittingをインストール」をタップして、招待ページからTestFlightを開いてください。",
         "Live Fittingをインストール",
         "https://testflight.apple.com/join/NdJvT2Gt",
       ],
@@ -572,6 +580,10 @@ const translations = {
       [
         "更新アシスタントでは最新ですが、アプリのバージョンが変わりません。",
         "システムのインストール確認を完了したか確認します。解消しない場合はアプリのバージョン、業務バージョン、画面の画像を公式サポートに送ってください。",
+      ],
+      [
+        "TestFlightで招待コードの入力を求められた場合は？",
+        "アプリをインストールするiPadで本ガイドに戻り、<a href=\"#/ja/v1.1-v1.2/guide/ipad/install/guide-install\">iPadのインストール手順</a>を開いて「Live Fittingをインストール」をタップしてください。招待ページで「TestFlightで表示」を選択し、案内に従って招待を承認してインストールします。",
       ],
       [
         "TestFlightにインストールボタンや対象ビルドがありません。",
