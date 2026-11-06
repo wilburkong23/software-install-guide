@@ -76,7 +76,7 @@ const translations = {
       ],
       [
         "安装更新助手",
-        "请在您需要安装应用的安卓设备上，从浏览器下载记录或文件管理中打开 APK。按系统提示允许当前浏览器或文件管理安装应用，再继续安装。受管设备请联系管理员。",
+        "请在您需要安装应用的安卓设备上，从浏览器下载记录或文件管理中打开 APK。当前版本通过官方安装包安装，应用商店上架正在推进中。如出现“信任第三方来源”“允许来自此来源”或类似提示，请开启当前浏览器或文件管理器的允许安装开关，返回后继续安装。受管设备请联系管理员。",
       ],
       [
         "安装试衣终端 App",
@@ -154,39 +154,53 @@ const translations = {
       [
         "如何查看 App 版本？",
         "在首页左上 Logo 连续点击 7 次，进入个人中心查看“当前版本”。将它与官方发布通知核对。",
+        "common"
       ],
       [
         "安卓提示安装失败，怎么办？",
         "先检查系统是否为 Android 12 及以上，再确认是否仍有旧版试衣终端和更新助手。需要换装时先向官方确认版本范围，再按老版本换装流程处理。",
+        "android"
+      ],
+      [
+        "安卓安装时提示“信任第三方来源”，怎么办？",
+        "当前版本暂未完成应用商店上架，官方正在积极推进上架，目前通过官方安装包安装。请确认安装包来自本手册提供的官方下载页面；如系统提示“信任第三方来源”“允许来自此来源”或“安装未知应用”，请开启当前用于安装的浏览器、文件管理器或轻链更新助手的允许安装开关，再返回继续安装。不同设备的提示名称可能略有不同；受管设备无法开启时，请联系管理员。",
+        "android"
       ],
       [
         "已经安装 TestFlight，为什么找不到试衣终端？",
         "请在您需要安装应用的 iPad 上打开本手册，返回 iPad 安装教程，点击“安装试衣终端”，从邀请页进入 TestFlight，接受邀请并安装应用。",
+        "ios"
       ],
       [
         "更新助手显示最新，为什么 App 版本没变？",
         "请打开试衣终端 App 核对当前版本。检查是否完成系统安装确认。持续异常时记录 App 版本、助手业务版本和提示截图，联系官方。",
+        "android"
       ],
       [
         "TestFlight 提示需要输入邀请码，怎么办？",
         "请在您需要安装应用的 iPad 上返回本手册，进入<a href=\"#/zh/v1.1-v1.2/guide/ipad/install/guide-install\">iPad 安装指引</a>，点击“安装试衣终端”。在邀请页选择“在 TestFlight 中查看”，然后按提示接受邀请并安装。",
+        "ios"
       ],
       [
         "TestFlight 没有安装按钮或目标版本？",
         "记录页面提示，确认机型和系统版本，并将截图发给官方核对测试资格、名额及构建有效期。",
+        "ios"
       ],
       [
         "可以通过应用商店安装吗？",
         "本手册对应更新助手与 TestFlight 渠道。应用宝、Google Play 和 App Store 渠道将在正式发布后，随对应版本手册提供入口和迁移说明。",
+        "common"
       ],
       [
         "轻链更新助手多次更新失败，怎么办？",
         "如果在轻链更新助手中多次点击“检查并更新”仍然失败，可以重新下载安装试衣终端。请先保存所需照片并确认登录账号，然后在需要安装应用的安卓设备上删除当前的试衣终端 App。用该设备的浏览器打开<a href=\"https://tryon-mirror.lightchainai.com/d\" target=\"_blank\" rel=\"noopener noreferrer\">下载页面</a>，点击“下载 Android APK”，直接下载并安装新版试衣终端安装包。此处选择的是试衣终端安装包，无需再次下载更新助手。安装完成后，打开试衣终端核对版本并登录；若仍失败，请联系官方。",
+        "android"
       ],
       [
         "更新持续失败，需要提供哪些信息？",
         "请记录设备型号、系统版本、App 版本、安装渠道及完整提示截图，联系官方协助处理。",
-      ],
+        "common"
+      ]
     ],
   },
   en: {
@@ -272,7 +286,7 @@ const translations = {
       ],
       [
         "Install the updater",
-        "On the Android device where you want to install the app, open the APK from browser downloads or your file manager. If prompted, allow this source to install apps. Contact your administrator for managed devices.",
+        "On the Android device where you want to install the app, open the APK from browser downloads or your file manager. This version is distributed as an official installation package while app-store listing is in progress. If you see “Allow from this source”, “Trust third-party sources” or a similar prompt, enable installation permission for the browser or file manager you are using, then return to continue installation. Contact your administrator for managed devices.",
       ],
       [
         "Install the “Live Fitting” app",
@@ -372,40 +386,54 @@ const translations = {
     faqs: [
       [
         "Where can I find the app version?",
-        "On the Android device where you want to update the app, open the “Live Fitting” app and tap the top-left logo on the home screen seven times. Find Current version in the profile and compare it with the release notice.",
+        "Open Live Fitting and tap the top-left logo on the home screen seven times. Find Current version in the profile and compare it with the official release notice.",
+        "common"
       ],
       [
         "Why does installation fail on Android?",
         "Check for Android 12 or later and existing legacy terminal and updater apps. Ask official support whether legacy replacement applies before removing anything.",
+        "android"
+      ],
+      [
+        "Android asks me to trust a third-party source. What should I do?",
+        "This version is not yet listed in app stores; official store listing is actively in progress, and installation currently uses the official package. Confirm that the package comes from the official download page linked in this guide. If Android shows “Trust third-party sources”, “Allow from this source” or “Install unknown apps”, enable installation permission for the browser, file manager or LightChain Updater currently handling the installation, then return and continue. Wording varies by device. Contact your administrator if a managed device prevents this setting.",
+        "android"
       ],
       [
         "TestFlight is installed. Where is the “Live Fitting” app?",
         "On the iPad where you want to install the app, open this manual, return to the iPad guide and select Install Live Fitting. Open the invitation in TestFlight, accept and install.",
+        "ios"
       ],
       [
         "The updater says up to date, but the app version is unchanged.",
         "Check the version inside the “Live Fitting” app and ensure the system installation confirmation was completed. Send the app version, updater business version and screenshots to official support if needed.",
+        "android"
       ],
       [
         "TestFlight asks for an invitation code. What should I do?",
         "On the iPad where you want to install the app, return to this guide and open the <a href=\"#/en/v1.1-v1.2/guide/ipad/install/guide-install\">iPad installation instructions</a>. Tap “Install Live Fitting”, select “View in TestFlight” on the invitation page, then follow the prompts to accept the invitation and install the app.",
+        "ios"
       ],
       [
         "TestFlight has no installation button or required build.",
         "Record the message, device model and OS version. Ask official support to check eligibility, capacity and build validity.",
+        "ios"
       ],
       [
         "Can I use an app store?",
         "This guide covers the updater and TestFlight channels. Official store links and migration instructions will be included with the relevant version guide after release.",
+        "common"
       ],
       [
         "What if LightChain Updater repeatedly fails to update?",
         "If “检查并更新” (Check and update) repeatedly fails in LightChain Updater, you can reinstall Live Fitting. Save any photos you need and confirm your login details, then delete the current Live Fitting app from the Android device where you want to install it. In that device’s browser, open the <a href=\"https://tryon-mirror.lightchainai.com/d\" target=\"_blank\" rel=\"noopener noreferrer\">download page</a> and tap “下载 Android APK” (Download Android APK) to download and install the new Live Fitting package directly. Choose the app package; you do not need to download the updater again. Open Live Fitting, verify its version and sign in. Contact official support if installation still fails.",
+        "android"
       ],
       [
         "What should I provide if updates keep failing?",
         "Send your device model, OS version, app version, installation channel and a complete screenshot of the message to official support.",
-      ],
+        "common"
+      ]
     ],
   },
   ja: {
@@ -486,7 +514,7 @@ const translations = {
       ],
       [
         "更新アシスタントをインストール",
-        "アプリをインストールするAndroidデバイスで、ブラウザのダウンロード履歴またはファイル管理からAPKを開きます。必要に応じて提供元からのインストールを許可します。管理対象デバイスは管理者にご相談ください。",
+        "アプリをインストールするAndroidデバイスで、ブラウザのダウンロード履歴またはファイル管理からAPKを開きます。現在は公式インストールパッケージで配布しており、アプリストアへの公開を進めています。「この提供元を許可」「サードパーティの提供元を信頼」などが表示されたら、使用中のブラウザまたはファイル管理アプリのインストール許可をオンにし、元の画面に戻って続行してください。管理対象デバイスは管理者にご相談ください。",
       ],
       [
         "「Live Fitting」アプリをインストール",
@@ -568,39 +596,53 @@ const translations = {
       [
         "アプリのバージョンはどこで確認できますか？",
         "ホーム画面左上のロゴを7回タップし、個人ページの現在のバージョンを確認します。リリース案内と照合してください。",
+        "common"
       ],
       [
         "Androidでインストールに失敗します。",
         "Android 12以降か、旧版アプリと更新アシスタントが残っていないかを確認します。削除前に公式サポートへ入れ替え対象か確認してください。",
+        "android"
+      ],
+      [
+        "Androidで「サードパーティの提供元を信頼」などと表示された場合は？",
+        "現在のバージョンはアプリストアでの公開がまだ完了しておらず、公式では公開を積極的に進めています。現在は公式インストールパッケージを使用します。本ガイドの公式ダウンロードページから入手したことを確認し、「この提供元を許可」「不明なアプリのインストール」などが表示されたら、インストールに使用中のブラウザ、ファイル管理アプリ、または更新アシスタントの許可をオンにして、元の画面に戻り続行してください。表示名は端末によって異なります。管理対象端末で変更できない場合は管理者にお問い合わせください。",
+        "android"
       ],
       [
         "TestFlightを入れましたが、「Live Fitting」アプリがありません。",
         "アプリをインストールするiPadで本マニュアルのiPadガイドに戻り、「Live Fittingをインストール」を選択します。招待からTestFlightに移動し、承認とインストールを完了してください。",
+        "ios"
       ],
       [
         "更新アシスタントでは最新ですが、アプリのバージョンが変わりません。",
         "システムのインストール確認を完了したか確認します。解消しない場合はアプリのバージョン、業務バージョン、画面の画像を公式サポートに送ってください。",
+        "android"
       ],
       [
         "TestFlightで招待コードの入力を求められた場合は？",
         "アプリをインストールするiPadで本ガイドに戻り、<a href=\"#/ja/v1.1-v1.2/guide/ipad/install/guide-install\">iPadのインストール手順</a>を開いて「Live Fittingをインストール」をタップしてください。招待ページで「TestFlightで表示」を選択し、案内に従って招待を承認してインストールします。",
+        "ios"
       ],
       [
         "TestFlightにインストールボタンや対象ビルドがありません。",
         "メッセージ、機種、OSバージョンを記録し、公式サポートにテスト資格、定員、有効期限の確認を依頼してください。",
+        "ios"
       ],
       [
         "公式ストアからインストールできますか？",
         "本ガイドは更新アシスタントとTestFlightを対象としています。公式ストアの入口と移行手順は、正式公開後に該当バージョンのガイドでご案内します。",
+        "common"
       ],
       [
         "更新アシスタントで何度更新しても失敗する場合は？",
         "更新アシスタントの「检查并更新」（更新を確認）を何度実行しても失敗する場合は、Live Fittingを再インストールできます。必要な写真を保存してログイン情報を確認し、対象のAndroid端末から現在のLive Fittingアプリを削除してください。同じ端末のブラウザで<a href=\"https://tryon-mirror.lightchainai.com/d\" target=\"_blank\" rel=\"noopener noreferrer\">ダウンロードページ</a>を開き、「下载 Android APK」をタップして新版のLive Fittingを直接ダウンロードし、インストールします。ここではアプリ本体を選び、更新アシスタントを再ダウンロードする必要はありません。完了後にLive Fittingを開き、バージョンを確認してログインしてください。解決しない場合は公式サポートにご連絡ください。",
+        "android"
       ],
       [
         "更新に失敗し続ける場合は？",
         "機種、OSバージョン、アプリのバージョン、インストール経路、メッセージ全体のスクリーンショットを公式サポートにお送りください。",
-      ],
+        "common"
+      ]
     ],
   },
 };
@@ -807,6 +849,29 @@ function renderSpecs(t) {
     </details>
     <p class="spec-source"><a href="https://lightchain.feishu.cn/docx/WeNwdyjbtoxQjsxP5RBcZrFJn2b" target="_blank" rel="noopener noreferrer">${spec.source}</a></p>`;
 }
+function renderFaq(t) {
+  const android = state.device !== "ipad";
+  const names = state.locale === "zh" ? ["安卓", "iOS（iPad）"] : ["Android", "iOS (iPad)"];
+  const platforms = ["android", "ios"];
+  return `<h1>${t.nav[2]}</h1><p class="lede">${t.faqIntro}</p>
+    <div class="faq-tabs" role="tablist" aria-label="${t.choose}">
+      ${platforms.map((platform, i) => `<button type="button" role="tab" id="faq-tab-${platform}" aria-controls="faq-panel-${platform}" aria-selected="${(platform === "android") === android}" tabindex="${(platform === "android") === android ? 0 : -1}" data-faq-platform="${platform}">${names[i]}</button>`).join("")}
+    </div>
+    ${platforms.map(platform => `<section role="tabpanel" id="faq-panel-${platform}" aria-labelledby="faq-tab-${platform}" ${(platform === "android") === android ? "" : "hidden"}>${t.faqs.filter(([, , category]) => category === platform || category === "common").map(([q, a], i) => `<details ${i === 0 ? "open" : ""}><summary>${q}</summary><p>${a}</p></details>`).join("")}</section>`).join("")}`;
+}
+function activateFaqTab(tab) {
+  const platform = tab.dataset.faqPlatform;
+  state.device = platform === "ios" ? "ipad" : (state.device === "pad" ? "pad" : "terminal");
+  state.anchor = "";
+  history.replaceState(null, "", href("faq"));
+  document.querySelectorAll("[data-faq-platform]").forEach(button => {
+    const selected = button === tab;
+    button.setAttribute("aria-selected", String(selected));
+    button.tabIndex = selected ? 0 : -1;
+    document.getElementById(button.getAttribute("aria-controls")).hidden = !selected;
+  });
+}
+
 function renderArticle(t) {
   const labels = { guide: t.nav[0], specs: t.nav[1], faq: t.nav[2] };
   const body =
@@ -814,7 +879,7 @@ function renderArticle(t) {
       ? renderGuide(t)
       : state.page === "specs"
         ? renderSpecs(t)
-        : `<h1>${t.nav[2]}</h1><p class="lede">${t.faqIntro}</p>${t.faqs.map(([q, a], i) => `<details ${i === 0 ? "open" : ""}><summary>${q}</summary><p>${a}</p></details>`).join("")}`;
+        : renderFaq(t);
   return /* HTML */ `<main id="main" class="wrap">
     <div class="breadcrumb">
       ${link("home", t.home)} <span aria-hidden="true">›</span> V1.1–V1.2
@@ -908,6 +973,17 @@ function render() {
     const main = document.getElementById("main");
     main.tabIndex = -1;
     main.focus();
+  });
+  const faqTabs = [...document.querySelectorAll("[data-faq-platform]")];
+  faqTabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => activateFaqTab(tab));
+    tab.addEventListener("keydown", event => {
+      if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+      event.preventDefault();
+      const next = event.key === "Home" ? 0 : event.key === "End" ? faqTabs.length - 1 : (index + (event.key === "ArrowRight" ? 1 : -1) + faqTabs.length) % faqTabs.length;
+      faqTabs[next].focus();
+      activateFaqTab(faqTabs[next]);
+    });
   });
   document.querySelectorAll(".image-preview-trigger").forEach(trigger => {
     trigger.addEventListener("click", () => openImageViewer(trigger));

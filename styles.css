@@ -926,3 +926,9 @@ html.image-viewer-open { overflow: hidden; }
   .image-viewer-panel { padding: 60px 12px 12px; border-radius: 14px; }
   .image-viewer-image { max-height: calc(100dvh - 96px); }
 }
+
+.faq-tabs { display: flex; gap: 4px; padding: 4px; margin: 28px 0 36px; border-radius: 12px; background: #f5f5f7; }
+.faq-tabs button { flex: 1; min-width: 0; padding: 13px 16px; border: 0; border-radius: 9px; background: transparent; color: #515154; font: inherit; cursor: pointer; }
+.faq-tabs button[aria-selected="true"] { background: #fff; color: #1d1d1f; font-weight: 600; box-shadow: 0 2px 7px rgba(0,0,0,.1); }
+.faq-tabs button:focus-visible { outline: 2px solid #0071e3; outline-offset: 2px; }
+[role="tabpanel"][hidden] { display: none; }
