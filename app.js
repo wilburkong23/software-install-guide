@@ -185,11 +185,11 @@ const translations = {
     sidebarGroups: ["Download & installation", "Hardware & software requirements", "FAQ"],
     lang: "en",
     brand: "LightChain",
-    manual: "试衣终端 User Guide",
+    manual: "Live Fitting User Guide",
     languageLabel: "Switch language",
     nav: ["Install & update", "Specifications", "FAQ"],
     home: "Guide home",
-    heading: "试衣终端",
+    heading: "Live Fitting",
     intro:
       "Find the right instructions for your device, from your first installation to your next update.",
     choose: "Choose your device",
@@ -209,7 +209,7 @@ const translations = {
     faqTitle: "Need a little help?",
     faqDesc: "Find answers to common installation and update questions.",
     faqLink: "Explore common questions",
-    footer: "试衣终端: User Guide",
+    footer: "Live Fitting: User Guide",
     updated: "For V1.1–V1.2: Updated November 6, 2026",
     skip: "Skip to content",
     scenes: [
@@ -227,10 +227,10 @@ const translations = {
     legacyAndroid:
       "Replacing a legacy installation requires removing the old terminal app and LightChain Updater. Ask official support to confirm that this applies to your version, save your photos and confirm your account details before following the steps below.",
     legacyIpad:
-      "On the iPad where you want to install the app, save any photos you need and confirm your login details, then <b>delete the old “试衣终端” app</b>. Before installing the new version, confirm that the old app has been deleted, then follow the steps below.",
+      "On the iPad where you want to install the app, save any photos you need and confirm your login details, then <b>delete the old “Live Fitting” app</b>. Before installing the new version, confirm that the old app has been deleted, then follow the steps below.",
     installed: "Check when finished",
     installedText:
-      "Open the “试衣终端” app and verify its version against the release notice. Check your account, store content and camera permissions. After installing TestFlight or the updater, complete the “试衣终端” app installation too.",
+      "Open the “Live Fitting” app and verify its version against the release notice. Check your account, store content and camera permissions. After installing TestFlight or the updater, complete the “Live Fitting” app installation too.",
     video: "Video tutorial",
     videoText: "In preparation. Please follow the steps above for now.",
     ipadSteps: [
@@ -243,16 +243,16 @@ const translations = {
       [
         "Return here and open the invitation",
         "After setup, return to this guide on the iPad where you want to install the app and use the link below. Select “View in TestFlight” on the invitation page.",
-        "Install 试衣终端",
+        "Install Live Fitting",
         "https://testflight.apple.com/join/NdJvT2Gt",
       ],
       [
         "Accept and install",
-        "In TestFlight on that iPad, check the app name is “试衣终端”. When joining for the first time, select Accept, then Install.",
+        "In TestFlight on that iPad, check the app name is “Live Fitting”. When joining for the first time, select Accept, then Install.",
       ],
       [
-        "Open the “试衣终端” app",
-        "Wait for installation to finish, then select Open or find the “试衣终端” app on your Home Screen.",
+        "Open the “Live Fitting” app",
+        "Wait for installation to finish, then select Open or find the “Live Fitting” app on your Home Screen.",
       ],
     ],
     androidSteps: [
@@ -267,12 +267,12 @@ const translations = {
         "On the Android device where you want to install the app, open the APK from browser downloads or your file manager. If prompted, allow this source to install apps. Contact your administrator for managed devices.",
       ],
       [
-        "Install the “试衣终端” app",
+        "Install the “Live Fitting” app",
         "On the Android device where you want to install the app, open LightChain Updater and select “检查并更新” (Check and update). Grant installation permission if requested and finish downloading and installing.",
       ],
       [
         "Open and check the version",
-        "Open the “试衣终端” app. Use the version shown inside the app for verification. The updater’s business version is for troubleshooting.",
+        "Open the “Live Fitting” app. Use the version shown inside the app for verification. The updater’s business version is for troubleshooting.",
       ],
     ],
     ipadUpdate: [
@@ -282,7 +282,7 @@ const translations = {
       ],
       [
         "Update in TestFlight",
-        "On the iPad where you want to update the app, open TestFlight, find the “试衣终端” app and select Update. If it shows Open, compare the version with the official release notice.",
+        "On the iPad where you want to update the app, open TestFlight, find the “Live Fitting” app and select Update. If it shows Open, compare the version with the official release notice.",
       ],
       [
         "Open and verify",
@@ -296,7 +296,7 @@ const translations = {
       ],
       [
         "Check for updates in the app",
-        "On the Android device where you want to update the app, open the “试衣终端” app and tap the top-left logo on the home screen seven times to open the profile. Record the current version and select Check for updates.",
+        "On the Android device where you want to update the app, open the “Live Fitting” app and tap the top-left logo on the home screen seven times to open the profile. Record the current version and select Check for updates.",
       ],
       [
         "Complete installation with the updater",
@@ -364,19 +364,19 @@ const translations = {
     faqs: [
       [
         "Where can I find the app version?",
-        "On the Android device where you want to update the app, open the “试衣终端” app and tap the top-left logo on the home screen seven times. Find Current version in the profile and compare it with the release notice.",
+        "On the Android device where you want to update the app, open the “Live Fitting” app and tap the top-left logo on the home screen seven times. Find Current version in the profile and compare it with the release notice.",
       ],
       [
         "Why does installation fail on Android?",
         "Check for Android 12 or later and existing legacy terminal and updater apps. Ask official support whether legacy replacement applies before removing anything.",
       ],
       [
-        "TestFlight is installed. Where is the “试衣终端” app?",
-        "On the iPad where you want to install the app, open this manual, return to the iPad guide and select Install 试衣终端. Open the invitation in TestFlight, accept and install.",
+        "TestFlight is installed. Where is the “Live Fitting” app?",
+        "On the iPad where you want to install the app, open this manual, return to the iPad guide and select Install Live Fitting. Open the invitation in TestFlight, accept and install.",
       ],
       [
         "The updater says up to date, but the app version is unchanged.",
-        "Check the version inside the “试衣终端” app and ensure the system installation confirmation was completed. Send the app version, updater business version and screenshots to official support if needed.",
+        "Check the version inside the “Live Fitting” app and ensure the system installation confirmation was completed. Send the app version, updater business version and screenshots to official support if needed.",
       ],
       [
         "TestFlight has no installation button or required build.",
@@ -396,11 +396,11 @@ const translations = {
     sidebarGroups: ["ダウンロードとインストール", "ハードウェア・ソフトウェア要件", "FAQ"],
     lang: "ja",
     brand: "LightChain",
-    manual: "试衣终端ユーザーガイド",
+    manual: "Live Fittingユーザーガイド",
     languageLabel: "言語を切り替える",
     nav: ["インストールと更新", "動作環境", "よくある質問"],
     home: "ガイドのホーム",
-    heading: "试衣终端",
+    heading: "Live Fitting",
     intro: "お使いのデバイスに合った手順で、インストールからアップデートまで。",
     choose: "デバイスを選択",
     devices: ["iPad", "Android端末", "Androidタブレット"],
@@ -419,7 +419,7 @@ const translations = {
     faqTitle: "お困りのときは。",
     faqDesc: "インストールや更新に関するよくある質問と対処方法をご案内します。",
     faqLink: "よくある質問を見る",
-    footer: "试衣终端：ユーザーガイド",
+    footer: "Live Fitting：ユーザーガイド",
     updated: "V1.1–V1.2 対応：2026年11月6日更新",
     skip: "本文へ移動",
     scenes: ["初めてのインストール", "旧版からの入れ替え", "アプリの更新"],
@@ -431,12 +431,12 @@ const translations = {
     legacy: "対象バージョンの確認が必要です",
     legacyIpadTitle: "インストール前に旧版アプリを削除",
     legacyAndroid:
-      "旧版からの入れ替えでは、旧「试衣终端」アプリと更新アシスタントの削除が必要です。公式サポートに対象バージョンか確認し、写真の保存とアカウント情報を確認してから、以下の手順を進めてください。",
+      "旧版からの入れ替えでは、旧「Live Fitting」アプリと更新アシスタントの削除が必要です。公式サポートに対象バージョンか確認し、写真の保存とアカウント情報を確認してから、以下の手順を進めてください。",
     legacyIpad:
-      "アプリをインストールするiPadで、必要な写真を保存し、ログイン情報を確認してから、<b>旧版の「试衣终端」アプリを削除</b>してください。新しいバージョンをインストールする前に、旧版アプリが削除済みであることを確認し、以下の手順に進んでください。",
+      "アプリをインストールするiPadで、必要な写真を保存し、ログイン情報を確認してから、<b>旧版の「Live Fitting」アプリを削除</b>してください。新しいバージョンをインストールする前に、旧版アプリが削除済みであることを確認し、以下の手順に進んでください。",
     installed: "完了後の確認",
     installedText:
-      "「试衣终端」アプリを開き、バージョンをリリース案内と照合します。アカウント、店舗情報、カメラ権限も確認してください。TestFlightや更新アシスタントの導入後、「试衣终端」アプリ自体のインストールも完了させます。",
+      "「Live Fitting」アプリを開き、バージョンをリリース案内と照合します。アカウント、店舗情報、カメラ権限も確認してください。TestFlightや更新アシスタントの導入後、「Live Fitting」アプリ自体のインストールも完了させます。",
     video: "動画ガイド",
     videoText: "準備中です。現在は上記の手順をご利用ください。",
     ipadSteps: [
@@ -449,16 +449,16 @@ const translations = {
       [
         "このページに戻り、招待を開く",
         "初期設定後、アプリをインストールするiPadでこのガイドに戻って下のリンクを開き、招待ページで「TestFlightで表示」を選択します。",
-        "试衣终端をインストール",
+        "Live Fittingをインストール",
         "https://testflight.apple.com/join/NdJvT2Gt",
       ],
       [
         "招待を承認してインストール",
-        "同じiPadのTestFlightでアプリ名が「试衣终端」であることを確認します。初回は「承認」を選択し、「インストール」をタップします。",
+        "同じiPadのTestFlightでアプリ名が「Live Fitting」であることを確認します。初回は「承認」を選択し、「インストール」をタップします。",
       ],
       [
-        "「试衣终端」アプリを開く",
-        "完了後に「開く」をタップするか、ホーム画面の「试衣终端」アプリを開きます。",
+        "「Live Fitting」アプリを開く",
+        "完了後に「開く」をタップするか、ホーム画面の「Live Fitting」アプリを開きます。",
       ],
     ],
     androidSteps: [
@@ -473,19 +473,19 @@ const translations = {
         "アプリをインストールするAndroidデバイスで、ブラウザのダウンロード履歴またはファイル管理からAPKを開きます。必要に応じて提供元からのインストールを許可します。管理対象デバイスは管理者にご相談ください。",
       ],
       [
-        "「试衣终端」アプリをインストール",
+        "「Live Fitting」アプリをインストール",
         "アプリをインストールするAndroidデバイスで更新アシスタントを開き、「检查并更新」（更新を確認）を選択します。必要な権限を許可し、ダウンロードとインストールを完了します。",
       ],
       [
         "アプリとバージョンを確認",
-        "「试衣终端」アプリを開き、アプリ内のバージョンを確認します。更新アシスタントの業務バージョンは調査用の情報です。",
+        "「Live Fitting」アプリを開き、アプリ内のバージョンを確認します。更新アシスタントの業務バージョンは調査用の情報です。",
       ],
     ],
     ipadUpdate: [
       ["利用中の操作を終了", "写真を保存し、ネットワークと電源を確保します。"],
       [
         "TestFlightで更新",
-        "アプリを更新するiPadでTestFlightを開き、「试衣终端」アプリを見つけ、「アップデート」を選択します。「開く」と表示される場合は、案内されたバージョンか確認してください。",
+        "アプリを更新するiPadでTestFlightを開き、「Live Fitting」アプリを見つけ、「アップデート」を選択します。「開く」と表示される場合は、案内されたバージョンか確認してください。",
       ],
       [
         "再起動して確認",
@@ -499,7 +499,7 @@ const translations = {
       ],
       [
         "アプリで更新を確認",
-        "アプリを更新するAndroidデバイスで「试衣终端」アプリを開き、ホーム画面左上のロゴを7回タップして個人ページを開きます。現在のバージョンを記録し、更新確認を選択します。",
+        "アプリを更新するAndroidデバイスで「Live Fitting」アプリを開き、ホーム画面左上のロゴを7回タップして個人ページを開きます。現在のバージョンを記録し、更新確認を選択します。",
       ],
       [
         "更新アシスタントでインストール",
@@ -558,8 +558,8 @@ const translations = {
         "Android 12以降か、旧版アプリと更新アシスタントが残っていないかを確認します。削除前に公式サポートへ入れ替え対象か確認してください。",
       ],
       [
-        "TestFlightを入れましたが、「试衣终端」アプリがありません。",
-        "アプリをインストールするiPadで本マニュアルのiPadガイドに戻り、「试衣终端をインストール」を選択します。招待からTestFlightに移動し、承認とインストールを完了してください。",
+        "TestFlightを入れましたが、「Live Fitting」アプリがありません。",
+        "アプリをインストールするiPadで本マニュアルのiPadガイドに戻り、「Live Fittingをインストール」を選択します。招待からTestFlightに移動し、承認とインストールを完了してください。",
       ],
       [
         "更新アシスタントでは最新ですが、アプリのバージョンが変わりません。",
@@ -655,11 +655,11 @@ function stepImage(t, ipad, index, scene) {
     filename = "android-download.png";
   if (!ipad && index === 2) filename = "android-updater.png";
   if (!filename) return "";
-  const imagePath = ipad ? `${state.locale}/ipad-invitation.png` : index === 0 ? "zh/android-download.png" : "android-updater.png";
+  const imagePath = ipad ? `${state.locale}/ipad-invitation-named.png` : index === 0 ? `${state.locale}/android-download-named.png` : "android-updater.png";
   const captions = {
-    zh: ipad ? "中文 TestFlight 页面实拍。邀请页仍显示旧应用名，应用介绍由发布方提供；本手册统一使用“试衣终端”。" : "中文界面原图。界面中的名称、版本和系统字段可能与本手册不同；请以本手册的 Android 12 及以上要求和官方发布通知为准。",
-    en: ipad ? "Actual English TestFlight page. The publisher’s app name and description remain in Chinese. This guide calls the app “试衣终端”." : "Original Chinese interface with English guidance. The app does not currently provide a verified English screen. Names, versions and system fields may differ; follow this guide’s Android 12+ requirement and the official release notice.",
-    ja: ipad ? "日本語のTestFlight実画面です。公開元のアプリ名と説明は中国語のままです。本ガイドではアプリ名を「试衣终端」に統一しています。" : "中国語の実画面に日本語の操作説明を添えています。日本語の実画面は未確認です。名称、バージョン、OS欄が異なる場合は、本ガイドのAndroid 12以降の要件と公式案内に従ってください。",
+    zh: ipad ? "TestFlight 页面参考，应用名已校正为“试衣终端”。点击图片可放大查看。" : "中文界面参考，下载页应用名已校正为“试衣终端”。版本和系统要求以本手册及官方通知为准。",
+    en: ipad ? "TestFlight reference with the app name corrected to “Live Fitting”. The publisher’s description remains in Chinese." : "Chinese interface reference with English guidance. The download page’s app name has been corrected to “Live Fitting”. Follow this guide and official notices for version and system requirements.",
+    ja: ipad ? "アプリ名を「Live Fitting」に修正したTestFlightの参考画像です。公開元のアプリ説明は中国語のままです。" : "中国語画面に日本語の操作説明を添えた参考画像です。ダウンロード画面のアプリ名は「Live Fitting」に修正しています。バージョンと動作要件は本ガイドと公式案内に従ってください。",
   };
   const labels = {
     zh: {title: "操作对照", download: [["轻链更新助手", "找到更新助手区域。"], ["下载 Updater App", "点击此按钮下载更新助手，然后在这台安卓设备上安装。"]], updater: [["业务版本", "仅用于辅助排查，不是试衣终端 App 的当前版本。"], ["检查并更新", "点击此按钮，按系统提示完成下载和安装。"], ["已经是最新版本", "仍需回到试衣终端 App 核对实际版本。"]], open: "点击放大查看"},
@@ -667,7 +667,7 @@ function stepImage(t, ipad, index, scene) {
     ja: {title: "日本語の操作ガイド", download: [["轻链更新助手", "更新アシスタント：この欄を探してください。"], ["下载 Updater App", "更新アシスタントをダウンロード：このボタンを押し、同じAndroid端末にインストールします。"]], updater: [["业务版本", "業務バージョン：調査用の値です。試着アプリのバージョンではありません。"], ["检查并更新", "更新を確認：このボタンを押し、OSの案内に従ってダウンロードとインストールを完了します。"], ["已经是最新版本", "最新バージョン：試着アプリ内で実際のバージョンも確認してください。"]], open: "画像を拡大する"},
   };
   const copy = labels[state.locale];
-  const dimensions = ipad ? [889, 530] : index === 0 ? [640, 986] : [1086, 1448];
+  const dimensions = ipad ? [889, state.locale === "ja" ? 568 : 530] : index === 0 ? [640, 986] : [1086, 1448];
   return `<figure class="tutorial-image ${ipad ? "" : "tutorial-annotated"}">
     <button type="button" class="image-preview-trigger" aria-haspopup="dialog" aria-label="${copy.open}">
       <img src="./assets/${imagePath}" width="${dimensions[0]}" height="${dimensions[1]}" alt="${ipad ? t.ipadSteps[1][0] : index === 0 ? t.androidSteps[0][0] : t.androidSteps[2][0]}" loading="lazy" />

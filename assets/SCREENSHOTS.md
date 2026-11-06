@@ -7,3 +7,7 @@ Updated 2026-11-06.
 - `android-updater.png`: existing supplied field photograph. No live Android device is connected; retain the original with localized button explanations. A new native screenshot requires a device running the updater.
 
 The manual's application name and Android installation requirements take precedence over legacy labels in reference images. Keep original assets for provenance. Screenshot language selection and captions are owned by `stepImage` in `app.js`.
+
+## Localized application names (2026-11-06)
+
+Active `*/ipad-invitation-named.png` and `*/android-download-named.png` are reference captures with the application name corrected in the browser DOM before capture: Chinese `试衣终端`; English and Japanese `Live Fitting`. Only application-name text nodes were changed. These do not assert that the remote publisher updated its metadata. The original unmodified captures above are retained for provenance. The manual captions disclose the name correction. The updater photograph names a different application (LightChain Updater), so its name is unchanged.
