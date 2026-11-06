@@ -25,8 +25,8 @@ const translations = {
     faqTitle: "遇到问题？从这里开始。",
     faqDesc: "查看安装与更新中的常见问题，找到下一步处理方法。",
     faqLink: "查看常见问题",
-    footer: "试衣终端 · 用户手册",
-    updated: "适用 V1.1–V1.2 · 更新于 2026 年 11 月 5 日",
+    footer: "试衣终端：用户手册",
+    updated: "适用 V1.1–V1.2：更新于 2026 年 11 月 5 日",
     skip: "跳转到正文",
     scenes: ["首次安装", "老版本换装", "现有版本更新"],
     preparation: "开始前，请先检查",
@@ -209,8 +209,8 @@ const translations = {
     faqTitle: "Need a little help?",
     faqDesc: "Find answers to common installation and update questions.",
     faqLink: "Explore common questions",
-    footer: "试衣终端 · User Guide",
-    updated: "For V1.1–V1.2 · Updated November 5, 2026",
+    footer: "试衣终端: User Guide",
+    updated: "For V1.1–V1.2: Updated November 5, 2026",
     skip: "Skip to content",
     scenes: [
       "First installation",
@@ -419,8 +419,8 @@ const translations = {
     faqTitle: "お困りのときは。",
     faqDesc: "インストールや更新に関するよくある質問と対処方法をご案内します。",
     faqLink: "よくある質問を見る",
-    footer: "试衣终端 · ユーザーガイド",
-    updated: "V1.1–V1.2 対応 · 2026年11月5日更新",
+    footer: "试衣终端：ユーザーガイド",
+    updated: "V1.1–V1.2 対応：2026年11月5日更新",
     skip: "本文へ移動",
     scenes: ["初めてのインストール", "旧版からの入れ替え", "アプリの更新"],
     preparation: "開始前に確認",
@@ -706,7 +706,7 @@ function renderGuide(t) {
       </div>
     </section>`;
   }).join("");
-  return /* HTML */ `<h1>${t.devices[deviceKeys.indexOf(state.device)]} · ${t.nav[0]}</h1>
+  return /* HTML */ `<h1>${t.devices[deviceKeys.indexOf(state.device)]}${state.locale === "en" ? ": " : "："}${t.nav[0]}</h1>
     <p class="lede">${t.channels[deviceKeys.indexOf(state.device)]}</p>
     <nav class="section-anchors" aria-label="${t.nav[0]}">
       ${sceneKeys.map((scene, index) => `<a href="${href("guide", state.device, scene)}/guide-${scene}" data-section-anchor="guide-${scene}">${t.scenes[index]}</a>`).join("")}
@@ -792,7 +792,7 @@ function render() {
   };
   const t = translations[state.locale];
   document.documentElement.lang = t.lang;
-  document.title = `${state.page === "home" ? t.manual : t.nav[["guide", "specs", "faq"].indexOf(state.page)]} · LightChain`;
+  document.title = `${state.page === "home" ? t.manual : t.nav[["guide", "specs", "faq"].indexOf(state.page)]}${state.locale === "en" ? ": " : "："}LightChain`;
   document.getElementById("app").innerHTML =
     /* HTML */
     `<a class="skip" href="#main">${t.skip}</a>
