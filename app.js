@@ -3,11 +3,11 @@ const translations = {
     sidebarGroups: ["下载与安装", "软硬件规格要求", "FAQ"],
     lang: "zh-CN",
     brand: "轻链 LightChain",
-    manual: "AI试衣终端用户手册",
+    manual: "试衣终端用户手册",
     languageLabel: "切换语言",
     nav: ["下载、安装与更新", "设备规格", "常见问题"],
     home: "手册首页",
-    heading: "轻链AI试衣终端",
+    heading: "试衣终端",
     intro: "从第一次安装到每一次更新，找到适合你设备的操作指引。",
     choose: "选择你的设备",
     devices: ["iPad", "安卓终端", "安卓平板"],
@@ -25,24 +25,24 @@ const translations = {
     faqTitle: "遇到问题？从这里开始。",
     faqDesc: "查看安装与更新中的常见问题，找到下一步处理方法。",
     faqLink: "查看常见问题",
-    footer: "轻链AI试衣终端 · 用户手册",
+    footer: "试衣终端 · 用户手册",
     updated: "适用 V1.1–V1.2 · 更新于 2026 年 11 月 5 日",
     skip: "跳转到正文",
     scenes: ["首次安装", "老版本换装", "现有版本更新"],
     preparation: "开始前，请先检查",
     ipadPrep:
-      "请在您需要安装应用的 iPad 上确认系统为 <b>iPadOS 16.4 或以上</b>，并对照设备规格检查<b>芯片、内存、存储及摄像头等硬件满足最低要求</b>。存储容量至少为 <b>64GB</b>，并留有足够可用空间；具体机型的芯片与内存请向运营确认。准备好 Apple 账户及稳定网络，并保持供电。",
+      "请在您需要安装应用的 iPad 上确认系统为 <b>iPadOS 16.4 或以上</b>，并对照设备规格检查<b>芯片、内存、存储及摄像头等硬件满足最低要求</b>。存储容量至少为 <b>64GB</b>，并留有足够可用空间；若芯片版本低于 A14，请与技术人员确认是否满足安装条件。准备好 Apple 账户及稳定网络，并保持供电。",
     androidPrep:
-      "确认设备为 <b>Android 12 或以上</b>系统，连接稳定网络并保持供电。安装前请查看设备规格，准备好运营提供的登录账号。",
+      "确认设备为 <b>Android 12 或以上</b>系统，连接稳定网络并保持供电。安装前请查看设备规格，准备好官方提供的登录账号。",
     legacy: "适用范围待确认",
     legacyIpadTitle: "安装前，请删除旧应用",
     legacyAndroid:
-      "旧版设备换装需要卸载旧的试衣终端 App 和轻链更新助手。请先联系运营确认当前版本属于需要换装的范围，并确认照片保存及账号信息，再继续以下安装步骤。",
+      "旧版设备换装需要卸载旧的试衣终端 App 和轻链更新助手。请先联系官方确认当前版本属于需要换装的范围，并确认照片保存及账号信息，再继续以下安装步骤。",
     legacyIpad:
-      "请在您需要安装应用的 iPad 上，先保存所需照片并确认登录账号，再<b>删除旧版本的试衣镜应用</b>。安装新版本前，请确认旧应用已删除，然后按以下步骤安装。",
+      "请在您需要安装应用的 iPad 上，先保存所需照片并确认登录账号，再<b>删除旧版本的试衣终端应用</b>。安装新版本前，请确认旧应用已删除，然后按以下步骤安装。",
     installed: "完成后确认",
     installedText:
-      "打开轻链AI试衣终端，核对实际 App 版本与运营通知一致，并确认账号、门店内容及相机权限。更新助手或 TestFlight 安装完成后，还需要完成终端 App 的安装。",
+      "打开试衣终端，核对实际 App 版本与官方通知一致，并确认账号、门店内容及相机权限。更新助手或 TestFlight 安装完成后，还需要完成试衣终端 App 的安装。",
     video: "视频教程",
     videoText: "正在准备，当前请按上方步骤操作。",
     ipadSteps: [
@@ -55,16 +55,16 @@ const translations = {
       [
         "返回此页，打开应用邀请",
         "完成 TestFlight 设置后，请在您需要安装应用的 iPad 上回到本手册，点击下方入口，在邀请页选择“在 TestFlight 中查看”。",
-        "安装轻链AI试衣终端",
+        "安装试衣终端",
         "https://testflight.apple.com/join/NdJvT2Gt",
       ],
       [
         "接受邀请并安装",
-        "请在该 iPad 的 TestFlight 中核对应用名称为轻链AI试衣终端，首次加入时点击“接受”，再点击“安装”。",
+        "请在该 iPad 的 TestFlight 中核对应用名称为试衣终端，首次加入时点击“接受”，再点击“安装”。",
       ],
       [
         "打开试衣终端",
-        "等待安装完成，点击“打开”，或在主屏幕找到轻链AI试衣终端。",
+        "等待安装完成，点击“打开”，或在主屏幕找到试衣终端。",
       ],
     ],
     androidSteps: [
@@ -84,18 +84,18 @@ const translations = {
       ],
       [
         "打开并核对版本",
-        "安装结束后打开轻链AI试衣终端。助手的“业务版本”仅用于辅助排查，请以 App 内的当前版本为准。",
+        "安装结束后打开试衣终端。助手的“业务版本”仅用于辅助排查，请以 App 内的当前版本为准。",
       ],
     ],
     ipadUpdate: [
       ["结束当前体验", "保存本次照片，保持网络与电量。"],
       [
         "在 TestFlight 中更新",
-        "请在您需要更新应用的 iPad 上打开 TestFlight，找到轻链AI试衣终端，点击“更新”。若仅显示“打开”，请核对版本是否符合运营通知。",
+        "请在您需要更新应用的 iPad 上打开 TestFlight，找到试衣终端，点击“更新”。若仅显示“打开”，请核对版本是否符合官方通知。",
       ],
       [
         "重新打开并检查",
-        "启动终端 App，核对版本、账号和门店内容。没有目标构建时，请联系运营。",
+        "启动试衣终端 App，核对版本、账号和门店内容。没有目标构建时，请联系官方。",
       ],
     ],
     androidUpdate: [
@@ -105,7 +105,7 @@ const translations = {
       ],
       [
         "在 App 中检查更新",
-        "请在您需要更新应用的安卓设备上打开轻链AI试衣终端，连续点击首页左上 Logo 7 次进入个人中心，记录当前版本并点击“检查更新”。",
+        "请在您需要更新应用的安卓设备上打开试衣终端，连续点击首页左上 Logo 7 次进入个人中心，记录当前版本并点击“检查更新”。",
       ],
       [
         "通过更新助手完成安装",
@@ -113,7 +113,7 @@ const translations = {
       ],
       [
         "返回 App 核对",
-        "重新打开终端 App，确认当前版本与发布通知一致。检查失败时检查网络并重试，持续失败请联系运营。",
+        "重新打开试衣终端 App，确认当前版本与发布通知一致。检查失败时检查网络并重试，持续失败请联系官方。",
       ],
     ],
     specIntro:
@@ -153,23 +153,23 @@ const translations = {
     faqs: [
       [
         "如何查看 App 版本？",
-        "在首页左上 Logo 连续点击 7 次，进入个人中心查看“当前版本”。将它与运营发布通知核对。",
+        "在首页左上 Logo 连续点击 7 次，进入个人中心查看“当前版本”。将它与官方发布通知核对。",
       ],
       [
         "安卓提示安装失败，怎么办？",
-        "先检查系统是否为 Android 12 及以上，再确认是否仍有旧版试衣终端和更新助手。需要换装时先向运营确认版本范围，再按老版本换装流程处理。",
+        "先检查系统是否为 Android 12 及以上，再确认是否仍有旧版试衣终端和更新助手。需要换装时先向官方确认版本范围，再按老版本换装流程处理。",
       ],
       [
         "已经安装 TestFlight，为什么找不到试衣终端？",
-        "请在您需要安装应用的 iPad 上打开本手册，返回 iPad 安装教程，点击“安装轻链AI试衣终端”，从邀请页进入 TestFlight，接受邀请并安装应用。",
+        "请在您需要安装应用的 iPad 上打开本手册，返回 iPad 安装教程，点击“安装试衣终端”，从邀请页进入 TestFlight，接受邀请并安装应用。",
       ],
       [
         "更新助手显示最新，为什么 App 版本没变？",
-        "请打开试衣终端 App 核对当前版本。检查是否完成系统安装确认。持续异常时记录 App 版本、助手业务版本和提示截图，联系运营。",
+        "请打开试衣终端 App 核对当前版本。检查是否完成系统安装确认。持续异常时记录 App 版本、助手业务版本和提示截图，联系官方。",
       ],
       [
         "TestFlight 没有安装按钮或目标版本？",
-        "记录页面提示，确认机型和系统版本，并将截图发给运营核对测试资格、名额及构建有效期。",
+        "记录页面提示，确认机型和系统版本，并将截图发给官方核对测试资格、名额及构建有效期。",
       ],
       [
         "可以通过应用商店安装吗？",
@@ -177,7 +177,7 @@ const translations = {
       ],
       [
         "更新持续失败，需要提供哪些信息？",
-        "请记录设备型号、系统版本、App 版本、安装渠道及完整提示截图，联系运营协助处理。",
+        "请记录设备型号、系统版本、App 版本、安装渠道及完整提示截图，联系官方协助处理。",
       ],
     ],
   },
@@ -185,11 +185,11 @@ const translations = {
     sidebarGroups: ["Download & installation", "Hardware & software requirements", "FAQ"],
     lang: "en",
     brand: "LightChain",
-    manual: "AI Fitting Terminal User Guide",
+    manual: "试衣终端 User Guide",
     languageLabel: "Switch language",
     nav: ["Install & update", "Specifications", "FAQ"],
     home: "Guide home",
-    heading: "LightChain AI Fitting Terminal",
+    heading: "试衣终端",
     intro:
       "Find the right instructions for your device, from your first installation to your next update.",
     choose: "Choose your device",
@@ -209,7 +209,7 @@ const translations = {
     faqTitle: "Need a little help?",
     faqDesc: "Find answers to common installation and update questions.",
     faqLink: "Explore common questions",
-    footer: "LightChain AI Fitting Terminal · User Guide",
+    footer: "试衣终端 · User Guide",
     updated: "For V1.1–V1.2 · Updated November 5, 2026",
     skip: "Skip to content",
     scenes: [
@@ -219,18 +219,18 @@ const translations = {
     ],
     preparation: "Before you begin",
     ipadPrep:
-      "On the iPad where you want to install the app, confirm that the system runs <b>iPadOS 16.4 or later</b> and check the device specifications to ensure that the <b>chip, memory, storage and camera meet the minimum requirements</b>. Storage capacity must be at least <b>64GB</b>, with enough free space. Confirm chip and memory suitability for your model with your operator. Have an Apple Account and a stable connection ready, and keep the device powered.",
+      "On the iPad where you want to install the app, confirm that the system runs <b>iPadOS 16.4 or later</b> and check the device specifications to ensure that the <b>chip, memory, storage and camera meet the minimum requirements</b>. Storage capacity must be at least <b>64GB</b>, with enough free space. If your chip is older than A14, please consult technical support to confirm whether the device meets the installation requirements. Have an Apple Account and a stable connection ready, and keep the device powered.",
     androidPrep:
-      "Check that your device runs <b>Android 12 or later</b>. Keep it powered and connected. Review device specifications and have your operator-provided account ready.",
+      "Check that your device runs <b>Android 12 or later</b>. Keep it powered and connected. Review device specifications and have the account provided by official support ready.",
     legacy: "Confirm applicability first",
     legacyIpadTitle: "Delete the old app before installing",
     legacyAndroid:
-      "Replacing a legacy installation requires removing the old terminal app and LightChain Updater. Ask your operator to confirm that this applies to your version, save your photos and confirm your account details before following the steps below.",
+      "Replacing a legacy installation requires removing the old terminal app and LightChain Updater. Ask official support to confirm that this applies to your version, save your photos and confirm your account details before following the steps below.",
     legacyIpad:
-      "On the iPad where you want to install the app, save any photos you need and confirm your login details, then <b>delete the old fitting mirror app</b>. Before installing the new version, confirm that the old app has been deleted, then follow the steps below.",
+      "On the iPad where you want to install the app, save any photos you need and confirm your login details, then <b>delete the old “试衣终端” app</b>. Before installing the new version, confirm that the old app has been deleted, then follow the steps below.",
     installed: "Check when finished",
     installedText:
-      "Open the terminal app and verify its version against the release notice. Check your account, store content and camera permissions. After installing TestFlight or the updater, complete the terminal app installation too.",
+      "Open the “试衣终端” app and verify its version against the release notice. Check your account, store content and camera permissions. After installing TestFlight or the updater, complete the “试衣终端” app installation too.",
     video: "Video tutorial",
     videoText: "In preparation. Please follow the steps above for now.",
     ipadSteps: [
@@ -243,16 +243,16 @@ const translations = {
       [
         "Return here and open the invitation",
         "After setup, return to this guide on the iPad where you want to install the app and use the link below. Select “View in TestFlight” on the invitation page.",
-        "Install LightChain AI Fitting Terminal",
+        "Install 试衣终端",
         "https://testflight.apple.com/join/NdJvT2Gt",
       ],
       [
         "Accept and install",
-        "In TestFlight on that iPad, check the app name. When joining for the first time, select Accept, then Install.",
+        "In TestFlight on that iPad, check the app name is “试衣终端”. When joining for the first time, select Accept, then Install.",
       ],
       [
-        "Open the terminal app",
-        "Wait for installation to finish, then select Open or find the terminal app on your Home Screen.",
+        "Open the “试衣终端” app",
+        "Wait for installation to finish, then select Open or find the “试衣终端” app on your Home Screen.",
       ],
     ],
     androidSteps: [
@@ -267,12 +267,12 @@ const translations = {
         "On the Android device where you want to install the app, open the APK from browser downloads or your file manager. If prompted, allow this source to install apps. Contact your administrator for managed devices.",
       ],
       [
-        "Install the terminal app",
+        "Install the “试衣终端” app",
         "On the Android device where you want to install the app, open LightChain Updater and select “检查并更新” (Check and update). Grant installation permission if requested and finish downloading and installing.",
       ],
       [
         "Open and check the version",
-        "Open the terminal app. Use the version shown inside the app for verification. The updater’s business version is for troubleshooting.",
+        "Open the “试衣终端” app. Use the version shown inside the app for verification. The updater’s business version is for troubleshooting.",
       ],
     ],
     ipadUpdate: [
@@ -282,11 +282,11 @@ const translations = {
       ],
       [
         "Update in TestFlight",
-        "On the iPad where you want to update the app, open TestFlight, find the terminal app and select Update. If it shows Open, compare the version with your operator’s release notice.",
+        "On the iPad where you want to update the app, open TestFlight, find the “试衣终端” app and select Update. If it shows Open, compare the version with the official release notice.",
       ],
       [
         "Open and verify",
-        "Check the app version, account and store content. Contact your operator if the required build is unavailable.",
+        "Check the app version, account and store content. Contact official support if the required build is unavailable.",
       ],
     ],
     androidUpdate: [
@@ -296,7 +296,7 @@ const translations = {
       ],
       [
         "Check for updates in the app",
-        "On the Android device where you want to update the app, open the terminal app and tap the top-left logo on the home screen seven times to open the profile. Record the current version and select Check for updates.",
+        "On the Android device where you want to update the app, open the “试衣终端” app and tap the top-left logo on the home screen seven times to open the profile. Record the current version and select Check for updates.",
       ],
       [
         "Complete installation with the updater",
@@ -304,7 +304,7 @@ const translations = {
       ],
       [
         "Return to the app",
-        "Verify that the installed version matches the release notice. Check connectivity and retry if checking fails. Contact your operator if the problem persists.",
+        "Verify that the installed version matches the release notice. Check connectivity and retry if checking fails. Contact official support if the problem persists.",
       ],
     ],
     specIntro:
@@ -364,23 +364,23 @@ const translations = {
     faqs: [
       [
         "Where can I find the app version?",
-        "On the Android device where you want to update the app, open the terminal app and tap the top-left logo on the home screen seven times. Find Current version in the profile and compare it with the release notice.",
+        "On the Android device where you want to update the app, open the “试衣终端” app and tap the top-left logo on the home screen seven times. Find Current version in the profile and compare it with the release notice.",
       ],
       [
         "Why does installation fail on Android?",
-        "Check for Android 12 or later and existing legacy terminal and updater apps. Ask your operator whether legacy replacement applies before removing anything.",
+        "Check for Android 12 or later and existing legacy terminal and updater apps. Ask official support whether legacy replacement applies before removing anything.",
       ],
       [
-        "TestFlight is installed. Where is the terminal app?",
-        "On the iPad where you want to install the app, open this manual, return to the iPad guide and select Install LightChain AI Fitting Terminal. Open the invitation in TestFlight, accept and install.",
+        "TestFlight is installed. Where is the “试衣终端” app?",
+        "On the iPad where you want to install the app, open this manual, return to the iPad guide and select Install 试衣终端. Open the invitation in TestFlight, accept and install.",
       ],
       [
         "The updater says up to date, but the app version is unchanged.",
-        "Check the version inside the terminal app and ensure the system installation confirmation was completed. Send the app version, updater business version and screenshots to your operator if needed.",
+        "Check the version inside the “试衣终端” app and ensure the system installation confirmation was completed. Send the app version, updater business version and screenshots to official support if needed.",
       ],
       [
         "TestFlight has no installation button or required build.",
-        "Record the message, device model and OS version. Ask your operator to check eligibility, capacity and build validity.",
+        "Record the message, device model and OS version. Ask official support to check eligibility, capacity and build validity.",
       ],
       [
         "Can I use an app store?",
@@ -388,7 +388,7 @@ const translations = {
       ],
       [
         "What should I provide if updates keep failing?",
-        "Send your device model, OS version, app version, installation channel and a complete screenshot of the message to your operator.",
+        "Send your device model, OS version, app version, installation channel and a complete screenshot of the message to official support.",
       ],
     ],
   },
@@ -396,11 +396,11 @@ const translations = {
     sidebarGroups: ["ダウンロードとインストール", "ハードウェア・ソフトウェア要件", "FAQ"],
     lang: "ja",
     brand: "LightChain",
-    manual: "AI試着端末ユーザーガイド",
+    manual: "试衣终端ユーザーガイド",
     languageLabel: "言語を切り替える",
     nav: ["インストールと更新", "動作環境", "よくある質問"],
     home: "ガイドのホーム",
-    heading: "LightChain AI試着端末",
+    heading: "试衣终端",
     intro: "お使いのデバイスに合った手順で、インストールからアップデートまで。",
     choose: "デバイスを選択",
     devices: ["iPad", "Android端末", "Androidタブレット"],
@@ -419,24 +419,24 @@ const translations = {
     faqTitle: "お困りのときは。",
     faqDesc: "インストールや更新に関するよくある質問と対処方法をご案内します。",
     faqLink: "よくある質問を見る",
-    footer: "LightChain AI試着端末 · ユーザーガイド",
+    footer: "试衣终端 · ユーザーガイド",
     updated: "V1.1–V1.2 対応 · 2026年11月5日更新",
     skip: "本文へ移動",
     scenes: ["初めてのインストール", "旧版からの入れ替え", "アプリの更新"],
     preparation: "開始前に確認",
     ipadPrep:
-      "アプリをインストールするiPadで、OSが<b>iPadOS 16.4以降</b>であることを確認してください。動作環境と照合し、<b>チップ、メモリ、ストレージ、カメラなどが最低要件を満たしていること</b>も確認します。ストレージ容量は<b>64GB以上</b>で、十分な空き容量が必要です。機種ごとのチップとメモリの適合性は運営担当者に確認してください。Apple Account、安定したネットワーク、電源を用意してください。",
+      "アプリをインストールするiPadで、OSが<b>iPadOS 16.4以降</b>であることを確認してください。動作環境と照合し、<b>チップ、メモリ、ストレージ、カメラなどが最低要件を満たしていること</b>も確認します。ストレージ容量は<b>64GB以上</b>で、十分な空き容量が必要です。A14より前のチップを搭載している場合は、インストール条件を満たすか技術担当者に確認してください。Apple Account、安定したネットワーク、電源を用意してください。",
     androidPrep:
-      "<b>Android 12以降</b>であることを確認し、電源とネットワークを確保してください。動作環境を確認し、運営担当者から案内されたアカウントを用意します。",
+      "<b>Android 12以降</b>であることを確認し、電源とネットワークを確保してください。動作環境を確認し、公式サポートから案内されたアカウントを用意します。",
     legacy: "対象バージョンの確認が必要です",
     legacyIpadTitle: "インストール前に旧版アプリを削除",
     legacyAndroid:
-      "旧版からの入れ替えでは、旧試着端末アプリと更新アシスタントの削除が必要です。担当者に対象バージョンか確認し、写真の保存とアカウント情報を確認してから、以下の手順を進めてください。",
+      "旧版からの入れ替えでは、旧「试衣终端」アプリと更新アシスタントの削除が必要です。公式サポートに対象バージョンか確認し、写真の保存とアカウント情報を確認してから、以下の手順を進めてください。",
     legacyIpad:
-      "アプリをインストールするiPadで、必要な写真を保存し、ログイン情報を確認してから、<b>旧版の試着ミラーアプリを削除</b>してください。新しいバージョンをインストールする前に、旧版アプリが削除済みであることを確認し、以下の手順に進んでください。",
+      "アプリをインストールするiPadで、必要な写真を保存し、ログイン情報を確認してから、<b>旧版の「试衣终端」アプリを削除</b>してください。新しいバージョンをインストールする前に、旧版アプリが削除済みであることを確認し、以下の手順に進んでください。",
     installed: "完了後の確認",
     installedText:
-      "試着端末アプリを開き、バージョンをリリース案内と照合します。アカウント、店舗情報、カメラ権限も確認してください。TestFlightや更新アシスタントの導入後、試着端末アプリ自体のインストールも完了させます。",
+      "「试衣终端」アプリを開き、バージョンをリリース案内と照合します。アカウント、店舗情報、カメラ権限も確認してください。TestFlightや更新アシスタントの導入後、「试衣终端」アプリ自体のインストールも完了させます。",
     video: "動画ガイド",
     videoText: "準備中です。現在は上記の手順をご利用ください。",
     ipadSteps: [
@@ -449,16 +449,16 @@ const translations = {
       [
         "このページに戻り、招待を開く",
         "初期設定後、アプリをインストールするiPadでこのガイドに戻って下のリンクを開き、招待ページで「TestFlightで表示」を選択します。",
-        "AI試着端末をインストール",
+        "试衣终端をインストール",
         "https://testflight.apple.com/join/NdJvT2Gt",
       ],
       [
         "招待を承認してインストール",
-        "同じiPadのTestFlightでアプリ名を確認します。初回は「承認」を選択し、「インストール」をタップします。",
+        "同じiPadのTestFlightでアプリ名が「试衣终端」であることを確認します。初回は「承認」を選択し、「インストール」をタップします。",
       ],
       [
-        "試着端末アプリを開く",
-        "完了後に「開く」をタップするか、ホーム画面の試着端末アプリを開きます。",
+        "「试衣终端」アプリを開く",
+        "完了後に「開く」をタップするか、ホーム画面の「试衣终端」アプリを開きます。",
       ],
     ],
     androidSteps: [
@@ -473,23 +473,23 @@ const translations = {
         "アプリをインストールするAndroidデバイスで、ブラウザのダウンロード履歴またはファイル管理からAPKを開きます。必要に応じて提供元からのインストールを許可します。管理対象デバイスは管理者にご相談ください。",
       ],
       [
-        "試着端末アプリをインストール",
+        "「试衣终端」アプリをインストール",
         "アプリをインストールするAndroidデバイスで更新アシスタントを開き、「检查并更新」（更新を確認）を選択します。必要な権限を許可し、ダウンロードとインストールを完了します。",
       ],
       [
         "アプリとバージョンを確認",
-        "試着端末アプリを開き、アプリ内のバージョンを確認します。更新アシスタントの業務バージョンは調査用の情報です。",
+        "「试衣终端」アプリを開き、アプリ内のバージョンを確認します。更新アシスタントの業務バージョンは調査用の情報です。",
       ],
     ],
     ipadUpdate: [
       ["利用中の操作を終了", "写真を保存し、ネットワークと電源を確保します。"],
       [
         "TestFlightで更新",
-        "アプリを更新するiPadでTestFlightを開き、試着端末アプリを見つけ、「アップデート」を選択します。「開く」と表示される場合は、案内されたバージョンか確認してください。",
+        "アプリを更新するiPadでTestFlightを開き、「试衣终端」アプリを見つけ、「アップデート」を選択します。「開く」と表示される場合は、案内されたバージョンか確認してください。",
       ],
       [
         "再起動して確認",
-        "アプリのバージョン、アカウント、店舗情報を確認します。対象ビルドがない場合は担当者にご連絡ください。",
+        "アプリのバージョン、アカウント、店舗情報を確認します。対象ビルドがない場合は公式サポートにご連絡ください。",
       ],
     ],
     androidUpdate: [
@@ -499,7 +499,7 @@ const translations = {
       ],
       [
         "アプリで更新を確認",
-        "アプリを更新するAndroidデバイスで試着端末アプリを開き、ホーム画面左上のロゴを7回タップして個人ページを開きます。現在のバージョンを記録し、更新確認を選択します。",
+        "アプリを更新するAndroidデバイスで「试衣终端」アプリを開き、ホーム画面左上のロゴを7回タップして個人ページを開きます。現在のバージョンを記録し、更新確認を選択します。",
       ],
       [
         "更新アシスタントでインストール",
@@ -507,7 +507,7 @@ const translations = {
       ],
       [
         "アプリに戻って確認",
-        "リリース案内とバージョンを照合します。確認に失敗した場合は通信状態を確認して再試行し、解消しない場合は担当者にご連絡ください。",
+        "リリース案内とバージョンを照合します。確認に失敗した場合は通信状態を確認して再試行し、解消しない場合は公式サポートにご連絡ください。",
       ],
     ],
     specIntro:
@@ -555,19 +555,19 @@ const translations = {
       ],
       [
         "Androidでインストールに失敗します。",
-        "Android 12以降か、旧版アプリと更新アシスタントが残っていないかを確認します。削除前に担当者へ入れ替え対象か確認してください。",
+        "Android 12以降か、旧版アプリと更新アシスタントが残っていないかを確認します。削除前に公式サポートへ入れ替え対象か確認してください。",
       ],
       [
-        "TestFlightを入れましたが、試着端末アプリがありません。",
-        "アプリをインストールするiPadで本マニュアルのiPadガイドに戻り、「AI試着端末をインストール」を選択します。招待からTestFlightに移動し、承認とインストールを完了してください。",
+        "TestFlightを入れましたが、「试衣终端」アプリがありません。",
+        "アプリをインストールするiPadで本マニュアルのiPadガイドに戻り、「试衣终端をインストール」を選択します。招待からTestFlightに移動し、承認とインストールを完了してください。",
       ],
       [
         "更新アシスタントでは最新ですが、アプリのバージョンが変わりません。",
-        "システムのインストール確認を完了したか確認します。解消しない場合はアプリのバージョン、業務バージョン、画面の画像を担当者に送ってください。",
+        "システムのインストール確認を完了したか確認します。解消しない場合はアプリのバージョン、業務バージョン、画面の画像を公式サポートに送ってください。",
       ],
       [
         "TestFlightにインストールボタンや対象ビルドがありません。",
-        "メッセージ、機種、OSバージョンを記録し、担当者にテスト資格、定員、有効期限の確認を依頼してください。",
+        "メッセージ、機種、OSバージョンを記録し、公式サポートにテスト資格、定員、有効期限の確認を依頼してください。",
       ],
       [
         "公式ストアからインストールできますか？",
@@ -575,7 +575,7 @@ const translations = {
       ],
       [
         "更新に失敗し続ける場合は？",
-        "機種、OSバージョン、アプリのバージョン、インストール経路、メッセージ全体のスクリーンショットを担当者にお送りください。",
+        "機種、OSバージョン、アプリのバージョン、インストール経路、メッセージ全体のスクリーンショットを公式サポートにお送りください。",
       ],
     ],
   },
@@ -655,16 +655,29 @@ function stepImage(t, ipad, index, scene) {
     filename = "android-download.png";
   if (!ipad && index === 2) filename = "android-updater.png";
   if (!filename) return "";
+  const localizedImages = {
+    zh: {"ipad-invitation.png": "ipad-invitation.png", "android-download.png": "android-download.png", "android-updater.png": "android-updater.png"},
+    en: {},
+    ja: {},
+  };
+  const imagePath = localizedImages[state.locale][filename];
+  if (!imagePath) {
+    const pending = {
+      en: "English screenshot coming soon. Please follow the written instructions above.",
+      ja: "日本語の画面画像は準備中です。上記の手順に沿って操作してください。",
+    };
+    return `<figure class="tutorial-image"><div class="video">${pending[state.locale]}</div></figure>`;
+  }
   const captions = {
-    zh: "现有中文界面示意。截图中的版本、系统要求与旧登录描述以本手册正文及实际发布通知为准。点击查看原图。",
-    en: "Existing Chinese interface reference. Follow this guide and the release notice for current versions, system requirements and sign-in instructions. Open the original image.",
-    ja: "既存の中国語画面の参考画像です。バージョン、動作要件、ログイン方法は本文とリリース案内をご確認ください。原寸画像を開けます。",
+    zh: "中文界面参考。截图可能仍显示旧应用名；本手册统一使用“试衣终端”。版本及安装要求以正文和官方通知为准。点击查看原图。",
+    en: "English interface reference. Open the original image.",
+    ja: "日本語画面の参考画像です。原寸画像を開けます。",
   };
   const dimensions = {"ipad-invitation.png": [900, 1100], "android-download.png": [1798, 875], "android-updater.png": [1086, 1448]};
   return /* HTML */ `<figure class="tutorial-image">
-    <a href="./assets/${filename}" target="_blank" rel="noopener noreferrer"
+    <a href="./assets/${imagePath}" target="_blank" rel="noopener noreferrer"
       ><img
-        src="./assets/${filename}"
+        src="./assets/${imagePath}"
         width="${dimensions[filename][0]}"
         height="${dimensions[filename][1]}"
         alt="${ipad ? t.ipadSteps[1][0] : index === 0 ? t.androidSteps[0][0] : t.androidSteps[2][0]}"
