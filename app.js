@@ -26,7 +26,7 @@ const translations = {
     faqDesc: "查看安装与更新中的常见问题，找到下一步处理方法。",
     faqLink: "查看常见问题",
     footer: "试衣终端：用户手册",
-    updated: "适用 V1.1–V1.2：更新于 2026 年 11 月 5 日",
+    updated: "适用 V1.1–V1.2：更新于 2026 年 11 月 6 日",
     skip: "跳转到正文",
     scenes: ["首次安装", "老版本换装", "现有版本更新"],
     preparation: "开始前，请先检查",
@@ -210,7 +210,7 @@ const translations = {
     faqDesc: "Find answers to common installation and update questions.",
     faqLink: "Explore common questions",
     footer: "试衣终端: User Guide",
-    updated: "For V1.1–V1.2: Updated November 5, 2026",
+    updated: "For V1.1–V1.2: Updated November 6, 2026",
     skip: "Skip to content",
     scenes: [
       "First installation",
@@ -420,7 +420,7 @@ const translations = {
     faqDesc: "インストールや更新に関するよくある質問と対処方法をご案内します。",
     faqLink: "よくある質問を見る",
     footer: "试衣终端：ユーザーガイド",
-    updated: "V1.1–V1.2 対応：2026年11月5日更新",
+    updated: "V1.1–V1.2 対応：2026年11月6日更新",
     skip: "本文へ移動",
     scenes: ["初めてのインストール", "旧版からの入れ替え", "アプリの更新"],
     preparation: "開始前に確認",
@@ -655,35 +655,25 @@ function stepImage(t, ipad, index, scene) {
     filename = "android-download.png";
   if (!ipad && index === 2) filename = "android-updater.png";
   if (!filename) return "";
-  const localizedImages = {
-    zh: {"ipad-invitation.png": "ipad-invitation.png", "android-download.png": "android-download.png", "android-updater.png": "android-updater.png"},
-    en: {},
-    ja: {},
-  };
-  const imagePath = localizedImages[state.locale][filename];
-  if (!imagePath) {
-    const pending = {
-      en: "English screenshot coming soon. Please follow the written instructions above.",
-      ja: "日本語の画面画像は準備中です。上記の手順に沿って操作してください。",
-    };
-    return `<figure class="tutorial-image"><div class="video">${pending[state.locale]}</div></figure>`;
-  }
+  const imagePath = ipad ? `${state.locale}/ipad-invitation.png` : index === 0 ? "zh/android-download.png" : "android-updater.png";
   const captions = {
-    zh: "中文界面参考。截图可能仍显示旧应用名；本手册统一使用“试衣终端”。版本及安装要求以正文和官方通知为准。点击查看原图。",
-    en: "English interface reference. Open the original image.",
-    ja: "日本語画面の参考画像です。原寸画像を開けます。",
+    zh: ipad ? "中文 TestFlight 页面实拍。邀请页仍显示旧应用名，应用介绍由发布方提供；本手册统一使用“试衣终端”。" : "中文界面原图。界面中的名称、版本和系统字段可能与本手册不同；请以本手册的 Android 12 及以上要求和官方发布通知为准。",
+    en: ipad ? "Actual English TestFlight page. The publisher’s app name and description remain in Chinese. This guide calls the app “试衣终端”." : "Original Chinese interface with English guidance. The app does not currently provide a verified English screen. Names, versions and system fields may differ; follow this guide’s Android 12+ requirement and the official release notice.",
+    ja: ipad ? "日本語のTestFlight実画面です。公開元のアプリ名と説明は中国語のままです。本ガイドではアプリ名を「试衣终端」に統一しています。" : "中国語の実画面に日本語の操作説明を添えています。日本語の実画面は未確認です。名称、バージョン、OS欄が異なる場合は、本ガイドのAndroid 12以降の要件と公式案内に従ってください。",
   };
-  const dimensions = {"ipad-invitation.png": [900, 1100], "android-download.png": [1798, 875], "android-updater.png": [1086, 1448]};
-  return /* HTML */ `<figure class="tutorial-image">
-    <a href="./assets/${imagePath}" target="_blank" rel="noopener noreferrer"
-      ><img
-        src="./assets/${imagePath}"
-        width="${dimensions[filename][0]}"
-        height="${dimensions[filename][1]}"
-        alt="${ipad ? t.ipadSteps[1][0] : index === 0 ? t.androidSteps[0][0] : t.androidSteps[2][0]}"
-        loading="lazy"
-    /></a>
-    <figcaption>${captions[state.locale]}</figcaption>
+  const labels = {
+    zh: {title: "操作对照", download: [["轻链更新助手", "找到更新助手区域。"], ["下载 Updater App", "点击此按钮下载更新助手，然后在这台安卓设备上安装。"]], updater: [["业务版本", "仅用于辅助排查，不是试衣终端 App 的当前版本。"], ["检查并更新", "点击此按钮，按系统提示完成下载和安装。"], ["已经是最新版本", "仍需回到试衣终端 App 核对实际版本。"]], open: "点击查看原图"},
+    en: {title: "English button guide", download: [["轻链更新助手", "LightChain Updater: find this section."], ["下载 Updater App", "Download Updater App: tap this button, then install it on this Android device."]], updater: [["业务版本", "Business version: a troubleshooting value, not the terminal app version."], ["检查并更新", "Check and update: tap here, then complete the system download and installation prompts."], ["已经是最新版本", "Up to date: still verify the actual version inside the terminal app."]], open: "Open original image"},
+    ja: {title: "日本語の操作ガイド", download: [["轻链更新助手", "更新アシスタント：この欄を探してください。"], ["下载 Updater App", "更新アシスタントをダウンロード：このボタンを押し、同じAndroid端末にインストールします。"]], updater: [["业务版本", "業務バージョン：調査用の値です。試着アプリのバージョンではありません。"], ["检查并更新", "更新を確認：このボタンを押し、OSの案内に従ってダウンロードとインストールを完了します。"], ["已经是最新版本", "最新バージョン：試着アプリ内で実際のバージョンも確認してください。"]], open: "原寸画像を開く"},
+  };
+  const copy = labels[state.locale];
+  const dimensions = ipad ? [889, 530] : index === 0 ? [640, 986] : [1086, 1448];
+  return `<figure class="tutorial-image ${ipad ? "" : "tutorial-annotated"}">
+    <a href="./assets/${imagePath}" target="_blank" rel="noopener noreferrer" aria-label="${copy.open}">
+      <img src="./assets/${imagePath}" width="${dimensions[0]}" height="${dimensions[1]}" alt="${ipad ? t.ipadSteps[1][0] : index === 0 ? t.androidSteps[0][0] : t.androidSteps[2][0]}" loading="lazy" />
+    </a>
+    ${ipad ? "" : `<div class="tutorial-key"><h4>${copy.title}</h4><dl>${(index === 0 ? copy.download : copy.updater).map(([label, explanation]) => `<dt lang="zh-CN">${label}</dt><dd>${explanation}</dd>`).join("")}</dl></div>`}
+    <figcaption>${captions[state.locale]} ${copy.open} ↗</figcaption>
   </figure>`;
 }
 function renderGuide(t) {
@@ -714,9 +704,13 @@ function renderGuide(t) {
     ${sections}
     ${link("faq", `${t.faqLink} ›`)}`;
 }
+function renderSpecTable(headers, rows) {
+  return `<div class="table-wrap"><table><thead><tr>${headers.map(title => `<th scope="col">${title}</th>`).join("")}</tr></thead><tbody>${rows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+}
 function renderSpecs(t) {
+  const spec = specificationUpdates[state.locale];
   const sections = deviceKeys.map((key, index) => {
-    const rows = key === "ipad" ? t.ipadRows : t.androidRows;
+    const rows = key === "ipad" ? spec.ipadRows : spec.androidRows;
     return /* HTML */ `<section class="anchor-section" id="spec-${key}" tabindex="-1" aria-labelledby="spec-title-${key}">
       <h2 id="spec-title-${key}">${t.devices[index]}</h2>
       <div class="table-wrap">
@@ -725,7 +719,8 @@ function renderSpecs(t) {
           <tbody>${rows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join("")}</tr>`).join("")}</tbody>
         </table>
       </div>
-      ${key === "ipad" ? `<p class="note">${t.ipadCaution}</p>` : ""}
+      ${key === "ipad" ? `<p class="note">${t.ipadCaution}</p><h3 class="spec-subheading">${spec.modelTitle}</h3><ul class="spec-list">${spec.models.map(model => `<li>${model}</li>`).join("")}</ul>` : `<p class="note">${spec.recording}</p>`}
+      ${key === "pad" ? `<h3 class="spec-subheading">${spec.processorTitle}</h3><p>${spec.processorNote}</p>${renderSpecTable(spec.processorHeaders, spec.processorRows)}` : ""}
     </section>`;
   }).join("");
   return /* HTML */ `<h1>${t.nav[1]}</h1>
@@ -736,10 +731,14 @@ function renderSpecs(t) {
     ${sections}
     <h2>${t.network}</h2>
     <p>${t.networkText}</p>
+    <h3 class="spec-subheading">${spec.networkTitle}</h3>
+    ${renderSpecTable(spec.networkHeaders, spec.networkRows)}
+    <p class="note">${spec.capacity}</p>
     <details>
       <summary>${t.networkDetail}</summary>
-      <p>${t.networkDetailText}</p>
-    </details>`;
+      <ul class="spec-list">${spec.deployment.map(item => `<li>${item}</li>`).join("")}</ul>
+    </details>
+    <p class="spec-source"><a href="https://lightchain.feishu.cn/docx/WeNwdyjbtoxQjsxP5RBcZrFJn2b" target="_blank" rel="noopener noreferrer">${spec.source}</a></p>`;
 }
 function renderArticle(t) {
   const labels = { guide: t.nav[0], specs: t.nav[1], faq: t.nav[2] };
