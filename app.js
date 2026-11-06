@@ -31,14 +31,15 @@ const translations = {
     scenes: ["首次安装", "老版本换装", "现有版本更新"],
     preparation: "开始前，请先检查",
     ipadPrep:
-      "准备 <b>iPadOS 16.4 或以上</b>系统的 iPad、Apple 账户及稳定网络。保持供电，并确认有足够存储空间。",
+      "请在您需要安装应用的 iPad 上确认系统为 <b>iPadOS 16.4 或以上</b>，并对照设备规格检查<b>芯片、内存、存储及摄像头等硬件满足最低要求</b>。存储容量至少为 <b>64GB</b>，并留有足够可用空间；具体机型的芯片与内存请向运营确认。准备好 Apple 账户及稳定网络，并保持供电。",
     androidPrep:
       "确认设备为 <b>Android 12 或以上</b>系统，连接稳定网络并保持供电。安装前请查看设备规格，准备好运营提供的登录账号。",
     legacy: "适用范围待确认",
+    legacyIpadTitle: "安装前，请删除旧应用",
     legacyAndroid:
       "旧版设备换装需要卸载旧的试衣终端 App 和轻链更新助手。请先联系运营确认当前版本属于需要换装的范围，并确认照片保存及账号信息，再继续以下安装步骤。",
     legacyIpad:
-      "现有资料尚未明确 iPad 老版本是否需要卸载。请先向运营确认版本与处理方式，再按首次安装指引操作。",
+      "请在您需要安装应用的 iPad 上，先保存所需照片并确认登录账号，再<b>删除旧版本的试衣镜应用</b>。安装新版本前，请确认旧应用已删除，然后按以下步骤安装。",
     installed: "完成后确认",
     installedText:
       "打开轻链AI试衣终端，核对实际 App 版本与运营通知一致，并确认账号、门店内容及相机权限。更新助手或 TestFlight 安装完成后，还需要完成终端 App 的安装。",
@@ -218,14 +219,15 @@ const translations = {
     ],
     preparation: "Before you begin",
     ipadPrep:
-      "Prepare an iPad running <b>iPadOS 16.4 or later</b>, an Apple Account and a stable connection. Keep the device powered and check available storage.",
+      "On the iPad where you want to install the app, confirm that the system runs <b>iPadOS 16.4 or later</b> and check the device specifications to ensure that the <b>chip, memory, storage and camera meet the minimum requirements</b>. Storage capacity must be at least <b>64GB</b>, with enough free space. Confirm chip and memory suitability for your model with your operator. Have an Apple Account and a stable connection ready, and keep the device powered.",
     androidPrep:
       "Check that your device runs <b>Android 12 or later</b>. Keep it powered and connected. Review device specifications and have your operator-provided account ready.",
     legacy: "Confirm applicability first",
+    legacyIpadTitle: "Delete the old app before installing",
     legacyAndroid:
       "Replacing a legacy installation requires removing the old terminal app and LightChain Updater. Ask your operator to confirm that this applies to your version, save your photos and confirm your account details before following the steps below.",
     legacyIpad:
-      "The current instructions do not specify whether a legacy iPad app must be removed. Confirm the procedure with your operator before following the first-installation steps.",
+      "On the iPad where you want to install the app, save any photos you need and confirm your login details, then <b>delete the old fitting mirror app</b>. Before installing the new version, confirm that the old app has been deleted, then follow the steps below.",
     installed: "Check when finished",
     installedText:
       "Open the terminal app and verify its version against the release notice. Check your account, store content and camera permissions. After installing TestFlight or the updater, complete the terminal app installation too.",
@@ -423,14 +425,15 @@ const translations = {
     scenes: ["初めてのインストール", "旧版からの入れ替え", "アプリの更新"],
     preparation: "開始前に確認",
     ipadPrep:
-      "<b>iPadOS 16.4以降</b>のiPad、Apple Account、安定したネットワークを用意してください。電源と空き容量も確認します。",
+      "アプリをインストールするiPadで、OSが<b>iPadOS 16.4以降</b>であることを確認してください。動作環境と照合し、<b>チップ、メモリ、ストレージ、カメラなどが最低要件を満たしていること</b>も確認します。ストレージ容量は<b>64GB以上</b>で、十分な空き容量が必要です。機種ごとのチップとメモリの適合性は運営担当者に確認してください。Apple Account、安定したネットワーク、電源を用意してください。",
     androidPrep:
       "<b>Android 12以降</b>であることを確認し、電源とネットワークを確保してください。動作環境を確認し、運営担当者から案内されたアカウントを用意します。",
     legacy: "対象バージョンの確認が必要です",
+    legacyIpadTitle: "インストール前に旧版アプリを削除",
     legacyAndroid:
       "旧版からの入れ替えでは、旧試着端末アプリと更新アシスタントの削除が必要です。担当者に対象バージョンか確認し、写真の保存とアカウント情報を確認してから、以下の手順を進めてください。",
     legacyIpad:
-      "iPadの旧版アプリを削除する必要があるかは、現時点の資料では確定していません。担当者に確認後、初回インストール手順に従ってください。",
+      "アプリをインストールするiPadで、必要な写真を保存し、ログイン情報を確認してから、<b>旧版の試着ミラーアプリを削除</b>してください。新しいバージョンをインストールする前に、旧版アプリが削除済みであることを確認し、以下の手順に進んでください。",
     installed: "完了後の確認",
     installedText:
       "試着端末アプリを開き、バージョンをリリース案内と照合します。アカウント、店舗情報、カメラ権限も確認してください。TestFlightや更新アシスタントの導入後、試着端末アプリ自体のインストールも完了させます。",
@@ -678,8 +681,8 @@ function renderGuide(t) {
       : (ipad ? t.ipadSteps : t.androidSteps);
     return /* HTML */ `<section class="anchor-section" id="guide-${scene}" tabindex="-1" aria-labelledby="guide-title-${scene}">
       <h2 id="guide-title-${scene}">${t.scenes[sceneIndex]}</h2>
-      <div class="note note-check"><strong>${t.preparation}</strong>${ipad ? t.ipadPrep : t.androidPrep}</div>
-      ${scene === "legacy" ? `<div class="note note-warning"><strong>${t.legacy}</strong>${ipad ? t.legacyIpad : t.legacyAndroid}</div>` : ""}
+      <div class="note note-check"><strong>${t.preparation}</strong>${ipad ? `${t.ipadPrep} <a href="${href("specs", "ipad")}/spec-ipad">${t.specsLink} ›</a>` : t.androidPrep}</div>
+      ${scene === "legacy" ? `<div class="note note-warning"><strong>${ipad ? t.legacyIpadTitle : t.legacy}</strong>${ipad ? t.legacyIpad : t.legacyAndroid}</div>` : ""}
       <ol class="steps">
         ${steps.map((step, index) => `<li><h3>${step[0]}</h3><p>${step[1]}</p>${step[2] ? `<a class="action" href="${step[3]}" target="_blank" rel="noopener noreferrer">${step[2]} <span aria-hidden="true">↗</span></a>` : ""}${stepImage(t, ipad, index, scene)}</li>`).join("")}
       </ol>
