@@ -70,7 +70,7 @@ const translations = {
     androidSteps: [
       [
         "下载轻链更新助手",
-        "请在您需要安装应用的安卓设备上，使用浏览器打开下载页，向下滑动找到“轻链更新助手”，点击其下方的“下载 Updater App”。",
+        "请在您需要安装应用的安卓设备上，使用浏览器打开下载页，通过右上角语言菜单选择“中文”，再向下滑动找到“轻链更新助手”，点击其下方的“下载 Updater App”。",
         "打开下载页",
         "https://tryon-mirror.lightchainai.com/d",
       ],
@@ -193,7 +193,7 @@ const translations = {
       ],
       [
         "轻链更新助手多次更新失败，怎么办？",
-        "如果在轻链更新助手中多次点击“检查并更新”仍然失败，可以重新下载安装试衣终端。请先保存所需照片并确认登录账号，然后在需要安装应用的安卓设备上删除当前的试衣终端 App。用该设备的浏览器打开<a href=\"https://tryon-mirror.lightchainai.com/d\" target=\"_blank\" rel=\"noopener noreferrer\">下载页面</a>，点击“下载 Android APK”，直接下载并安装新版试衣终端安装包。此处选择的是试衣终端安装包，无需再次下载更新助手。安装完成后，打开试衣终端核对版本并登录；若仍失败，请联系官方。",
+        "如果在轻链更新助手中多次点击“检查并更新”仍然失败，可以重新下载安装试衣终端。请先保存所需照片并确认登录账号，然后在需要安装应用的安卓设备上删除当前的试衣终端 App。用该设备的浏览器打开<a href=\"https://tryon-mirror.lightchainai.com/d\" target=\"_blank\" rel=\"noopener noreferrer\">下载页面</a>，在右上角语言菜单选择“中文”，点击“下载 Android APK”，直接下载并安装新版试衣终端安装包。此处选择的是试衣终端安装包，无需再次下载更新助手。安装完成后，打开试衣终端核对版本并登录；若仍失败，请联系官方。",
         "android"
       ],
       [
@@ -218,8 +218,8 @@ const translations = {
     devices: ["iPad", "Android terminal", "Android tablet"],
     channels: [
       "Install and update with TestFlight",
-      "Install and update with LightChain Updater",
-      "Install and update with LightChain Updater",
+      "Install and update with Light Chain Updater",
+      "Install and update with Light Chain Updater",
     ],
     start: "View installation guide",
     version: "For version",
@@ -247,7 +247,7 @@ const translations = {
     legacy: "Confirm applicability first",
     legacyIpadTitle: "Delete the old app before installing",
     legacyAndroid:
-      "Replacing a legacy installation requires removing the old terminal app and LightChain Updater. Ask official support to confirm that this applies to your version, save your photos and confirm your account details before following the steps below.",
+      "Replacing a legacy installation requires removing the old terminal app and Light Chain Updater. Ask official support to confirm that this applies to your version, save your photos and confirm your account details before following the steps below.",
     legacyIpad:
       "On the iPad where you want to install the app, save any photos you need and confirm your login details, then <b>delete the old “Live Fitting” app</b>. Before installing the new version, confirm that the old app has been deleted, then follow the steps below.",
     installed: "Check when finished",
@@ -279,8 +279,8 @@ const translations = {
     ],
     androidSteps: [
       [
-        "Download LightChain Updater",
-        "On the Android device where you want to install the app, open the download page in a browser. Scroll down to “轻链更新助手” (LightChain Updater) and tap “下载 Updater App” (Download Updater App) below it.",
+        "Download Light Chain Updater",
+        "On the Android device where you want to install the app, open the download page in a browser. Select “English” from the language menu in the top-right corner. Scroll down to “Light Chain Updater” and tap “Download Updater App” below it.",
         "Open download page",
         "https://tryon-mirror.lightchainai.com/d",
       ],
@@ -290,7 +290,7 @@ const translations = {
       ],
       [
         "Install the “Live Fitting” app",
-        "On the Android device where you want to install the app, open LightChain Updater and select “检查并更新” (Check and update). Grant installation permission if requested and finish downloading and installing.",
+        "On the Android device where you want to install the app, open Light Chain Updater and select “检查并更新” (Check and update). Grant installation permission if requested and finish downloading and installing.",
       ],
       [
         "Open and check the version",
@@ -322,7 +322,7 @@ const translations = {
       ],
       [
         "Complete installation with the updater",
-        "On the same Android device, open LightChain Updater and select “检查并更新” (Check and update). Follow the download and installation prompts. Open the updater from the desktop if needed.",
+        "On the same Android device, open Light Chain Updater and select “检查并更新” (Check and update). Follow the download and installation prompts. Open the updater from the desktop if needed.",
       ],
       [
         "Return to the app",
@@ -396,7 +396,7 @@ const translations = {
       ],
       [
         "Android asks me to trust a third-party source. What should I do?",
-        "This version is not yet listed in app stores; official store listing is actively in progress, and installation currently uses the official package. Confirm that the package comes from the official download page linked in this guide. If Android shows “Trust third-party sources”, “Allow from this source” or “Install unknown apps”, enable installation permission for the browser, file manager or LightChain Updater currently handling the installation, then return and continue. Wording varies by device. Contact your administrator if a managed device prevents this setting.",
+        "This version is not yet listed in app stores; official store listing is actively in progress, and installation currently uses the official package. Confirm that the package comes from the official download page linked in this guide. If Android shows “Trust third-party sources”, “Allow from this source” or “Install unknown apps”, enable installation permission for the browser, file manager or Light Chain Updater currently handling the installation, then return and continue. Wording varies by device. Contact your administrator if a managed device prevents this setting.",
         "android"
       ],
       [
@@ -425,8 +425,8 @@ const translations = {
         "common"
       ],
       [
-        "What if LightChain Updater repeatedly fails to update?",
-        "If “检查并更新” (Check and update) repeatedly fails in LightChain Updater, you can reinstall Live Fitting. Save any photos you need and confirm your login details, then delete the current Live Fitting app from the Android device where you want to install it. In that device’s browser, open the <a href=\"https://tryon-mirror.lightchainai.com/d\" target=\"_blank\" rel=\"noopener noreferrer\">download page</a> and tap “下载 Android APK” (Download Android APK) to download and install the new Live Fitting package directly. Choose the app package; you do not need to download the updater again. Open Live Fitting, verify its version and sign in. Contact official support if installation still fails.",
+        "What if Light Chain Updater repeatedly fails to update?",
+        "If “检查并更新” (Check and update) repeatedly fails in Light Chain Updater, you can reinstall Live Fitting. Save any photos you need and confirm your login details, then delete the current Live Fitting app from the Android device where you want to install it. In that device’s browser, open the <a href=\"https://tryon-mirror.lightchainai.com/d\" target=\"_blank\" rel=\"noopener noreferrer\">download page</a> select “English” from the top-right language menu, and tap “Download Android APK” to download and install the new Live Fitting package directly. Choose the app package; you do not need to download the updater again. Open Live Fitting, verify its version and sign in. Contact official support if installation still fails.",
         "android"
       ],
       [
@@ -450,8 +450,8 @@ const translations = {
     devices: ["iPad", "Android端末", "Androidタブレット"],
     channels: [
       "TestFlightでインストール・更新",
-      "LightChain更新アシスタントを使用",
-      "LightChain更新アシスタントを使用",
+      "Light Chain 更新アシスタントを使用",
+      "Light Chain 更新アシスタントを使用",
     ],
     start: "インストール手順を見る",
     version: "対象バージョン",
@@ -508,7 +508,7 @@ const translations = {
     androidSteps: [
       [
         "更新アシスタントをダウンロード",
-        "アプリをインストールするAndroidデバイスのブラウザでダウンロードページを開きます。下にスクロールして「轻链更新助手」（更新アシスタント）を見つけ、その下の「下载 Updater App」をタップしてください。",
+        "アプリをインストールするAndroidデバイスのブラウザでダウンロードページを開きます。右上の言語メニューで「日本語」を選択します。下にスクロールして「Light Chain 更新アシスタント」を見つけ、その下の「更新アプリをダウンロード」をタップしてください。",
         "ダウンロードページへ",
         "https://tryon-mirror.lightchainai.com/d",
       ],
@@ -635,7 +635,7 @@ const translations = {
       ],
       [
         "更新アシスタントで何度更新しても失敗する場合は？",
-        "更新アシスタントの「检查并更新」（更新を確認）を何度実行しても失敗する場合は、Live Fittingを再インストールできます。必要な写真を保存してログイン情報を確認し、対象のAndroid端末から現在のLive Fittingアプリを削除してください。同じ端末のブラウザで<a href=\"https://tryon-mirror.lightchainai.com/d\" target=\"_blank\" rel=\"noopener noreferrer\">ダウンロードページ</a>を開き、「下载 Android APK」をタップして新版のLive Fittingを直接ダウンロードし、インストールします。ここではアプリ本体を選び、更新アシスタントを再ダウンロードする必要はありません。完了後にLive Fittingを開き、バージョンを確認してログインしてください。解決しない場合は公式サポートにご連絡ください。",
+        "更新アシスタントの「检查并更新」（更新を確認）を何度実行しても失敗する場合は、Live Fittingを再インストールできます。必要な写真を保存してログイン情報を確認し、対象のAndroid端末から現在のLive Fittingアプリを削除してください。同じ端末のブラウザで<a href=\"https://tryon-mirror.lightchainai.com/d\" target=\"_blank\" rel=\"noopener noreferrer\">ダウンロードページ</a>を開き、右上の言語メニューで「日本語」を選択して「Android APK をダウンロード」をタップし、新版のLive Fittingを直接ダウンロードし、インストールします。ここではアプリ本体を選び、更新アシスタントを再ダウンロードする必要はありません。完了後にLive Fittingを開き、バージョンを確認してログインしてください。解決しない場合は公式サポートにご連絡ください。",
         "android"
       ],
       [
@@ -721,25 +721,25 @@ function stepImage(t, ipad, index, scene) {
     filename = "android-download.png";
   if (!ipad && index === 2) filename = "android-updater.png";
   if (!filename) return "";
-  const imagePath = ipad ? `${state.locale}/ipad-invitation-named.png` : index === 0 ? `${state.locale}/android-download-named.png` : "android-updater.png";
+  const imagePath = ipad ? `${state.locale}/ipad-invitation-named.png` : index === 0 ? `${state.locale}/android-download-localized.png` : "android-updater.png";
   const captions = {
-    zh: ipad ? "TestFlight 页面参考，应用名已校正为“试衣终端”。点击图片可放大查看。" : "中文界面参考，下载页应用名已校正为“试衣终端”。版本和系统要求以本手册及官方通知为准。",
-    en: ipad ? "TestFlight reference with the app name corrected to “Live Fitting”. The publisher’s description remains in Chinese." : "Chinese interface reference with English guidance. The download page’s app name has been corrected to “Live Fitting”. Follow this guide and official notices for version and system requirements.",
-    ja: ipad ? "アプリ名を「Live Fitting」に修正したTestFlightの参考画像です。公開元のアプリ説明は中国語のままです。" : "中国語画面に日本語の操作説明を添えた参考画像です。ダウンロード画面のアプリ名は「Live Fitting」に修正しています。バージョンと動作要件は本ガイドと公式案内に従ってください。",
+    zh: ipad ? "TestFlight 页面参考，应用名已校正为“试衣终端”。点击图片可放大查看。" : index === 0 ? "中文版下载页参考，应用名已校正为“试衣终端”。版本和系统要求以本手册及官方通知为准。" : "更新助手界面参考。安装完成后，请在试衣终端内核对实际版本。",
+    en: ipad ? "TestFlight reference with the app name corrected to “Live Fitting”. The publisher’s description remains in Chinese." : index === 0 ? "English download page reference, with the app name corrected to “Live Fitting”. Follow this guide and official notices for version and system requirements." : "The updater screenshot shows its Chinese interface. See the button explanations alongside it and verify the installed version in Live Fitting.",
+    ja: ipad ? "アプリ名を「Live Fitting」に修正したTestFlightの参考画像です。公開元のアプリ説明は中国語のままです。" : index === 0 ? "日本語のダウンロードページの参考画像です。アプリ名は「Live Fitting」に修正しています。バージョンと動作要件は本ガイドと公式案内に従ってください。" : "更新アシスタントの中国語画面です。併記したボタン説明を参照し、インストール後はLive Fitting内でバージョンを確認してください。",
   };
   const labels = {
-    zh: {title: "操作对照", download: [["轻链更新助手", "找到更新助手区域。"], ["下载 Updater App", "点击此按钮下载更新助手，然后在这台安卓设备上安装。"]], updater: [["业务版本", "仅用于辅助排查，不是试衣终端 App 的当前版本。"], ["检查并更新", "点击此按钮，按系统提示完成下载和安装。"], ["已经是最新版本", "仍需回到试衣终端 App 核对实际版本。"]], open: "点击放大查看"},
-    en: {title: "Buttons in the screenshot", download: [["下载 Updater App", "Scroll down to “轻链更新助手” (LightChain Updater), then tap “下载 Updater App” below it to download the updater."]], updater: [["业务版本", "Business version: a troubleshooting value, not the terminal app version."], ["检查并更新", "Check and update: tap here, then complete the system download and installation prompts."], ["已经是最新版本", "Up to date: still verify the actual version inside the terminal app."]], open: "Enlarge image"},
-    ja: {title: "画像内のボタン説明", download: [["下载 Updater App", "下にスクロールして「轻链更新助手」（更新アシスタント）を見つけ、その下の「下载 Updater App」をタップしてダウンロードします。"]], updater: [["业务版本", "業務バージョン：調査用の値です。試着アプリのバージョンではありません。"], ["检查并更新", "更新を確認：このボタンを押し、OSの案内に従ってダウンロードとインストールを完了します。"], ["已经是最新版本", "最新バージョン：試着アプリ内で実際のバージョンも確認してください。"]], open: "画像を拡大する"},
+    zh: {title: "操作对照", updater: [["业务版本", "仅用于辅助排查，不是试衣终端 App 的当前版本。"], ["检查并更新", "点击此按钮，按系统提示完成下载和安装。"], ["已经是最新版本", "仍需回到试衣终端 App 核对实际版本。"]], open: "点击放大查看"},
+    en: {title: "Buttons in the screenshot", updater: [["业务版本", "Business version: a troubleshooting value, not the terminal app version."], ["检查并更新", "Check and update: tap here, then complete the system download and installation prompts."], ["已经是最新版本", "Up to date: still verify the actual version inside the terminal app."]], open: "Enlarge image"},
+    ja: {title: "画像内のボタン説明", updater: [["业务版本", "業務バージョン：調査用の値です。試着アプリのバージョンではありません。"], ["检查并更新", "更新を確認：このボタンを押し、OSの案内に従ってダウンロードとインストールを完了します。"], ["已经是最新版本", "最新バージョン：試着アプリ内で実際のバージョンも確認してください。"]], open: "画像を拡大する"},
   };
   const copy = labels[state.locale];
-  const showKey = !ipad && state.locale !== "zh";
-  const dimensions = ipad ? [889, state.locale === "ja" ? 568 : 530] : index === 0 ? [640, 986] : [1086, 1448];
+  const showKey = !ipad && index !== 0 && state.locale !== "zh";
+  const dimensions = ipad ? [889, state.locale === "ja" ? 568 : 530] : index === 0 ? [640, 1006] : [1086, 1448];
   return `<figure class="tutorial-image ${showKey ? "tutorial-annotated" : ""}">
     <button type="button" class="image-preview-trigger" aria-haspopup="dialog" aria-label="${copy.open}">
       <img src="./assets/${imagePath}" width="${dimensions[0]}" height="${dimensions[1]}" alt="${ipad ? t.ipadSteps[1][0] : index === 0 ? t.androidSteps[0][0] : t.androidSteps[2][0]}" loading="lazy" />
     </button>
-    ${showKey ? `<div class="tutorial-key"><h4>${copy.title}</h4><dl>${(index === 0 ? copy.download : copy.updater).map(([label, explanation]) => `<dt lang="zh-CN">${label}</dt><dd>${explanation}</dd>`).join("")}</dl></div>` : ""}
+    ${showKey ? `<div class="tutorial-key"><h4>${copy.title}</h4><dl>${copy.updater.map(([label, explanation]) => `<dt lang="zh-CN">${label}</dt><dd>${explanation}</dd>`).join("")}</dl></div>` : ""}
     <figcaption>${captions[state.locale]} ${copy.open}</figcaption>
   </figure>`;
 }
