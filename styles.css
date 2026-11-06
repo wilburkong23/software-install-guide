@@ -870,7 +870,7 @@ details p {
 .tutorial-annotated figcaption { grid-column: 1 / -1; margin-top: 0; }
 .tutorial-key { font-size: 14px; line-height: 1.6; }
 .tutorial-key h4 { margin: 0 0 18px; font-size: 15px; }
-.tutorial-key dt { color: #0071e3; font-weight: 600; margin-top: 18px; }
+.tutorial-key dt { color: #515154; font-weight: 600; margin-top: 18px; }
 .tutorial-key dd { margin: 6px 0 0; color: #515154; }
 @media (max-width: 760px) {
   .tutorial-annotated { grid-template-columns: minmax(0, 1fr); gap: 12px; }
