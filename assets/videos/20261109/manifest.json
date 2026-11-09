@@ -1,0 +1,32 @@
+[
+  {
+    "file": "zh-install.mp4",
+    "duration": 55.416667,
+    "sha256": "57a79e6b3b8b9cab729fb94e24a6c29b4295513c15822a7ee3823a4056c8f4be"
+  },
+  {
+    "file": "zh-replace.mp4",
+    "duration": 66.083333,
+    "sha256": "003891701fbd1d1058f237bc929290acde94e4465ee817c9ae1c54debe9fc469"
+  },
+  {
+    "file": "en-install.mp4",
+    "duration": 51.125,
+    "sha256": "05bb724ff94a8628d352a1f3c8115a698a3c571224822eb6545df4fb57717dc7"
+  },
+  {
+    "file": "en-replace.mp4",
+    "duration": 61.791667,
+    "sha256": "d6570486daef9be49e8f12f3c5b193b1467303b9e78704b3a9d2b71399d1aa55"
+  },
+  {
+    "file": "ja-install.mp4",
+    "duration": 48.833333,
+    "sha256": "c4ffa77f682d2e731ed5b07b7d55a80d2f04a07122f84c470a46da6566b3bbcb"
+  },
+  {
+    "file": "ja-replace.mp4",
+    "duration": 59.5,
+    "sha256": "478c20cc87974a3817ccc80039c456ba4f4309d6d9f573716e6272dd0e8151f0"
+  }
+]

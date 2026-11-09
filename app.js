@@ -26,7 +26,7 @@ const translations = {
     faqDesc: "查看安装与更新中的常见问题，找到下一步处理方法。",
     faqLink: "查看常见问题",
     footer: "试衣终端：用户手册",
-    updated: "适用 V1.1–V1.2：更新于 2026 年 11 月 6 日",
+    updated: "适用 V1.1–V1.2：更新于 2026 年 11 月 9 日",
     skip: "跳转到正文",
     scenes: ["首次安装", "老版本换装", "现有版本更新"],
     preparation: "开始前，请先检查",
@@ -232,7 +232,7 @@ const translations = {
     faqDesc: "Find answers to common installation and update questions.",
     faqLink: "Explore common questions",
     footer: "Live Fitting: User Guide",
-    updated: "For V1.1–V1.2: Updated November 6, 2026",
+    updated: "For V1.1–V1.2: Updated November 9, 2026",
     skip: "Skip to content",
     scenes: [
       "First installation",
@@ -464,7 +464,7 @@ const translations = {
     faqDesc: "インストールや更新に関するよくある質問と対処方法をご案内します。",
     faqLink: "よくある質問を見る",
     footer: "Live Fitting：ユーザーガイド",
-    updated: "V1.1–V1.2 対応：2026年11月6日更新",
+    updated: "V1.1–V1.2 対応：2026年11月9日更新",
     skip: "本文へ移動",
     scenes: ["初めてのインストール", "旧版からの入れ替え", "アプリの更新"],
     preparation: "開始前に確認",
@@ -785,6 +785,26 @@ function openImageViewer(trigger) {
   dialog.showModal();
 }
 
+function renderTutorialVideo(t, scene, sceneIndex) {
+  if (state.device === "ipad") return `<div class="video"><span class="play" aria-hidden="true">▷</span><div><h3>${t.video}</h3><p>${t.videoText}</p></div></div>`;
+  if (scene === "update") return "";
+  const kind = scene === "legacy" ? "replace" : "install";
+  const base = `./assets/videos/20261109/${state.locale}-${kind}`;
+  const copy = {
+    zh: { download: "下载视频", note: "无声教程，含步骤字幕。可全屏观看。", fallback: "浏览器暂不支持视频播放，请下载观看。" },
+    en: { download: "Download video", note: "Silent tutorial with step-by-step captions. Full-screen viewing is available.", fallback: "Your browser does not support video playback. Download the video to watch it." },
+    ja: { download: "動画をダウンロード", note: "音声なし・操作字幕付き。全画面で視聴できます。", fallback: "このブラウザでは動画を再生できません。ダウンロードしてご覧ください。" },
+  }[state.locale];
+  return `<div class="tutorial-video">
+    <h3>${t.video} · ${t.scenes[sceneIndex]}</h3>
+    <video controls playsinline preload="none" poster="${base}.jpg" aria-label="${t.video}: ${t.scenes[sceneIndex]}">
+      <source src="${base}.mp4" type="video/mp4" />
+      <a href="${base}.mp4">${copy.fallback}</a>
+    </video>
+    <div class="tutorial-video-footer"><p>${copy.note}</p><a href="${base}.mp4" download>${copy.download} ↓</a></div>
+  </div>`;
+}
+
 function renderGuide(t) {
   const ipad = state.device === "ipad";
   const sections = sceneKeys.map((scene, sceneIndex) => {
@@ -799,10 +819,7 @@ function renderGuide(t) {
         ${steps.map((step, index) => `<li><h3>${step[0]}</h3><p>${step[1]}</p>${step[2] ? `<a class="action" href="${step[3]}" target="_blank" rel="noopener noreferrer">${step[2]} <span aria-hidden="true">↗</span></a>` : ""}${stepImage(t, ipad, index, scene)}</li>`).join("")}
       </ol>
       <div class="note note-check"><strong>${t.installed}</strong>${t.installedText}</div>
-      <div class="video">
-        <span class="play" aria-hidden="true">▷</span>
-        <div><h3>${t.video}</h3><p>${t.videoText}</p></div>
-      </div>
+      ${renderTutorialVideo(t, scene, sceneIndex)}
     </section>`;
   }).join("");
   return /* HTML */ `<h1>${t.devices[deviceKeys.indexOf(state.device)]}${state.locale === "en" ? ": " : "："}${t.nav[0]}</h1>

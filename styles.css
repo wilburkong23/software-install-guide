@@ -934,3 +934,11 @@ html.image-viewer-open { overflow: hidden; }
 .faq-tabs button[aria-selected="true"] { background: #fff; color: #1d1d1f; font-weight: 600; box-shadow: 0 2px 7px rgba(0,0,0,.1); }
 .faq-tabs button:focus-visible { outline: 2px solid #0071e3; outline-offset: 2px; }
 [role="tabpanel"][hidden] { display: none; }
+
+/* Installation tutorial media */
+.tutorial-video { margin-top: 32px; }
+.tutorial-video h3 { margin: 0 0 16px; font-size: 18px; }
+.tutorial-video video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #fff; border: 1px solid #e5e5e7; border-radius: 12px; }
+.tutorial-video-footer { display: flex; justify-content: space-between; align-items: baseline; gap: 12px 24px; flex-wrap: wrap; margin-top: 12px; }
+.tutorial-video-footer p { margin: 0; color: #6e6e73; font-size: 14px; }
+.tutorial-video-footer a { white-space: nowrap; font-size: 14px; }
